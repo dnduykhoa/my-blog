@@ -1,688 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/fav.png type="image/gif">
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      media="print" onload="this.media='all'" />
-<noscript>
-  <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-</noscript>
-
-
-<link rel="stylesheet" href="/css/font.css" media="all">
-
-
-
-<meta property="og:url" content="http://localhost:1313/blogs/javascript/javascript-objects-arrays-oop/">
-  <meta property="og:site_name" content="Blog Lập Trình">
-  <meta property="og:title" content="Đối tượng, Mảng và OOP trong JavaScript">
-  <meta property="og:description" content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype.">
-  <meta property="og:locale" content="vi">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blogs">
-    <meta property="article:published_time" content="2025-10-03T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-03T00:00:00+00:00">
-    <meta property="article:tag" content="Javascript">
-    <meta property="article:tag" content="Object">
-    <meta property="article:tag" content="Array">
-    <meta property="article:tag" content="Oop">
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Đối tượng, Mảng và OOP trong JavaScript">
-  <meta name="twitter:description" content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype.">
-
-
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
-<link rel="stylesheet" href="/css/footer.css" media="all">
-
-
-<link rel="stylesheet" href="/css/theme.css" media="all">
-
-<style>
-    :root {
-        --text-color: #343a40;
-        --text-secondary-color: #6c757d;
-        --text-link-color: #007bff;
-        --background-color: #eaedf0;
-        --secondary-background-color: #64ffda1a;
-        --primary-color: #007bff;
-        --secondary-color: #f8f9fa;
-
-         
-        --text-color-dark: #e4e6eb;
-        --text-secondary-color-dark: #b0b3b8;
-        --text-link-color-dark: #ffffff;
-        --background-color-dark: #18191a;
-        --secondary-background-color-dark: #212529;
-        --primary-color-dark: #ffffff;
-        --secondary-color-dark: #212529;
-    }
-    body {
-        font-size: "1rem";
-        font-weight: "400";
-        line-height: "1.5";
-        text-align: "left";
-    }
-
-    html {
-        background-color: var(--background-color) !important;
-    }
-
-    body::-webkit-scrollbar {
-        height: 0px;
-        width: 8px;
-        background-color: var(--background-color);
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 1rem;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 1rem;
-        background: #b0b0b0;
-        outline: 1px solid var(--background-color);
-    }
-
-    #search-content::-webkit-scrollbar {
-        width: .5em;
-        height: .1em;
-        background-color: var(--background-color);
-    }
-</style>
-
-
-
-<meta name="description" content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype.">
-<link rel="stylesheet" href="/css/single.css">
-<script defer src="/fontawesome-6/all-6.4.2.js"></script>
-
-
-  
-  
-
-  <title>
-Đối tượng, Mảng và OOP trong JavaScript | Blog Lập Trình
-
-  </title>
-</head>
-
-<body class="light">
-  
-  
-<script>
-    let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.body.classList.add('dark');
-            }
-            break;
-    }
-</script>
-
-
-
-
-
-<header id="profileHeader">
-    <nav class="pt-3 navbar navbar-expand-lg ">
-        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
-            
-            <a class="navbar-brand primary-font text-wrap" href="/">
-                
-                Blog Lập Trình Java &amp; JavaScript
-                
-            </a>
-
-            
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
-                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
-                </svg>
-            </button>
-
-            
-            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
-                <ul class="navbar-nav ms-auto text-center">
-                    
-                        <li class="nav-item navbar-text d-block d-md-none">
-                            <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
-                            </div>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/" title="">
-                            
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text dropdown">
-                        <a class="nav-link dropdown-toggle" href="/blogs" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
-                            
-                            <a class="dropdown-item text-center nav-link" href="/blogs/java"
-                                title="">
-                                Java
-                            </a>
-                            
-                            <a class="dropdown-item text-center nav-link" href="/blogs/javascript"
-                                title="">
-                                JavaScript
-                            </a>
-                            
-                        </div>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/about" title="">
-                            
-                            Giới Thiệu
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/contact" title="">
-                            
-                            Liên Hệ
-                        </a>
-                    </li>
-                    
-                    
-
-                    
-                    <li class="nav-item navbar-text">
-                        
-                        <div class="text-center">
-                            <button id="theme-toggle">
-                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                </svg>
-                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    
-
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</header><div id="content">
-<section id="single">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-12 col-lg-9">
-        <div class="pr-lg-4">
-          <div class="title mb-5">
-            <h1 class="text-center mb-4">Đối tượng, Mảng và OOP trong JavaScript</h1>
-            <div class="text-center">
-              Đào Nguyễn Duy Khoa <small>|</small>
-              03/10/2025
-            </div>
-          </div>
-
-          
-
-          <article class="page-content p-2">
-            <hr>
-<h2 id="1-mở-đầu">1. Mở đầu</h2>
-<p>Trong bài 2, bạn đã biết cách sử dụng <strong>if, vòng lặp và hàm</strong> để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách <strong>tổ chức dữ liệu</strong> hiệu quả hơn.</p>
-<p>👉 Đó là lý do có <strong>Object (đối tượng)</strong> và <strong>Array (mảng)</strong>, hai cấu trúc dữ liệu cốt lõi trong JavaScript. Và để nâng cao, ta có <strong>OOP (Object-Oriented Programming)</strong> với class và prototype.</p>
-<blockquote>
-<p>Hồi mình mới học JS, mình viết danh sách sinh viên bằng… 5 biến riêng lẻ: <code>name1</code>, <code>name2</code>, <code>name3</code>… 😅. Rất lộn xộn! Sau này mình mới biết dùng <strong>array</strong> và <strong>object</strong>, mọi thứ gọn gàng hơn hẳn. Bạn đã từng code “cồng kềnh” như vậy chưa?</p></blockquote>
-<p>{{&lt; image src=&quot;/images/js-object-array.png&quot; alt=&ldquo;Object và Array trong JavaScript&rdquo; &gt;}}</p>
-<hr>
-<h2 id="2-object-trong-javascript">2. Object trong JavaScript</h2>
-<h3 id="21-khai-báo-object">2.1 Khai báo object</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">study</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang học JavaScript.&#34;</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Khoa
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">study</span>();
-</span></span></code></pre></div><h3 id="22-thêm-và-xóa-thuộc-tính">2.2 Thêm và xóa thuộc tính</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">student</span>.<span style="color:#66d9ef">class</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CNTT&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">age</span>;
-</span></span></code></pre></div><hr>
-<h2 id="3-array-trong-javascript">3. Array trong JavaScript</h2>
-<h3 id="31-khai-báo-array">3.1 Khai báo array</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Táo&#34;</span>, <span style="color:#e6db74">&#34;Cam&#34;</span>, <span style="color:#e6db74">&#34;Chuối&#34;</span>];
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// Táo
-</span></span></span></code></pre></div><h3 id="32-các-phương-thức-hay-dùng">3.2 Các phương thức hay dùng</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#34;Xoài&#34;</span>);   <span style="color:#75715e">// thêm phần tử
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">pop</span>();          <span style="color:#75715e">// xóa phần tử cuối
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">shift</span>();        <span style="color:#75715e">// xóa phần tử đầu
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#e6db74">&#34;Lê&#34;</span>);  <span style="color:#75715e">// thêm phần tử đầu
-</span></span></span></code></pre></div><hr>
-<h3 id="33-duyệt-mảng">3.3 Duyệt mảng</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruit</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">fruits</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruit</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="34-các-phương-thức-hiện-đại">3.4 Các phương thức hiện đại</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squares</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">squares</span>); <span style="color:#75715e">// [1,4,9,16,25]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">even</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">even</span>); <span style="color:#75715e">// [2,4]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// 15
-</span></span></span></code></pre></div><hr>
-<h2 id="4-lập-trình-hướng-đối-tượng-oop">4. Lập trình Hướng Đối Tượng (OOP)</h2>
-<h3 id="41-constructor-function">4.1 Constructor function</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Student</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#ae81ff">21</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">name</span>);
-</span></span></code></pre></div><hr>
-<h3 id="42-prototype">4.2 Prototype</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Student</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào, tôi là &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">sayHello</span>();
-</span></span></code></pre></div><hr>
-<h3 id="43-class-es6">4.3 Class (ES6)</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">study</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang học JS.&#34;</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Lan&#34;</span>, <span style="color:#ae81ff">20</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">s2</span>.<span style="color:#a6e22e">study</span>();
-</span></span></code></pre></div><hr>
-<h3 id="44-kế-thừa-với-extends">4.4 Kế thừa với <code>extends</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teacher</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">teach</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang giảng bài.&#34;</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Teacher</span>(<span style="color:#e6db74">&#34;Thầy Minh&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">teach</span>();
-</span></span></code></pre></div><hr>
-<p>{{&lt; image src=&quot;/images/js-class-diagram.png&quot; alt=&ldquo;Class và kế thừa trong JavaScript&rdquo; &gt;}}</p>
-<hr>
-<h2 id="5-ví-dụ-tổng-hợp-quản-lý-sinh-viên">5. Ví dụ tổng hợp: Quản lý sinh viên</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">display</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Tuổi: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#ae81ff">21</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Lan&#34;</span>, <span style="color:#ae81ff">20</span>),
-</span></span><span style="display:flex;"><span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s</span> =&gt; <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">display</span>());
-</span></span></code></pre></div><hr>
-<h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Lỗi</th>
-          <th>Nguyên nhân</th>
-          <th>Giải pháp</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>undefined</code> khi truy cập object</td>
-          <td>Sai key</td>
-          <td>Kiểm tra tên thuộc tính</td>
-      </tr>
-      <tr>
-          <td><code>is not a function</code></td>
-          <td>Gọi method chưa định nghĩa</td>
-          <td>Xem lại class/prototype</td>
-      </tr>
-      <tr>
-          <td>Thêm phần tử ngoài mảng</td>
-          <td>Dùng sai chỉ số</td>
-          <td>Chỉ số phải &lt; length</td>
-      </tr>
-      <tr>
-          <td>Quên <code>new</code> khi tạo object</td>
-          <td>Không tạo instance</td>
-          <td>Dùng <code>new ClassName()</code></td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
-<ol>
-<li>Tạo object <code>car</code> có thuộc tính <code>brand</code>, <code>speed</code>, và method <code>drive()</code>.</li>
-<li>Tạo mảng chứa 5 số và tính tổng.</li>
-<li>Viết class <code>Animal</code> và class con <code>Dog</code>, override method <code>sound()</code>.</li>
-<li>Tạo danh sách sinh viên (array of objects) và in ra tất cả.</li>
-</ol>
-<hr>
-<h2 id="8-tổng-kết">8. Tổng kết</h2>
-<p>Trong bài này, bạn đã học:</p>
-<ul>
-<li>Object và cách thêm/xóa thuộc tính.</li>
-<li>Array và các phương thức quan trọng (<code>map</code>, <code>filter</code>, <code>reduce</code>).</li>
-<li>OOP trong JavaScript: constructor, prototype, class, kế thừa.</li>
-<li>Ví dụ quản lý sinh viên bằng class.</li>
-</ul>
-<p>👉 Đây là bước quan trọng để bạn làm việc với <strong>dữ liệu phức tạp và mô hình hóa đối tượng trong JS</strong>.</p>
-<p>Ở <strong>bài 4</strong>, chúng ta sẽ học:
-<strong>“DOM &amp; Tương tác với Web”</strong> – nơi JS thật sự “thể hiện sức mạnh” khi làm web sống động.</p>
-<hr>
-<p><em>Hẹn gặp bạn ở Bài 4 nhé!</em> 🚀</p>
-
-          </article>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-12 col-lg-3">
-        <div id="stickySideBar" class="sticky-sidebar">
-          
-          <aside class="toc">
-            <h5>Mục lục</h5>
-            <div class="toc-content">
-              
-              
-              
-              
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-mở-đầu">1. Mở đầu</a></li>
-    <li><a href="#2-object-trong-javascript">2. Object trong JavaScript</a>
-      <ul>
-        <li><a href="#21-khai-báo-object">2.1 Khai báo object</a></li>
-        <li><a href="#22-thêm-và-xóa-thuộc-tính">2.2 Thêm và xóa thuộc tính</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-array-trong-javascript">3. Array trong JavaScript</a>
-      <ul>
-        <li><a href="#31-khai-báo-array">3.1 Khai báo array</a></li>
-        <li><a href="#32-các-phương-thức-hay-dùng">3.2 Các phương thức hay dùng</a></li>
-        <li><a href="#33-duyệt-mảng">3.3 Duyệt mảng</a></li>
-        <li><a href="#34-các-phương-thức-hiện-đại">3.4 Các phương thức hiện đại</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-lập-trình-hướng-đối-tượng-oop">4. Lập trình Hướng Đối Tượng (OOP)</a>
-      <ul>
-        <li><a href="#41-constructor-function">4.1 Constructor function</a></li>
-        <li><a href="#42-prototype">4.2 Prototype</a></li>
-        <li><a href="#43-class-es6">4.3 Class (ES6)</a></li>
-        <li><a href="#44-kế-thừa-với-extends">4.4 Kế thừa với <code>extends</code></a></li>
-      </ul>
-    </li>
-    <li><a href="#5-ví-dụ-tổng-hợp-quản-lý-sinh-viên">5. Ví dụ tổng hợp: Quản lý sinh viên</a></li>
-    <li><a href="#6-lỗi-thường-gặp">6. Lỗi thường gặp</a></li>
-    <li><a href="#7-bài-tập-nhỏ">7. Bài tập nhỏ</a></li>
-    <li><a href="#8-tổng-kết">8. Tổng kết</a></li>
-  </ul>
-</nav>
-            </div>
-          </aside>
-          
-
-          
-          <aside class="tags">
-            <h5>Tags</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/javascript" target="_blank">javascript</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/object" target="_blank">object</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/array" target="_blank">array</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/oop" target="_blank">oop</a>
-              </li>
-              
-            </ul>
-          </aside>
-          
-
-          
-          <aside class="social">
-            <h5>Social</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript: http%3a%2f%2flocalhost%3a1313%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-whatsapp"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f'><i class="fa fa-envelope"></i></a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
-        
-      </div>
-    </div>
-  </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
-</section>
-
-<div class="progress">
-  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<script src="/js/scrollProgressBar.js"></script>
-
-<script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
-  
-  let stickySideBarElem = document.getElementById("stickySideBar");
-  let stickyNavBar = false; 
-  if(stickyNavBar){
-    let headerElem = document.getElementById("profileHeader");
-    let headerHeight = (headerElem?.offsetHeight || 35) + 15;
-    stickySideBarElem.style.top = headerHeight + "px";
-  } else {
-    stickySideBarElem.style.top = "50px";
-  }
-</script>
-
-  </div><footer>
-    
- 
-
-<div class="text-center pt-2">
-    
-
-    
-
-    
-
-    
-
-    
-</div><div class="container py-4">
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            
-            &copy; 2025  All Rights Reserved
-            <div class="text-secondary">
-                Made with
-                <span class="text-danger">
-                    &#10084;
-                </span>
-                and
-                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
-                    title="Designed and developed by gurusabarish">
-                    Hugo Profile
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
-</script>
-
-
-    <script src="/js/search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-  <section id="search-content" class="py-2">
-    <div class="container" id="search-results"></div>
-  </section>
-</body>
-
-</html>
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta http-equiv=Accept-CH content="DPR, Viewport-Width, Width"><link rel=icon href=https://dnduykhoa.github.io/my-blog/fav.png type=image/gif><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet></noscript><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/font.css media=all><meta property="og:url" content="https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-objects-arrays-oop/"><meta property="og:site_name" content="Blog Lập Trình"><meta property="og:title" content="Đối tượng, Mảng và OOP trong JavaScript"><meta property="og:description" content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype."><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="blogs"><meta property="article:published_time" content="2025-10-03T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-03T00:00:00+00:00"><meta property="article:tag" content="Javascript"><meta property="article:tag" content="Object"><meta property="article:tag" content="Array"><meta property="article:tag" content="Oop"><meta name=twitter:card content="summary"><meta name=twitter:title content="Đối tượng, Mảng và OOP trong JavaScript"><meta name=twitter:description content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype."><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/header.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/footer.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/theme.css media=all><style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#ffffff;--background-color-dark:#18191a;--secondary-background-color-dark:#212529;--primary-color-dark:#ffffff;--secondary-color-dark:#212529}body{font-size:"1rem";font-weight:"400";line-height:"1.5";text-align:"left"}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style><meta name=description content="Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype."><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/single.css><script defer src=https://dnduykhoa.github.io/my-blog/fontawesome-6/all-6.4.2.js></script><title>Đối tượng, Mảng và OOP trong JavaScript | Blog Lập Trình</title></head><body class=light><script>let localStorageValue=localStorage.getItem("pref-theme"),mediaQuery=window.matchMedia("(prefers-color-scheme: dark)").matches;switch(localStorageValue){case"dark":document.body.classList.add("dark");break;case"light":document.body.classList.remove("dark");break;default:mediaQuery&&document.body.classList.add("dark");break}</script><header id=profileHeader><nav class="pt-3 navbar navbar-expand-lg"><div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5"><a class="navbar-brand primary-font text-wrap" href=https://dnduykhoa.github.io/my-blog/>Blog Lập Trình Java & JavaScript
+</a><button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
+<svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg></button><div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent><ul class="navbar-nav ms-auto text-center"><li class="nav-item navbar-text d-block d-md-none"><div class=nav-link><input id=search autocomplete=off class="form-control mr-sm-2" placeholder='Ctrl + k to Search...' aria-label=Search oninput=searchOnChange(event)></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/ title>Trang chủ</a></li><li class="nav-item navbar-text dropdown"><a class="nav-link dropdown-toggle" href=https://dnduykhoa.github.io/my-blog/blogs id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false title>Blog</a><div class="dropdown-menu shadow-lg rounded" aria-labelledby=navbarDropdown><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/java title>Java
+</a><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/javascript title>JavaScript</a></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/about title>Giới Thiệu</a></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/contact title>Liên Hệ</a></li><li class="nav-item navbar-text"><div class=text-center><button id=theme-toggle>
+<svg id="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></li></ul></div></div></nav></header><div id=content><section id=single><div class=container><div class="row justify-content-center"><div class="col-sm-12 col-md-12 col-lg-9"><div class=pr-lg-4><div class="title mb-5"><h1 class="text-center mb-4">Đối tượng, Mảng và OOP trong JavaScript</h1><div class=text-center>Đào Nguyễn Duy Khoa <small>|</small>
+03/10/2025</div></div><article class="page-content p-2"><hr><h2 id=1-mở-đầu>1. Mở đầu</h2><p>Trong bài 2, bạn đã biết cách sử dụng <strong>if, vòng lặp và hàm</strong> để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách <strong>tổ chức dữ liệu</strong> hiệu quả hơn.</p><p>👉 Đó là lý do có <strong>Object (đối tượng)</strong> và <strong>Array (mảng)</strong>, hai cấu trúc dữ liệu cốt lõi trong JavaScript. Và để nâng cao, ta có <strong>OOP (Object-Oriented Programming)</strong> với class và prototype.</p><blockquote><p>Hồi mình mới học JS, mình viết danh sách sinh viên bằng… 5 biến riêng lẻ: <code>name1</code>, <code>name2</code>, <code>name3</code>… 😅. Rất lộn xộn! Sau này mình mới biết dùng <strong>array</strong> và <strong>object</strong>, mọi thứ gọn gàng hơn hẳn. Bạn đã từng code “cồng kềnh” như vậy chưa?</p></blockquote><p>{{&lt; image src="/images/js-object-array.png" alt=&ldquo;Object và Array trong JavaScript&rdquo; >}}</p><hr><h2 id=2-object-trong-javascript>2. Object trong JavaScript</h2><h3 id=21-khai-báo-object>2.1 Khai báo object</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>student</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Khoa&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>21</span>,
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>study</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang học JavaScript.&#34;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>student</span>.<span style=color:#a6e22e>name</span>); <span style=color:#75715e>// Khoa
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>student</span>.<span style=color:#a6e22e>study</span>();
+</span></span></code></pre></div><h3 id=22-thêm-và-xóa-thuộc-tính>2.2 Thêm và xóa thuộc tính</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>student</span>.<span style=color:#66d9ef>class</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;CNTT&#34;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>delete</span> <span style=color:#a6e22e>student</span>.<span style=color:#a6e22e>age</span>;
+</span></span></code></pre></div><hr><h2 id=3-array-trong-javascript>3. Array trong JavaScript</h2><h3 id=31-khai-báo-array>3.1 Khai báo array</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fruits</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Táo&#34;</span>, <span style=color:#e6db74>&#34;Cam&#34;</span>, <span style=color:#e6db74>&#34;Chuối&#34;</span>];
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>fruits</span>[<span style=color:#ae81ff>0</span>]); <span style=color:#75715e>// Táo
+</span></span></span></code></pre></div><h3 id=32-các-phương-thức-hay-dùng>3.2 Các phương thức hay dùng</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>push</span>(<span style=color:#e6db74>&#34;Xoài&#34;</span>);   <span style=color:#75715e>// thêm phần tử
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>pop</span>();          <span style=color:#75715e>// xóa phần tử cuối
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>shift</span>();        <span style=color:#75715e>// xóa phần tử đầu
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>unshift</span>(<span style=color:#e6db74>&#34;Lê&#34;</span>);  <span style=color:#75715e>// thêm phần tử đầu
+</span></span></span></code></pre></div><hr><h3 id=33-duyệt-mảng>3.3 Duyệt mảng</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fruit</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>fruits</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>fruit</span>);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=34-các-phương-thức-hiện-đại>3.4 Các phương thức hiện đại</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>squares</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>map</span>(<span style=color:#a6e22e>n</span> =&gt; <span style=color:#a6e22e>n</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>n</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>squares</span>); <span style=color:#75715e>// [1,4,9,16,25]
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>even</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>n</span> =&gt; <span style=color:#a6e22e>n</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>even</span>); <span style=color:#75715e>// [2,4]
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>numbers</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>acc</span>, <span style=color:#a6e22e>n</span>) =&gt; <span style=color:#a6e22e>acc</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>n</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sum</span>); <span style=color:#75715e>// 15
+</span></span></span></code></pre></div><hr><h2 id=4-lập-trình-hướng-đối-tượng-oop>4. Lập trình Hướng Đối Tượng (OOP)</h2><h3 id=41-constructor-function>4.1 Constructor function</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Student</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>age</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>age</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>s1</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Student</span>(<span style=color:#e6db74>&#34;Khoa&#34;</span>, <span style=color:#ae81ff>21</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>s1</span>.<span style=color:#a6e22e>name</span>);
+</span></span></code></pre></div><hr><h3 id=42-prototype>4.2 Prototype</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>Student</span>.<span style=color:#a6e22e>prototype</span>.<span style=color:#a6e22e>sayHello</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Xin chào, tôi là &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>s1</span>.<span style=color:#a6e22e>sayHello</span>();
+</span></span></code></pre></div><hr><h3 id=43-class-es6>4.3 Class (ES6)</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Student</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>age</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>age</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>study</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang học JS.&#34;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>s2</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Student</span>(<span style=color:#e6db74>&#34;Lan&#34;</span>, <span style=color:#ae81ff>20</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>s2</span>.<span style=color:#a6e22e>study</span>();
+</span></span></code></pre></div><hr><h3 id=44-kế-thừa-với-extends>4.4 Kế thừa với <code>extends</code></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Teacher</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Person</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>teach</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang giảng bài.&#34;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>t1</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Teacher</span>(<span style=color:#e6db74>&#34;Thầy Minh&#34;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>t1</span>.<span style=color:#a6e22e>teach</span>();
+</span></span></code></pre></div><hr><p>{{&lt; image src="/images/js-class-diagram.png" alt=&ldquo;Class và kế thừa trong JavaScript&rdquo; >}}</p><hr><h2 id=5-ví-dụ-tổng-hợp-quản-lý-sinh-viên>5. Ví dụ tổng hợp: Quản lý sinh viên</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Student</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>age</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>age</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>display</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Tên: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;, Tuổi: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>age</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>list</span> <span style=color:#f92672>=</span> [
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Student</span>(<span style=color:#e6db74>&#34;Khoa&#34;</span>, <span style=color:#ae81ff>21</span>),
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Student</span>(<span style=color:#e6db74>&#34;Lan&#34;</span>, <span style=color:#ae81ff>20</span>),
+</span></span><span style=display:flex><span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>list</span>.<span style=color:#a6e22e>forEach</span>(<span style=color:#a6e22e>s</span> =&gt; <span style=color:#a6e22e>s</span>.<span style=color:#a6e22e>display</span>());
+</span></span></code></pre></div><hr><h2 id=6-lỗi-thường-gặp>6. Lỗi thường gặp</h2><table><thead><tr><th>Lỗi</th><th>Nguyên nhân</th><th>Giải pháp</th></tr></thead><tbody><tr><td><code>undefined</code> khi truy cập object</td><td>Sai key</td><td>Kiểm tra tên thuộc tính</td></tr><tr><td><code>is not a function</code></td><td>Gọi method chưa định nghĩa</td><td>Xem lại class/prototype</td></tr><tr><td>Thêm phần tử ngoài mảng</td><td>Dùng sai chỉ số</td><td>Chỉ số phải &lt; length</td></tr><tr><td>Quên <code>new</code> khi tạo object</td><td>Không tạo instance</td><td>Dùng <code>new ClassName()</code></td></tr></tbody></table><hr><h2 id=7-bài-tập-nhỏ>7. Bài tập nhỏ</h2><ol><li>Tạo object <code>car</code> có thuộc tính <code>brand</code>, <code>speed</code>, và method <code>drive()</code>.</li><li>Tạo mảng chứa 5 số và tính tổng.</li><li>Viết class <code>Animal</code> và class con <code>Dog</code>, override method <code>sound()</code>.</li><li>Tạo danh sách sinh viên (array of objects) và in ra tất cả.</li></ol><hr><h2 id=8-tổng-kết>8. Tổng kết</h2><p>Trong bài này, bạn đã học:</p><ul><li>Object và cách thêm/xóa thuộc tính.</li><li>Array và các phương thức quan trọng (<code>map</code>, <code>filter</code>, <code>reduce</code>).</li><li>OOP trong JavaScript: constructor, prototype, class, kế thừa.</li><li>Ví dụ quản lý sinh viên bằng class.</li></ul><p>👉 Đây là bước quan trọng để bạn làm việc với <strong>dữ liệu phức tạp và mô hình hóa đối tượng trong JS</strong>.</p><p>Ở <strong>bài 4</strong>, chúng ta sẽ học:
+<strong>“DOM & Tương tác với Web”</strong> – nơi JS thật sự “thể hiện sức mạnh” khi làm web sống động.</p><hr><p><em>Hẹn gặp bạn ở Bài 4 nhé!</em> 🚀</p></article></div></div><div class="col-sm-12 col-md-12 col-lg-3"><div id=stickySideBar class=sticky-sidebar><aside class=toc><h5>Mục lục</h5><div class=toc-content><nav id=TableOfContents><ul><li><a href=#1-mở-đầu>1. Mở đầu</a></li><li><a href=#2-object-trong-javascript>2. Object trong JavaScript</a><ul><li><a href=#21-khai-báo-object>2.1 Khai báo object</a></li><li><a href=#22-thêm-và-xóa-thuộc-tính>2.2 Thêm và xóa thuộc tính</a></li></ul></li><li><a href=#3-array-trong-javascript>3. Array trong JavaScript</a><ul><li><a href=#31-khai-báo-array>3.1 Khai báo array</a></li><li><a href=#32-các-phương-thức-hay-dùng>3.2 Các phương thức hay dùng</a></li><li><a href=#33-duyệt-mảng>3.3 Duyệt mảng</a></li><li><a href=#34-các-phương-thức-hiện-đại>3.4 Các phương thức hiện đại</a></li></ul></li><li><a href=#4-lập-trình-hướng-đối-tượng-oop>4. Lập trình Hướng Đối Tượng (OOP)</a><ul><li><a href=#41-constructor-function>4.1 Constructor function</a></li><li><a href=#42-prototype>4.2 Prototype</a></li><li><a href=#43-class-es6>4.3 Class (ES6)</a></li><li><a href=#44-kế-thừa-với-extends>4.4 Kế thừa với <code>extends</code></a></li></ul></li><li><a href=#5-ví-dụ-tổng-hợp-quản-lý-sinh-viên>5. Ví dụ tổng hợp: Quản lý sinh viên</a></li><li><a href=#6-lỗi-thường-gặp>6. Lỗi thường gặp</a></li><li><a href=#7-bài-tập-nhỏ>7. Bài tập nhỏ</a></li><li><a href=#8-tổng-kết>8. Tổng kết</a></li></ul></nav></div></aside><aside class=tags><h5>Tags</h5><ul class="tags-ul list-unstyled list-inline"><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/javascript target=_blank>javascript</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/object target=_blank>object</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/array target=_blank>array</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/oop target=_blank>oop</a></li></ul></aside><aside class=social><h5>Social</h5><div class=social-content><ul class=list-inline><li class="list-inline-item text-center"><a target=_blank href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-linkedin"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://twitter.com/share?text=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-twitter"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://api.whatsapp.com/send?text=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript: https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f"><i class="fab fa-whatsapp"></i></a></li><li class="list-inline-item text-center"><a target=_blank href='mailto:?subject=%c4%90%e1%bb%91i%20t%c6%b0%e1%bb%a3ng%2c%20M%e1%ba%a3ng%20v%c3%a0%20OOP%20trong%20JavaScript&amp;body=Check%20out%20this%20site https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-objects-arrays-oop%2f'><i class="fa fa-envelope"></i></a></li></ul></div></aside></div></div></div><div class=row><div class="col-sm-12 col-md-12 col-lg-9 p-4"></div></div></div><button class="p-2 px-3" onclick=topFunction() id=topScroll>
+<i class="fas fa-angle-up"></i></button></section><div class=progress><div id=scroll-progress-bar class=progress-bar role=progressbar aria-valuenow=0 aria-valuemin=0 aria-valuemax=100></div></div><script src=https://dnduykhoa.github.io/my-blog/js/scrollProgressBar.js></script><script>var topScroll=document.getElementById("topScroll");window.onscroll=function(){scrollFunction()};function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?topScroll.style.display="block":topScroll.style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}let stickySideBarElem=document.getElementById("stickySideBar"),stickyNavBar=!1;if(stickyNavBar){let e=document.getElementById("profileHeader"),t=(e?.offsetHeight||35)+15;stickySideBarElem.style.top=t+"px"}else stickySideBarElem.style.top="50px"</script></div><footer><div class="text-center pt-2"></div><div class="container py-4"><div class="row justify-content-center"><div class="col-md-4 text-center">&copy; 2025 All Rights Reserved<div class=text-secondary>Made with
+<span class=text-danger>&#10084;
+</span>and
+<a href=https://github.com/gurusabarish/hugo-profile target=_blank title="Designed and developed by gurusabarish">Hugo Profile</a></div></div></div></div></footer><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js integrity=sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 crossorigin=anonymous></script><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))});var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e)})</script><script src=https://dnduykhoa.github.io/my-blog/js/search.js></script><section id=search-content class=py-2><div class=container id=search-results></div></section></body></html>

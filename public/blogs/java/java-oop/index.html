@@ -1,731 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/fav.png type="image/gif">
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
->
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      media="print" onload="this.media='all'" />
-<noscript>
-  <link
-          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-</noscript>
-
-
-<link rel="stylesheet" href="/css/font.css" media="all">
-
-
-
-<meta property="og:url" content="http://localhost:1313/blogs/java/java-oop/">
-  <meta property="og:site_name" content="Blog Lập Trình">
-  <meta property="og:title" content="Lập trình Hướng Đối Tượng (OOP) trong Java">
-  <meta property="og:description" content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng">
-  <meta property="og:locale" content="vi">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blogs">
-    <meta property="article:published_time" content="2025-10-03T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-03T00:00:00+00:00">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Oop">
-    <meta property="article:tag" content="Class">
-    <meta property="article:tag" content="Object">
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Lập trình Hướng Đối Tượng (OOP) trong Java">
-  <meta name="twitter:description" content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng">
-
-
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
-<link rel="stylesheet" href="/css/footer.css" media="all">
-
-
-<link rel="stylesheet" href="/css/theme.css" media="all">
-
-<style>
-    :root {
-        --text-color: #343a40;
-        --text-secondary-color: #6c757d;
-        --text-link-color: #007bff;
-        --background-color: #eaedf0;
-        --secondary-background-color: #64ffda1a;
-        --primary-color: #007bff;
-        --secondary-color: #f8f9fa;
-
-         
-        --text-color-dark: #e4e6eb;
-        --text-secondary-color-dark: #b0b3b8;
-        --text-link-color-dark: #ffffff;
-        --background-color-dark: #18191a;
-        --secondary-background-color-dark: #212529;
-        --primary-color-dark: #ffffff;
-        --secondary-color-dark: #212529;
-    }
-    body {
-        font-size: "1rem";
-        font-weight: "400";
-        line-height: "1.5";
-        text-align: "left";
-    }
-
-    html {
-        background-color: var(--background-color) !important;
-    }
-
-    body::-webkit-scrollbar {
-        height: 0px;
-        width: 8px;
-        background-color: var(--background-color);
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 1rem;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 1rem;
-        background: #b0b0b0;
-        outline: 1px solid var(--background-color);
-    }
-
-    #search-content::-webkit-scrollbar {
-        width: .5em;
-        height: .1em;
-        background-color: var(--background-color);
-    }
-</style>
-
-
-
-<meta name="description" content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng">
-<link rel="stylesheet" href="/css/single.css">
-<script defer src="/fontawesome-6/all-6.4.2.js"></script>
-
-
-  
-  
-
-  <title>
-Lập trình Hướng Đối Tượng (OOP) trong Java | Blog Lập Trình
-
-  </title>
-</head>
-
-<body class="light">
-  
-  
-<script>
-    let localStorageValue = localStorage.getItem("pref-theme");
-    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    switch (localStorageValue) {
-        case "dark":
-            document.body.classList.add('dark');
-            break;
-        case "light":
-            document.body.classList.remove('dark');
-            break;
-        default:
-            if (mediaQuery) {
-                document.body.classList.add('dark');
-            }
-            break;
-    }
-</script>
-
-
-
-
-
-<header id="profileHeader">
-    <nav class="pt-3 navbar navbar-expand-lg ">
-        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
-            
-            <a class="navbar-brand primary-font text-wrap" href="/">
-                
-                Blog Lập Trình Java &amp; JavaScript
-                
-            </a>
-
-            
-
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
-                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
-                </svg>
-            </button>
-
-            
-            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
-                <ul class="navbar-nav ms-auto text-center">
-                    
-                        <li class="nav-item navbar-text d-block d-md-none">
-                            <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
-                            </div>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/" title="">
-                            
-                            Trang chủ
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text dropdown">
-                        <a class="nav-link dropdown-toggle" href="/blogs" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
-                            
-                            <a class="dropdown-item text-center nav-link" href="/blogs/java"
-                                title="">
-                                Java
-                            </a>
-                            
-                            <a class="dropdown-item text-center nav-link" href="/blogs/javascript"
-                                title="">
-                                JavaScript
-                            </a>
-                            
-                        </div>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/about" title="">
-                            
-                            Giới Thiệu
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/contact" title="">
-                            
-                            Liên Hệ
-                        </a>
-                    </li>
-                    
-                    
-
-                    
-                    <li class="nav-item navbar-text">
-                        
-                        <div class="text-center">
-                            <button id="theme-toggle">
-                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                </svg>
-                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </li>
-                    
-
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-</header><div id="content">
-<section id="single">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-12 col-lg-9">
-        <div class="pr-lg-4">
-          <div class="title mb-5">
-            <h1 class="text-center mb-4">Lập trình Hướng Đối Tượng (OOP) trong Java</h1>
-            <div class="text-center">
-              Đào Nguyễn Duy Khoa <small>|</small>
-              03/10/2025
-            </div>
-          </div>
-
-          
-
-          <article class="page-content p-2">
-            <hr>
-<h2 id="1-mở-đầu">1. Mở đầu</h2>
-<p>Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với <strong>biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển</strong>. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.</p>
-<p>Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&hellip;), nếu chỉ viết code bằng <code>if-else</code> và <code>for</code> thì chương trình sẽ trở nên <strong>rối rắm, khó bảo trì</strong>.</p>
-<blockquote>
-<p>Hồi mới học OOP, mình cực kỳ rối giữa class và object. Mình cứ nghĩ chúng giống nhau. Chỉ khi làm mini project quản lý sinh viên trong Hugo blog của mình, mình mới ngộ ra: class giống như bản thiết kế, còn object là sản phẩm tạo ra. Bạn có thấy vậy không?</p></blockquote>
-<p>👉 Đó là lúc <strong>Lập trình Hướng Đối Tượng (OOP – Object-Oriented Programming)</strong> xuất hiện để giải quyết vấn đề.
-Java chính là một trong những ngôn ngữ tiêu biểu nhất cho OOP.</p>
-<hr>
-<h2 id="2-oop-là-gì">2. OOP là gì?</h2>
-<p><strong>OOP</strong> là phương pháp lập trình lấy <strong>đối tượng (object)</strong> làm trung tâm.
-Trong đời sống, chúng ta thấy mọi thứ đều là <strong>đối tượng</strong>: Sinh viên, Sách, Ô tô, Tài khoản ngân hàng…</p>
-<p>Mỗi đối tượng có:</p>
-<ul>
-<li><strong>Thuộc tính (Attributes)</strong>: đặc điểm, dữ liệu của nó.</li>
-<li><strong>Phương thức (Methods)</strong>: hành động mà nó thực hiện được.</li>
-</ul>
-<p>Ví dụ:</p>
-<ul>
-<li>
-<p>Đối tượng “Sinh viên”:</p>
-<ul>
-<li>Thuộc tính: <code>tên</code>, <code>mã số</code>, <code>ngành học</code>.</li>
-<li>Phương thức: <code>đăng ký môn học()</code>, <code>tính điểm()</code>.</li>
-</ul>
-</li>
-</ul>
-<p>👉 Đây chính là cách mà Java giúp chúng ta <strong>mô phỏng thế giới thực bằng code</strong>.</p>
-<hr>
-<h2 id="3-các-khái-niệm-cơ-bản">3. Các khái niệm cơ bản</h2>
-<h3 id="31-class-và-object">3.1 Class và Object</h3>
-<ul>
-<li><strong>Class (lớp)</strong>: Bản thiết kế, khuôn mẫu cho đối tượng.</li>
-<li><strong>Object (đối tượng)</strong>: Thực thể được tạo ra từ class.</li>
-</ul>
-<p>Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
-</span></span><span style="display:flex;"><span>    String name;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">study</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang học Java&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        Student sv <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student();
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>;
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> 21;
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">study</span>();  <span style="color:#75715e">// Output: Khoa đang học Java</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="4-bốn-tính-chất-quan-trọng-của-oop">4. Bốn tính chất quan trọng của OOP</h2>
-<h3 id="41-đóng-gói-encapsulation">4.1 Đóng gói (Encapsulation)</h3>
-<ul>
-<li>Giấu chi tiết bên trong đối tượng.</li>
-<li>Chỉ cho phép truy cập thông qua <strong>getter</strong> và <strong>setter</strong>.</li>
-</ul>
-<p>Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BankAccount</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> balance;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deposit</span>(<span style="color:#66d9ef">double</span> amount) {
-</span></span><span style="display:flex;"><span>        balance <span style="color:#f92672">+=</span> amount;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">getBalance</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> balance;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>👉 <code>balance</code> bị ẩn đi, không thể thay đổi trực tiếp từ bên ngoài.</p>
-<hr>
-<h3 id="42-kế-thừa-inheritance">4.2 Kế thừa (Inheritance)</h3>
-<ul>
-<li>Một class có thể <strong>kế thừa</strong> từ class khác.</li>
-<li>Giúp tái sử dụng code, mở rộng tính năng.</li>
-</ul>
-<p>Ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    String name;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang ăn&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">extends</span> Person {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">study</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang học&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        Student sv <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student();
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Lan&#34;</span>;
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">eat</span>();
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">study</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="43-đa-hình-polymorphism">4.3 Đa hình (Polymorphism)</h3>
-<ul>
-<li><strong>Nhiều hình thái khác nhau</strong> của cùng một phương thức.</li>
-<li>Gồm <strong>Overloading</strong> và <strong>Overriding</strong>.</li>
-</ul>
-<p>Ví dụ Overloading:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">double</span> a, <span style="color:#66d9ef">double</span> b) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Ví dụ Overriding:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Động vật kêu&#34;</span>); }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Gâu gâu&#34;</span>); }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="44-trừu-tượng-abstraction">4.4 Trừu tượng (Abstraction)</h3>
-<ul>
-<li>Ẩn chi tiết, chỉ cho người dùng thấy <strong>cái gì làm được</strong> chứ không cần biết <strong>làm thế nào</strong>.</li>
-<li>Thực hiện bằng <strong>Abstract class</strong> hoặc <strong>Interface</strong>.</li>
-</ul>
-<p>Ví dụ Abstract:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Meo meo&#34;</span>); }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Ví dụ Interface:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Vehicle</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">move</span>();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span> <span style="color:#66d9ef">implements</span> Vehicle {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">move</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Ô tô di chuyển bằng bánh xe&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="5-ví-dụ-tổng-hợp">5. Ví dụ tổng hợp</h2>
-<p>Giả sử bạn cần mô phỏng <strong>quản lý sinh viên</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    String name;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">extends</span> Person {
-</span></span><span style="display:flex;"><span>    String studentId;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">study</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang học&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        Student sv <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student();
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>;
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> 21;
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">studentId</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SV001&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span> <span style="color:#f92672">+</span> sv.<span style="color:#a6e22e">name</span>);
-</span></span><span style="display:flex;"><span>        sv.<span style="color:#a6e22e">study</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Lỗi</th>
-          <th>Nguyên nhân</th>
-          <th>Cách khắc phục</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>cannot find symbol</code></td>
-          <td>Gọi đến biến/phương thức chưa định nghĩa</td>
-          <td>Kiểm tra chính tả, khai báo đầy đủ</td>
-      </tr>
-      <tr>
-          <td><code>NullPointerException</code></td>
-          <td>Đối tượng chưa được khởi tạo bằng <code>new</code></td>
-          <td>Dùng <code>new</code> để tạo object</td>
-      </tr>
-      <tr>
-          <td>Lạm dụng kế thừa</td>
-          <td>Kế thừa không hợp lý, gây rối code</td>
-          <td>Chỉ kế thừa khi có quan hệ “is-a”</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
-<ol>
-<li>Tạo class <code>Animal</code> với phương thức <code>sound()</code>. Kế thừa tạo <code>Dog</code> và <code>Cat</code> rồi override <code>sound()</code>.</li>
-<li>Viết chương trình quản lý <strong>sách trong thư viện</strong>: class <code>Book</code> (title, author, year), thêm phương thức in thông tin.</li>
-<li>Tạo interface <code>Shape</code> với phương thức <code>area()</code>. Cài đặt <code>Rectangle</code> và <code>Circle</code>.</li>
-</ol>
-<hr>
-<h2 id="8-tổng-kết">8. Tổng kết</h2>
-<p>Trong bài này, bạn đã học:</p>
-<ul>
-<li>OOP là gì và tại sao quan trọng.</li>
-<li>Các khái niệm class, object.</li>
-<li>4 tính chất cơ bản: <strong>Đóng gói, Kế thừa, Đa hình, Trừu tượng</strong>.</li>
-<li>Ví dụ tổng hợp và các lỗi thường gặp.</li>
-</ul>
-<p>👉 Đây chính là <strong>linh hồn của Java</strong>. Khi nắm vững OOP, bạn sẽ dễ dàng học tiếp các framework như Spring, Hibernate hoặc phát triển ứng dụng Android.</p>
-<p>Ở <strong>bài 4</strong>, chúng ta sẽ tìm hiểu:
-<strong>“Thư viện &amp; Công cụ mạnh mẽ trong Java”</strong> – gồm Collections, Exception Handling và IO.</p>
-<hr>
-<p><em>Hẹn gặp bạn ở Bài 4 nhé!</em> 🚀</p>
-
-          </article>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-12 col-lg-3">
-        <div id="stickySideBar" class="sticky-sidebar">
-          
-          <aside class="toc">
-            <h5>Mục lục</h5>
-            <div class="toc-content">
-              
-              
-              
-              
-              <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-mở-đầu">1. Mở đầu</a></li>
-    <li><a href="#2-oop-là-gì">2. OOP là gì?</a></li>
-    <li><a href="#3-các-khái-niệm-cơ-bản">3. Các khái niệm cơ bản</a>
-      <ul>
-        <li><a href="#31-class-và-object">3.1 Class và Object</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-bốn-tính-chất-quan-trọng-của-oop">4. Bốn tính chất quan trọng của OOP</a>
-      <ul>
-        <li><a href="#41-đóng-gói-encapsulation">4.1 Đóng gói (Encapsulation)</a></li>
-        <li><a href="#42-kế-thừa-inheritance">4.2 Kế thừa (Inheritance)</a></li>
-        <li><a href="#43-đa-hình-polymorphism">4.3 Đa hình (Polymorphism)</a></li>
-        <li><a href="#44-trừu-tượng-abstraction">4.4 Trừu tượng (Abstraction)</a></li>
-      </ul>
-    </li>
-    <li><a href="#5-ví-dụ-tổng-hợp">5. Ví dụ tổng hợp</a></li>
-    <li><a href="#6-lỗi-thường-gặp">6. Lỗi thường gặp</a></li>
-    <li><a href="#7-bài-tập-nhỏ">7. Bài tập nhỏ</a></li>
-    <li><a href="#8-tổng-kết">8. Tổng kết</a></li>
-  </ul>
-</nav>
-            </div>
-          </aside>
-          
-
-          
-          <aside class="tags">
-            <h5>Tags</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/java" target="_blank">java</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/oop" target="_blank">oop</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/class" target="_blank">class</a>
-              </li>
-              
-              <li class="list-inline-item">
-                <a href="http://localhost:1313/tags/object" target="_blank">object</a>
-              </li>
-              
-            </ul>
-          </aside>
-          
-
-          
-          <aside class="social">
-            <h5>Social</h5>
-            <div class="social-content">
-              <ul class="list-inline">
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java: http%3a%2f%2flocalhost%3a1313%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-whatsapp"></i></a>
-                </li>
-                <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fblogs%2fjava%2fjava-oop%2f'><i class="fa fa-envelope"></i></a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-          
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
-        
-      </div>
-    </div>
-  </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
-</section>
-
-<div class="progress">
-  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<script src="/js/scrollProgressBar.js"></script>
-
-<script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
-  
-  let stickySideBarElem = document.getElementById("stickySideBar");
-  let stickyNavBar = false; 
-  if(stickyNavBar){
-    let headerElem = document.getElementById("profileHeader");
-    let headerHeight = (headerElem?.offsetHeight || 35) + 15;
-    stickySideBarElem.style.top = headerHeight + "px";
-  } else {
-    stickySideBarElem.style.top = "50px";
-  }
-</script>
-
-  </div><footer>
-    
- 
-
-<div class="text-center pt-2">
-    
-
-    
-
-    
-
-    
-
-    
-</div><div class="container py-4">
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center">
-            
-            &copy; 2025  All Rights Reserved
-            <div class="text-secondary">
-                Made with
-                <span class="text-danger">
-                    &#10084;
-                </span>
-                and
-                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
-                    title="Designed and developed by gurusabarish">
-                    Hugo Profile
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
-</script>
-
-
-    <script src="/js/search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-  <section id="search-content" class="py-2">
-    <div class="container" id="search-results"></div>
-  </section>
-</body>
-
-</html>
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta http-equiv=Accept-CH content="DPR, Viewport-Width, Width"><link rel=icon href=https://dnduykhoa.github.io/my-blog/fav.png type=image/gif><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet></noscript><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/font.css media=all><meta property="og:url" content="https://dnduykhoa.github.io/my-blog/blogs/java/java-oop/"><meta property="og:site_name" content="Blog Lập Trình"><meta property="og:title" content="Lập trình Hướng Đối Tượng (OOP) trong Java"><meta property="og:description" content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng"><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="blogs"><meta property="article:published_time" content="2025-10-03T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-03T00:00:00+00:00"><meta property="article:tag" content="Java"><meta property="article:tag" content="Oop"><meta property="article:tag" content="Class"><meta property="article:tag" content="Object"><meta name=twitter:card content="summary"><meta name=twitter:title content="Lập trình Hướng Đối Tượng (OOP) trong Java"><meta name=twitter:description content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/header.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/footer.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/theme.css media=all><style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#ffffff;--background-color-dark:#18191a;--secondary-background-color-dark:#212529;--primary-color-dark:#ffffff;--secondary-color-dark:#212529}body{font-size:"1rem";font-weight:"400";line-height:"1.5";text-align:"left"}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style><meta name=description content="Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng"><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/single.css><script defer src=https://dnduykhoa.github.io/my-blog/fontawesome-6/all-6.4.2.js></script><title>Lập trình Hướng Đối Tượng (OOP) trong Java | Blog Lập Trình</title></head><body class=light><script>let localStorageValue=localStorage.getItem("pref-theme"),mediaQuery=window.matchMedia("(prefers-color-scheme: dark)").matches;switch(localStorageValue){case"dark":document.body.classList.add("dark");break;case"light":document.body.classList.remove("dark");break;default:mediaQuery&&document.body.classList.add("dark");break}</script><header id=profileHeader><nav class="pt-3 navbar navbar-expand-lg"><div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5"><a class="navbar-brand primary-font text-wrap" href=https://dnduykhoa.github.io/my-blog/>Blog Lập Trình Java & JavaScript
+</a><button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
+<svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg></button><div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent><ul class="navbar-nav ms-auto text-center"><li class="nav-item navbar-text d-block d-md-none"><div class=nav-link><input id=search autocomplete=off class="form-control mr-sm-2" placeholder='Ctrl + k to Search...' aria-label=Search oninput=searchOnChange(event)></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/ title>Trang chủ</a></li><li class="nav-item navbar-text dropdown"><a class="nav-link dropdown-toggle" href=https://dnduykhoa.github.io/my-blog/blogs id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false title>Blog</a><div class="dropdown-menu shadow-lg rounded" aria-labelledby=navbarDropdown><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/java title>Java
+</a><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/javascript title>JavaScript</a></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/about title>Giới Thiệu</a></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/contact title>Liên Hệ</a></li><li class="nav-item navbar-text"><div class=text-center><button id=theme-toggle>
+<svg id="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></li></ul></div></div></nav></header><div id=content><section id=single><div class=container><div class="row justify-content-center"><div class="col-sm-12 col-md-12 col-lg-9"><div class=pr-lg-4><div class="title mb-5"><h1 class="text-center mb-4">Lập trình Hướng Đối Tượng (OOP) trong Java</h1><div class=text-center>Đào Nguyễn Duy Khoa <small>|</small>
+03/10/2025</div></div><article class="page-content p-2"><hr><h2 id=1-mở-đầu>1. Mở đầu</h2><p>Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với <strong>biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển</strong>. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.</p><p>Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&mldr;), nếu chỉ viết code bằng <code>if-else</code> và <code>for</code> thì chương trình sẽ trở nên <strong>rối rắm, khó bảo trì</strong>.</p><blockquote><p>Hồi mới học OOP, mình cực kỳ rối giữa class và object. Mình cứ nghĩ chúng giống nhau. Chỉ khi làm mini project quản lý sinh viên trong Hugo blog của mình, mình mới ngộ ra: class giống như bản thiết kế, còn object là sản phẩm tạo ra. Bạn có thấy vậy không?</p></blockquote><p>👉 Đó là lúc <strong>Lập trình Hướng Đối Tượng (OOP – Object-Oriented Programming)</strong> xuất hiện để giải quyết vấn đề.
+Java chính là một trong những ngôn ngữ tiêu biểu nhất cho OOP.</p><hr><h2 id=2-oop-là-gì>2. OOP là gì?</h2><p><strong>OOP</strong> là phương pháp lập trình lấy <strong>đối tượng (object)</strong> làm trung tâm.
+Trong đời sống, chúng ta thấy mọi thứ đều là <strong>đối tượng</strong>: Sinh viên, Sách, Ô tô, Tài khoản ngân hàng…</p><p>Mỗi đối tượng có:</p><ul><li><strong>Thuộc tính (Attributes)</strong>: đặc điểm, dữ liệu của nó.</li><li><strong>Phương thức (Methods)</strong>: hành động mà nó thực hiện được.</li></ul><p>Ví dụ:</p><ul><li><p>Đối tượng “Sinh viên”:</p><ul><li>Thuộc tính: <code>tên</code>, <code>mã số</code>, <code>ngành học</code>.</li><li>Phương thức: <code>đăng ký môn học()</code>, <code>tính điểm()</code>.</li></ul></li></ul><p>👉 Đây chính là cách mà Java giúp chúng ta <strong>mô phỏng thế giới thực bằng code</strong>.</p><hr><h2 id=3-các-khái-niệm-cơ-bản>3. Các khái niệm cơ bản</h2><h3 id=31-class-và-object>3.1 Class và Object</h3><ul><li><strong>Class (lớp)</strong>: Bản thiết kế, khuôn mẫu cho đối tượng.</li><li><strong>Object (đối tượng)</strong>: Thực thể được tạo ra từ class.</li></ul><p>Ví dụ:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Student</span> {
+</span></span><span style=display:flex><span>    String name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> age;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>study</span>() {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(name <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang học Java&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Main</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        Student sv <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Student();
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Khoa&#34;</span>;
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> 21;
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>study</span>();  <span style=color:#75715e>// Output: Khoa đang học Java</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=4-bốn-tính-chất-quan-trọng-của-oop>4. Bốn tính chất quan trọng của OOP</h2><h3 id=41-đóng-gói-encapsulation>4.1 Đóng gói (Encapsulation)</h3><ul><li>Giấu chi tiết bên trong đối tượng.</li><li>Chỉ cho phép truy cập thông qua <strong>getter</strong> và <strong>setter</strong>.</li></ul><p>Ví dụ:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BankAccount</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>double</span> balance;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>deposit</span>(<span style=color:#66d9ef>double</span> amount) {
+</span></span><span style=display:flex><span>        balance <span style=color:#f92672>+=</span> amount;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>double</span> <span style=color:#a6e22e>getBalance</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> balance;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>👉 <code>balance</code> bị ẩn đi, không thể thay đổi trực tiếp từ bên ngoài.</p><hr><h3 id=42-kế-thừa-inheritance>4.2 Kế thừa (Inheritance)</h3><ul><li>Một class có thể <strong>kế thừa</strong> từ class khác.</li><li>Giúp tái sử dụng code, mở rộng tính năng.</li></ul><p>Ví dụ:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> {
+</span></span><span style=display:flex><span>    String name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>eat</span>() {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(name <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang ăn&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Student</span> <span style=color:#66d9ef>extends</span> Person {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>study</span>() {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(name <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang học&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Main</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        Student sv <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Student();
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Lan&#34;</span>;
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>eat</span>();
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>study</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=43-đa-hình-polymorphism>4.3 Đa hình (Polymorphism)</h3><ul><li><strong>Nhiều hình thái khác nhau</strong> của cùng một phương thức.</li><li>Gồm <strong>Overloading</strong> và <strong>Overriding</strong>.</li></ul><p>Ví dụ Overloading:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Calculator</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>add</span>(<span style=color:#66d9ef>int</span> a, <span style=color:#66d9ef>int</span> b) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> <span style=color:#a6e22e>add</span>(<span style=color:#66d9ef>double</span> a, <span style=color:#66d9ef>double</span> b) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Ví dụ Overriding:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sound</span>() { System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Động vật kêu&#34;</span>); }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> <span style=color:#66d9ef>extends</span> Animal {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sound</span>() { System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Gâu gâu&#34;</span>); }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h3 id=44-trừu-tượng-abstraction>4.4 Trừu tượng (Abstraction)</h3><ul><li>Ẩn chi tiết, chỉ cho người dùng thấy <strong>cái gì làm được</strong> chứ không cần biết <strong>làm thế nào</strong>.</li><li>Thực hiện bằng <strong>Abstract class</strong> hoặc <strong>Interface</strong>.</li></ul><p>Ví dụ Abstract:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>abstract</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>abstract</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sound</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Cat</span> <span style=color:#66d9ef>extends</span> Animal {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>sound</span>() { System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Meo meo&#34;</span>); }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Ví dụ Interface:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>Vehicle</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>move</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Car</span> <span style=color:#66d9ef>implements</span> Vehicle {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>move</span>() {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Ô tô di chuyển bằng bánh xe&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=5-ví-dụ-tổng-hợp>5. Ví dụ tổng hợp</h2><p>Giả sử bạn cần mô phỏng <strong>quản lý sinh viên</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> {
+</span></span><span style=display:flex><span>    String name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> age;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Student</span> <span style=color:#66d9ef>extends</span> Person {
+</span></span><span style=display:flex><span>    String studentId;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>study</span>() {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(name <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; đang học&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Main</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        Student sv <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Student();
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Khoa&#34;</span>;
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> 21;
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>studentId</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;SV001&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Tên: &#34;</span> <span style=color:#f92672>+</span> sv.<span style=color:#a6e22e>name</span>);
+</span></span><span style=display:flex><span>        sv.<span style=color:#a6e22e>study</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><h2 id=6-lỗi-thường-gặp>6. Lỗi thường gặp</h2><table><thead><tr><th>Lỗi</th><th>Nguyên nhân</th><th>Cách khắc phục</th></tr></thead><tbody><tr><td><code>cannot find symbol</code></td><td>Gọi đến biến/phương thức chưa định nghĩa</td><td>Kiểm tra chính tả, khai báo đầy đủ</td></tr><tr><td><code>NullPointerException</code></td><td>Đối tượng chưa được khởi tạo bằng <code>new</code></td><td>Dùng <code>new</code> để tạo object</td></tr><tr><td>Lạm dụng kế thừa</td><td>Kế thừa không hợp lý, gây rối code</td><td>Chỉ kế thừa khi có quan hệ “is-a”</td></tr></tbody></table><hr><h2 id=7-bài-tập-nhỏ>7. Bài tập nhỏ</h2><ol><li>Tạo class <code>Animal</code> với phương thức <code>sound()</code>. Kế thừa tạo <code>Dog</code> và <code>Cat</code> rồi override <code>sound()</code>.</li><li>Viết chương trình quản lý <strong>sách trong thư viện</strong>: class <code>Book</code> (title, author, year), thêm phương thức in thông tin.</li><li>Tạo interface <code>Shape</code> với phương thức <code>area()</code>. Cài đặt <code>Rectangle</code> và <code>Circle</code>.</li></ol><hr><h2 id=8-tổng-kết>8. Tổng kết</h2><p>Trong bài này, bạn đã học:</p><ul><li>OOP là gì và tại sao quan trọng.</li><li>Các khái niệm class, object.</li><li>4 tính chất cơ bản: <strong>Đóng gói, Kế thừa, Đa hình, Trừu tượng</strong>.</li><li>Ví dụ tổng hợp và các lỗi thường gặp.</li></ul><p>👉 Đây chính là <strong>linh hồn của Java</strong>. Khi nắm vững OOP, bạn sẽ dễ dàng học tiếp các framework như Spring, Hibernate hoặc phát triển ứng dụng Android.</p><p>Ở <strong>bài 4</strong>, chúng ta sẽ tìm hiểu:
+<strong>“Thư viện & Công cụ mạnh mẽ trong Java”</strong> – gồm Collections, Exception Handling và IO.</p><hr><p><em>Hẹn gặp bạn ở Bài 4 nhé!</em> 🚀</p></article></div></div><div class="col-sm-12 col-md-12 col-lg-3"><div id=stickySideBar class=sticky-sidebar><aside class=toc><h5>Mục lục</h5><div class=toc-content><nav id=TableOfContents><ul><li><a href=#1-mở-đầu>1. Mở đầu</a></li><li><a href=#2-oop-là-gì>2. OOP là gì?</a></li><li><a href=#3-các-khái-niệm-cơ-bản>3. Các khái niệm cơ bản</a><ul><li><a href=#31-class-và-object>3.1 Class và Object</a></li></ul></li><li><a href=#4-bốn-tính-chất-quan-trọng-của-oop>4. Bốn tính chất quan trọng của OOP</a><ul><li><a href=#41-đóng-gói-encapsulation>4.1 Đóng gói (Encapsulation)</a></li><li><a href=#42-kế-thừa-inheritance>4.2 Kế thừa (Inheritance)</a></li><li><a href=#43-đa-hình-polymorphism>4.3 Đa hình (Polymorphism)</a></li><li><a href=#44-trừu-tượng-abstraction>4.4 Trừu tượng (Abstraction)</a></li></ul></li><li><a href=#5-ví-dụ-tổng-hợp>5. Ví dụ tổng hợp</a></li><li><a href=#6-lỗi-thường-gặp>6. Lỗi thường gặp</a></li><li><a href=#7-bài-tập-nhỏ>7. Bài tập nhỏ</a></li><li><a href=#8-tổng-kết>8. Tổng kết</a></li></ul></nav></div></aside><aside class=tags><h5>Tags</h5><ul class="tags-ul list-unstyled list-inline"><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/java target=_blank>java</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/oop target=_blank>oop</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/class target=_blank>class</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/object target=_blank>object</a></li></ul></aside><aside class=social><h5>Social</h5><div class=social-content><ul class=list-inline><li class="list-inline-item text-center"><a target=_blank href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-linkedin"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://twitter.com/share?text=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-twitter"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://api.whatsapp.com/send?text=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java: https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjava%2fjava-oop%2f"><i class="fab fa-whatsapp"></i></a></li><li class="list-inline-item text-center"><a target=_blank href='mailto:?subject=L%e1%ba%adp%20tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20%28OOP%29%20trong%20Java&amp;body=Check%20out%20this%20site https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjava%2fjava-oop%2f'><i class="fa fa-envelope"></i></a></li></ul></div></aside></div></div></div><div class=row><div class="col-sm-12 col-md-12 col-lg-9 p-4"></div></div></div><button class="p-2 px-3" onclick=topFunction() id=topScroll>
+<i class="fas fa-angle-up"></i></button></section><div class=progress><div id=scroll-progress-bar class=progress-bar role=progressbar aria-valuenow=0 aria-valuemin=0 aria-valuemax=100></div></div><script src=https://dnduykhoa.github.io/my-blog/js/scrollProgressBar.js></script><script>var topScroll=document.getElementById("topScroll");window.onscroll=function(){scrollFunction()};function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?topScroll.style.display="block":topScroll.style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}let stickySideBarElem=document.getElementById("stickySideBar"),stickyNavBar=!1;if(stickyNavBar){let e=document.getElementById("profileHeader"),t=(e?.offsetHeight||35)+15;stickySideBarElem.style.top=t+"px"}else stickySideBarElem.style.top="50px"</script></div><footer><div class="text-center pt-2"></div><div class="container py-4"><div class="row justify-content-center"><div class="col-md-4 text-center">&copy; 2025 All Rights Reserved<div class=text-secondary>Made with
+<span class=text-danger>&#10084;
+</span>and
+<a href=https://github.com/gurusabarish/hugo-profile target=_blank title="Designed and developed by gurusabarish">Hugo Profile</a></div></div></div></div></footer><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js integrity=sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 crossorigin=anonymous></script><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))});var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e)})</script><script src=https://dnduykhoa.github.io/my-blog/js/search.js></script><section id=search-content class=py-2><div class=container id=search-results></div></section></body></html>

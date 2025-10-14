@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Java on Blog Lập Trình</title>
-    <link>http://localhost:1313/categories/java/</link>
-    <description>Recent content in Java on Blog Lập Trình</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/java/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lập trình Hướng Đối Tượng (OOP) trong Java</title>
-      <link>http://localhost:1313/blogs/java/java-oop/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/java/java-oop/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển&lt;/strong&gt;. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&amp;hellip;), nếu chỉ viết code bằng &lt;code&gt;if-else&lt;/code&gt; và &lt;code&gt;for&lt;/code&gt; thì chương trình sẽ trở nên &lt;strong&gt;rối rắm, khó bảo trì&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/categories/java/</link><description>Recent content in Java on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Lập trình Hướng Đối Tượng (OOP) trong Java</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-oop/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-oop/</guid><description>&lt;hr&gt;
+&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
+&lt;p&gt;Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển&lt;/strong&gt;. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.&lt;/p&gt;
+&lt;p&gt;Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&amp;hellip;), nếu chỉ viết code bằng &lt;code&gt;if-else&lt;/code&gt; và &lt;code&gt;for&lt;/code&gt; thì chương trình sẽ trở nên &lt;strong&gt;rối rắm, khó bảo trì&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

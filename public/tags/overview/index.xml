@@ -1,26 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Overview on Blog Lập Trình</title>
-    <link>http://localhost:1313/tags/overview/</link>
-    <description>Recent content in Overview on Blog Lập Trình</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/overview/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tổng quan: Học Java từ cơ bản đến ứng dụng</title>
-      <link>http://localhost:1313/blogs/java/java-overview/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/java/java-overview/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào bạn 👋,&#xA;Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc &lt;strong&gt;học lập trình Java&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng câu hỏi đặt ra là: &lt;em&gt;“Mình nên bắt đầu học Java từ đâu? Học như thế nào để có cái nhìn toàn diện?”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó chính là lý do mình viết series &lt;strong&gt;4 bài blog Java cơ bản&lt;/strong&gt; – để giúp bạn đi từ số 0 đến khi có thể viết những chương trình nhỏ và hiểu nền tảng quan trọng nhất của Java.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tổng quan: Học JavaScript từ cơ bản đến ứng dụng</title>
-      <link>http://localhost:1313/blogs/javascript/javascript-overview/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/javascript/javascript-overview/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào bạn 👋,&#xA;Nếu bạn đang tìm hiểu về &lt;strong&gt;lập trình web&lt;/strong&gt;, chắc chắn bạn sẽ gặp cái tên &lt;strong&gt;JavaScript&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;JavaScript chính là ngôn ngữ giúp các trang web trở nên &lt;strong&gt;sống động và tương tác&lt;/strong&gt;. Không có JS, web chỉ là những trang HTML tĩnh.&lt;/p&gt;&#xA;&lt;p&gt;👉 Chính vì vậy, việc học JavaScript là bước đi đầu tiên để trở thành &lt;strong&gt;Front-end Developer&lt;/strong&gt;, hoặc xa hơn là &lt;strong&gt;Fullstack Developer&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/overview/</link><description>Recent content in Overview on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Tổng quan: Học Java từ cơ bản đến ứng dụng</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-overview/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-overview/</guid><description>&lt;hr&gt;
+&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
+&lt;p&gt;Xin chào bạn 👋,
+Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc &lt;strong&gt;học lập trình Java&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Nhưng câu hỏi đặt ra là: &lt;em&gt;“Mình nên bắt đầu học Java từ đâu? Học như thế nào để có cái nhìn toàn diện?”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;👉 Đó chính là lý do mình viết series &lt;strong&gt;4 bài blog Java cơ bản&lt;/strong&gt; – để giúp bạn đi từ số 0 đến khi có thể viết những chương trình nhỏ và hiểu nền tảng quan trọng nhất của Java.&lt;/p&gt;</description></item><item><title>Tổng quan: Học JavaScript từ cơ bản đến ứng dụng</title><link>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-overview/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-overview/</guid><description>&lt;hr&gt;
+&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
+&lt;p&gt;Xin chào bạn 👋,
+Nếu bạn đang tìm hiểu về &lt;strong&gt;lập trình web&lt;/strong&gt;, chắc chắn bạn sẽ gặp cái tên &lt;strong&gt;JavaScript&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;JavaScript chính là ngôn ngữ giúp các trang web trở nên &lt;strong&gt;sống động và tương tác&lt;/strong&gt;. Không có JS, web chỉ là những trang HTML tĩnh.&lt;/p&gt;
+&lt;p&gt;👉 Chính vì vậy, việc học JavaScript là bước đi đầu tiên để trở thành &lt;strong&gt;Front-end Developer&lt;/strong&gt;, hoặc xa hơn là &lt;strong&gt;Fullstack Developer&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

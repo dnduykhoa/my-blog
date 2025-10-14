@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vòng Lặp on Blog Lập Trình</title>
-    <link>http://localhost:1313/tags/v%C3%B2ng-l%E1%BA%B7p/</link>
-    <description>Recent content in Vòng Lặp on Blog Lập Trình</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/v%C3%B2ng-l%E1%BA%B7p/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cấu trúc điều khiển và Hàm trong JavaScript</title>
-      <link>http://localhost:1313/blogs/javascript/javascript-control-functions/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/javascript/javascript-control-functions/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài 1, bạn đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu và toán tử&lt;/strong&gt;. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần &lt;strong&gt;xử lý logic&lt;/strong&gt; để chương trình có thể đưa ra quyết định.&lt;/p&gt;&#xA;&lt;p&gt;Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và &lt;strong&gt;hàm&lt;/strong&gt; xuất hiện.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ hồi đầu học JS, mình viết &lt;code&gt;if (x = 5)&lt;/code&gt; thay vì &lt;code&gt;if (x == 5)&lt;/code&gt; 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vòng Lặp on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/v%C3%B2ng-l%E1%BA%B7p/</link><description>Recent content in Vòng Lặp on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/v%C3%B2ng-l%E1%BA%B7p/index.xml" rel="self" type="application/rss+xml"/><item><title>Cấu trúc điều khiển và Hàm trong JavaScript</title><link>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-control-functions/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-control-functions/</guid><description>&lt;hr&gt;
+&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
+&lt;p&gt;Trong bài 1, bạn đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu và toán tử&lt;/strong&gt;. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần &lt;strong&gt;xử lý logic&lt;/strong&gt; để chương trình có thể đưa ra quyết định.&lt;/p&gt;
+&lt;p&gt;Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và &lt;strong&gt;hàm&lt;/strong&gt; xuất hiện.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mình còn nhớ hồi đầu học JS, mình viết &lt;code&gt;if (x = 5)&lt;/code&gt; thay vì &lt;code&gt;if (x == 5)&lt;/code&gt; 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?&lt;/p&gt;</description></item></channel></rss>

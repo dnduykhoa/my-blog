@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Web on Blog Lập Trình</title>
-    <link>http://localhost:1313/tags/web/</link>
-    <description>Recent content in Web on Blog Lập Trình</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DOM &amp; Tương tác với Web trong JavaScript</title>
-      <link>http://localhost:1313/blogs/javascript/javascript-dom-web/</link>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogs/javascript/javascript-dom-web/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn đã biết &lt;strong&gt;Object, Array, OOP&lt;/strong&gt; trong JavaScript. Nhưng JS sẽ chẳng có ý nghĩa gì nếu nó không &lt;strong&gt;tương tác với HTML/CSS&lt;/strong&gt; để làm web sống động.&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó chính là &lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; – cây mô hình đại diện cho toàn bộ trang web.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ lần đầu viết code &lt;code&gt;document.getElementById(&amp;quot;title&amp;quot;).innerText = &amp;quot;Xin chào JS&amp;quot;;&lt;/code&gt; và thấy ngay dòng chữ trên web thay đổi. Mình cảm thấy “wow, mình vừa điều khiển được cả website bằng code của mình!”. Bạn có nhớ lần đầu tiên bạn thấy web “chuyển động” nhờ JS không?&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/web/</link><description>Recent content in Web on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>DOM &amp; Tương tác với Web trong JavaScript</title><link>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-dom-web/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-dom-web/</guid><description>&lt;hr&gt;
+&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
+&lt;p&gt;Bạn đã biết &lt;strong&gt;Object, Array, OOP&lt;/strong&gt; trong JavaScript. Nhưng JS sẽ chẳng có ý nghĩa gì nếu nó không &lt;strong&gt;tương tác với HTML/CSS&lt;/strong&gt; để làm web sống động.&lt;/p&gt;
+&lt;p&gt;👉 Đó chính là &lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; – cây mô hình đại diện cho toàn bộ trang web.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mình còn nhớ lần đầu viết code &lt;code&gt;document.getElementById(&amp;quot;title&amp;quot;).innerText = &amp;quot;Xin chào JS&amp;quot;;&lt;/code&gt; và thấy ngay dòng chữ trên web thay đổi. Mình cảm thấy “wow, mình vừa điều khiển được cả website bằng code của mình!”. Bạn có nhớ lần đầu tiên bạn thấy web “chuyển động” nhờ JS không?&lt;/p&gt;</description></item></channel></rss>
