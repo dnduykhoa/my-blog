@@ -3,7 +3,6 @@ languageCode = "vi"
 title = "Blog Lập Trình"
 
 theme = "hugo-profile"
-publishDir = "docs"
 
 [params]
   title = "Blog Lập Trình Java & JavaScript"
