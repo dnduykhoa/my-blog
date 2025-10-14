@@ -1,13 +1,16 @@
-baseURL = "https://dnduykhoa.github.io/"
+baseURL = "https://dnduykhoa.github.io/my-blog"
 languageCode = "vi"
 title = "Blog Lập Trình"
 
 theme = "hugo-profile"
+publishDir = "docs"
 
 [params]
   title = "Blog Lập Trình Java & JavaScript"
   description = "Chia sẻ kiến thức về lập trình web"
   dateFormat = "02/01/2006" 
+  staticPath = ""
+  UseBootstrapCDN = true
 
   [params.datesFormat]
     article = "02/01/2006"
