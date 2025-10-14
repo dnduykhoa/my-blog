@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Lập Trình</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <managingEditor>your.email@example.com (Đào Nguyễn Duy Khoa)</managingEditor>
+    <webMaster>your.email@example.com (Đào Nguyễn Duy Khoa)</webMaster>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Array on Blog Lập Trình</title>
+    <link>http://localhost:1313/tags/array/</link>
+    <description>Recent content in Array on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Đối tượng, Mảng và OOP trong JavaScript</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-objects-arrays-oop/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-objects-arrays-oop/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài 2, bạn đã biết cách sử dụng &lt;strong&gt;if, vòng lặp và hàm&lt;/strong&gt; để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách &lt;strong&gt;tổ chức dữ liệu&lt;/strong&gt; hiệu quả hơn.&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó là lý do có &lt;strong&gt;Object (đối tượng)&lt;/strong&gt; và &lt;strong&gt;Array (mảng)&lt;/strong&gt;, hai cấu trúc dữ liệu cốt lõi trong JavaScript. Và để nâng cao, ta có &lt;strong&gt;OOP (Object-Oriented Programming)&lt;/strong&gt; với class và prototype.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

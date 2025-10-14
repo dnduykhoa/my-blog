@@ -1,0 +1,125 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Site.Params.description }}">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
+{{ end }}
+
+{{ define "title" }}
+{{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<section class="home-hero">
+  <div class="container px-3 px-sm-5">
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-7">
+        <p class="subtitle">{{ .Site.Params.hero.intro }}</p>
+        <h1 class="hero-title gradient-text">{{ .Site.Params.hero.title }}</h1>
+        <h2 class="hero-subtitle">{{ .Site.Params.hero.subtitle }}</h2>
+        <p class="hero-desc">{{ .Site.Params.hero.content }}</p>
+        <!-- Typewriter -->
+        <p class="hero-typed">Viết về <span id="typewriter" data-words='["Java","JavaScript","Thuật toán","Web Development"]'></span></p>
+
+        <!-- Badges -->
+        <div class="hero-badges">
+          {{ $posts := where $.Site.RegularPages "Section" "blogs" }}
+          <span class="badge pill">{{ len $posts }} bài viết</span>
+          <span class="dot">•</span>
+          <span class="badge pill">{{ len $.Site.Taxonomies.tags }} tags</span>
+        </div>
+
+        <a href="#featured" class="scroll-down" aria-label="Scroll xuống">↓</a>
+      </div>
+
+      <div class="col-sm-12 col-md-5">
+        <div class="hero-photo-wrap glow">
+          <img src="{{ .Site.Params.hero.image }}" alt="{{ .Site.Params.author.name }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="home-featured">
+  <div class="container px-3 px-sm-5">
+    <div class="section-head">
+      <h3>Bài viết mới</h3>
+      <a class="see-all" href="/blogs">Xem tất cả</a>
+    </div>
+
+    <div class="row">
+      {{ range first 6 (where .Site.RegularPages "Section" "blogs") }}
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="{{ .RelPermalink }}">
+          <article class="post-card h-100 tilt">
+            {{ with .Params.image }}
+              <div class="thumb"><img src="{{ . }}" alt="{{ $.Title }}"></div>
+            {{ end }}
+            <div class="body">
+              <h5 class="title" title="{{ .Title }}">{{ .Title }}</h5>
+              <p class="summary">{{ .Summary | plainify | truncate 140 }}</p>
+            </div>
+            <div class="meta">
+              <span class="date">{{ .Date.Format "02/01/2006" }}</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="home-tags">
+  <div class="container px-3 px-sm-5">
+    <div class="section-head"><h3>Tags phổ biến</h3></div>
+    <div class="tags reveal">
+      {{ range first 12 (sort .Site.Taxonomies.tags "Count" "desc") }}
+        <a class="tag" href="{{ .Page.RelPermalink }}">#{{ .Page.Title }} <span>{{ .Count }}</span></a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Micro interactions -->
+<script>
+// Typewriter
+(function(){
+  const el = document.getElementById('typewriter');
+  if (!el) return;
+  const words = JSON.parse(el.dataset.words || '[]');
+  let i=0, j=0, dir=1;
+  function tick(){
+    const w = words[i] || "";
+    j += dir;
+    el.textContent = w.slice(0, j);
+    if (j === w.length + 8) dir = -1;
+    if (j === 0){ dir = 1; i = (i+1)%words.length; }
+    setTimeout(tick, 80);
+  }
+  tick();
+})();
+
+// Reveal on scroll
+(function(){
+  const IO = new IntersectionObserver(entries=>{
+    entries.forEach(e=> e.target.classList.toggle('show', e.isIntersecting));
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>IO.observe(el));
+})();
+
+// Card tilt
+(function(){
+  const max = 8;
+  document.querySelectorAll('.tilt').forEach(card=>{
+    card.addEventListener('mousemove', (e)=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - .5;
+      const y = (e.clientY - r.top)/r.height - .5;
+      card.style.transform = `rotateX(${(-y*max)}deg) rotateY(${(x*max)}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', ()=> card.style.transform = '');
+  });
+})();
+</script>
+{{ end }}

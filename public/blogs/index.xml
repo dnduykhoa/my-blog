@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Blog Lập Trình</title>
+    <link>http://localhost:1313/blogs/</link>
+    <description>Recent content in Blog on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tổng quan: Học Java từ cơ bản đến ứng dụng</title>
+      <link>http://localhost:1313/blogs/java/java-overview/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/java/java-overview/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào bạn 👋,&#xA;Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc &lt;strong&gt;học lập trình Java&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng câu hỏi đặt ra là: &lt;em&gt;“Mình nên bắt đầu học Java từ đâu? Học như thế nào để có cái nhìn toàn diện?”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó chính là lý do mình viết series &lt;strong&gt;4 bài blog Java cơ bản&lt;/strong&gt; – để giúp bạn đi từ số 0 đến khi có thể viết những chương trình nhỏ và hiểu nền tảng quan trọng nhất của Java.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tổng quan: Học JavaScript từ cơ bản đến ứng dụng</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-overview/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-overview/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào bạn 👋,&#xA;Nếu bạn đang tìm hiểu về &lt;strong&gt;lập trình web&lt;/strong&gt;, chắc chắn bạn sẽ gặp cái tên &lt;strong&gt;JavaScript&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;JavaScript chính là ngôn ngữ giúp các trang web trở nên &lt;strong&gt;sống động và tương tác&lt;/strong&gt;. Không có JS, web chỉ là những trang HTML tĩnh.&lt;/p&gt;&#xA;&lt;p&gt;👉 Chính vì vậy, việc học JavaScript là bước đi đầu tiên để trở thành &lt;strong&gt;Front-end Developer&lt;/strong&gt;, hoặc xa hơn là &lt;strong&gt;Fullstack Developer&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Cơ Bản – Nền tảng cho người mới bắt đầu</title>
+      <link>http://localhost:1313/blogs/java/java-basic/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/java/java-basic/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi: &lt;em&gt;“Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả trí tuệ nhân tạo?”&lt;/em&gt;&#xA;Câu trả lời nằm ở sự &lt;strong&gt;đơn giản, mạnh mẽ và ổn định&lt;/strong&gt; mà Java mang lại.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ &lt;code&gt;java -version&lt;/code&gt; mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript Cơ Bản – Nền tảng ngôn ngữ web</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-basic/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-basic/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là &lt;strong&gt;linh hồn&lt;/strong&gt; giúp trang web sống động và tương tác.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Lần đầu mình thử viết JS, mình thêm &lt;code&gt;document.getElementById(&amp;quot;demo&amp;quot;).innerText = &amp;quot;Hello JS&amp;quot;;&lt;/code&gt; mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai &lt;code&gt;id&lt;/code&gt; 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu trúc điều khiển và Hàm trong JavaScript</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-control-functions/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-control-functions/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài 1, bạn đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu và toán tử&lt;/strong&gt;. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần &lt;strong&gt;xử lý logic&lt;/strong&gt; để chương trình có thể đưa ra quyết định.&lt;/p&gt;&#xA;&lt;p&gt;Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và &lt;strong&gt;hàm&lt;/strong&gt; xuất hiện.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ hồi đầu học JS, mình viết &lt;code&gt;if (x = 5)&lt;/code&gt; thay vì &lt;code&gt;if (x == 5)&lt;/code&gt; 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu trúc và Dữ liệu trong Java</title>
+      <link>http://localhost:1313/blogs/java/java-structures-and-data/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/java/java-structures-and-data/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài trước, bạn đã chạy thành công chương trình &lt;strong&gt;Hello World&lt;/strong&gt;. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra màn hình, đúng không?&#xA;Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu chương.&lt;/p&gt;&#xA;&lt;p&gt;Để viết những chương trình hữu ích, bạn cần biết cách &lt;strong&gt;&amp;ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&amp;rdquo;&lt;/strong&gt; và &lt;strong&gt;&amp;ldquo;xử lý logic (if-else, vòng lặp)&amp;rdquo;&lt;/strong&gt;. Đây là &lt;strong&gt;“xương sống”&lt;/strong&gt; của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Đối tượng, Mảng và OOP trong JavaScript</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-objects-arrays-oop/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-objects-arrays-oop/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài 2, bạn đã biết cách sử dụng &lt;strong&gt;if, vòng lặp và hàm&lt;/strong&gt; để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách &lt;strong&gt;tổ chức dữ liệu&lt;/strong&gt; hiệu quả hơn.&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó là lý do có &lt;strong&gt;Object (đối tượng)&lt;/strong&gt; và &lt;strong&gt;Array (mảng)&lt;/strong&gt;, hai cấu trúc dữ liệu cốt lõi trong JavaScript. Và để nâng cao, ta có &lt;strong&gt;OOP (Object-Oriented Programming)&lt;/strong&gt; với class và prototype.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lập trình Hướng Đối Tượng (OOP) trong Java</title>
+      <link>http://localhost:1313/blogs/java/java-oop/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/java/java-oop/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển&lt;/strong&gt;. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&amp;hellip;), nếu chỉ viết code bằng &lt;code&gt;if-else&lt;/code&gt; và &lt;code&gt;for&lt;/code&gt; thì chương trình sẽ trở nên &lt;strong&gt;rối rắm, khó bảo trì&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DOM &amp; Tương tác với Web trong JavaScript</title>
+      <link>http://localhost:1313/blogs/javascript/javascript-dom-web/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/javascript/javascript-dom-web/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn đã biết &lt;strong&gt;Object, Array, OOP&lt;/strong&gt; trong JavaScript. Nhưng JS sẽ chẳng có ý nghĩa gì nếu nó không &lt;strong&gt;tương tác với HTML/CSS&lt;/strong&gt; để làm web sống động.&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó chính là &lt;strong&gt;DOM (Document Object Model)&lt;/strong&gt; – cây mô hình đại diện cho toàn bộ trang web.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ lần đầu viết code &lt;code&gt;document.getElementById(&amp;quot;title&amp;quot;).innerText = &amp;quot;Xin chào JS&amp;quot;;&lt;/code&gt; và thấy ngay dòng chữ trên web thay đổi. Mình cảm thấy “wow, mình vừa điều khiển được cả website bằng code của mình!”. Bạn có nhớ lần đầu tiên bạn thấy web “chuyển động” nhờ JS không?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thư viện &amp; Công cụ mạnh mẽ trong Java</title>
+      <link>http://localhost:1313/blogs/java/java-libraries-tools/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/java/java-libraries-tools/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Sau khi đã học về &lt;strong&gt;ngôn ngữ cơ bản&lt;/strong&gt; và &lt;strong&gt;OOP&lt;/strong&gt;, bạn có thể viết được nhiều chương trình nhỏ.&#xA;Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng những &lt;strong&gt;thư viện và công cụ mạnh mẽ&lt;/strong&gt; mà Java cung cấp sẵn.&lt;/p&gt;&#xA;&lt;p&gt;Trong bài này, chúng ta sẽ tìm hiểu ba “vũ khí” quan trọng:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collections Framework&lt;/strong&gt; – để quản lý dữ liệu phức tạp.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exception Handling&lt;/strong&gt; – để xử lý lỗi an toàn.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Input/Output (I/O)&lt;/strong&gt; – để đọc và ghi dữ liệu từ file.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Cuối cùng, mình cũng sẽ giới thiệu ngắn gọn những &lt;strong&gt;hướng phát triển nâng cao&lt;/strong&gt; như JDBC, JavaFX, Spring, Android.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,228 @@
+/* about.css - Hồ sơ cá nhân hai cột (aside trái + nội dung phải) */
+
+/* ==== Base layout ==== */
+#single {
+  padding: 60px 0;
+  line-height: 1.7;
+  font-size: 17px;
+  color: var(--text-color);
+}
+
+#single .title > h1 {
+  opacity: 0.9;
+  color: var(--text-color);
+}
+
+/* ==== CỘT TRÁI - ASIDE ==== */
+#single aside.aboutImg {
+  padding: 1.25rem;
+  background: var(--secondary-background-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+#single .avatar-wrap img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  margin: 0.5rem auto 1rem;
+}
+
+#single .name-heading {
+  font-size: 1.25rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Social links */
+#single .social-links .list-inline-item {
+  margin: 0 6px;
+}
+
+#single .social-links .list-inline-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+#single .social-links .list-inline-item a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+/* Aside section titles */
+.aside-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0 0.4rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.icon-circle {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* List items trong aside */
+#single .aside-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.4rem 0 1rem 0;
+  text-align: left;
+  color: var(--text-secondary-color);
+  font-size: 0.95rem;
+}
+
+#single .aside-list li {
+  margin-bottom: 0.7rem;
+  line-height: 1.45;
+}
+
+#single .aside-list a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#single .aside-list a:hover {
+  text-decoration: underline;
+}
+
+/* Detail nhỏ hơn trong học vấn */
+.aside-list .edu-detail {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+  margin-top: 2px;
+}
+
+/* ==== CỘT PHẢI - PAGE CONTENT ==== */
+#single .page-content {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  margin-top: -50px;
+}
+
+/* Tiêu đề lớn (## trong Markdown) */
+#single .page-content h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+
+  /* Hiệu ứng chữ gradient */
+  background: linear-gradient(90deg, var(--primary-color), #ff8800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tiêu đề nhỏ (### trong Markdown) */
+#single .page-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Danh sách trong nội dung */
+#single .page-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1.3rem;
+}
+
+#single .page-content li {
+  margin-bottom: 0.4rem;
+}
+
+/* ==== Skill bar ==== */
+.skill-item {
+  margin-bottom: 0.9rem;
+}
+
+.skill-bar {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.skill-bar > i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--primary-color);
+}
+
+/* ==== Scroll to top button ==== */
+#single #topScroll {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 1.2rem;
+}
+
+#single #topScroll:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 991px) {
+  #single aside.aboutImg {
+    margin-bottom: 1rem;
+  }
+  #single .avatar-wrap img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 575px) {
+  #single aside.aboutImg img {
+    width: 130px;
+    height: 130px;
+  }
+  .icon-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}

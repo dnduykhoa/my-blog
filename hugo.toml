@@ -1,0 +1,94 @@
+baseURL = "https://dnduykhoa.github.io/"
+languageCode = "vi"
+title = "Blog Lập Trình"
+
+theme = "hugo-profile"
+
+[params]
+  title = "Blog Lập Trình Java & JavaScript"
+  description = "Chia sẻ kiến thức về lập trình web"
+  dateFormat = "02/01/2006" 
+
+  [params.datesFormat]
+    article = "02/01/2006"
+    articleList = "02/01/2006"
+
+  [params.author]
+    name = "Đào Nguyễn Duy Khoa"
+
+  [params.hero]
+    enable = true
+    intro = "Xin chào, mình là"
+    title = "Đào Nguyễn Duy Khoa"
+    subtitle = "Sinh viên ngành CNTT - HUTECH"
+    content = "Đam mê phát triển web và chia sẻ kiến thức"
+    image = "/images/avatar.jpeg"
+
+  [params.navbar]
+    enable = true
+    showSearch = false
+    showToggle = false
+    showRSS = false
+    alignment = "center"
+    searchDisplay = false
+    brandDisplay = true
+    brandalignment = "left"
+
+  [params.search]
+    enable = false
+    type = "hidden"
+    placeholder = ""
+    clearButton = false
+
+  [outputs]
+    home = ["HTML"]
+    
+  [[menu.main]]
+    name = "Trang chủ"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blogs"
+    weight = 2
+
+  [[menu.main]]
+    name = "Java"
+    url = "/blogs/java"
+    parent = "Blog"
+    weight = 1
+
+  [[menu.main]]
+    name = "JavaScript"
+    url = "/blogs/javascript"
+    parent = "Blog"
+    weight = 2
+
+  [[menu.main]]
+    name = "Giới Thiệu"
+    url = "/about"
+    weight = 3
+
+  [[menu.main]]
+    name = "Liên Hệ"
+    url = "/contact"
+    weight = 4
+
+  [params.blog]
+    enable = true
+    showDate = true
+    showTags = true
+    showAuthor = true
+    authorImage = true
+    showRecentPosts = true  
+    recentPostsLimit = 5
+
+  [taxonomies]
+    tag = "tags"
+    category = "categories"
+  
+  [markup]
+  [markup.goldmark.parser]
+    attribute = true
+    

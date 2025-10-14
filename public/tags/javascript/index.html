@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1313/tags/javascript/">
+  <meta property="og:site_name" content="Blog Lập Trình">
+  <meta property="og:title" content="Javascript">
+  <meta property="og:description" content="Chia sẻ kiến thức về lập trình web">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Javascript">
+  <meta name="twitter:description" content="Chia sẻ kiến thức về lập trình web">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: "1rem";
+        font-weight: "400";
+        line-height: "1.5";
+        text-align: "left";
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Javascript of Blog Lập Trình">
+<link rel="stylesheet" href="/css/list.css" media="all">
+
+
+  
+  
+
+  <title>
+Javascript | Blog Lập Trình
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                Blog Lập Trình Java &amp; JavaScript
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="/blogs" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/blogs/java"
+                                title="">
+                                Java
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/blogs/javascript"
+                                title="">
+                                JavaScript
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/about" title="">
+                            
+                            Giới Thiệu
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/contact" title="">
+                            
+                            Liên Hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header><div id="content">
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">Javascript</h2>
+    <div class="row">
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100"> 
+                
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="/blogs/javascript/javascript-overview/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Tổng quan: Học JavaScript từ cơ bản đến ứng dụng">Tổng quan: Học JavaScript …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Xin chào bạn 👋,
+Nếu bạn đang tìm hiểu về <strong>lập trình web</strong>, chắc chắn bạn sẽ gặp cái tên <strong>JavaScript</strong>.</p>
+<p>JavaScript chính là ngôn ngữ giúp các trang web trở nên <strong>sống động và tương tác</strong>. Không có JS, web chỉ là những trang HTML tĩnh.</p>
+<p>👉 Chính vì vậy, việc học JavaScript là bước đi đầu tiên để trở …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">03/10/2025</span>
+                    <a href="/blogs/javascript/javascript-overview/" class="float-end btn btn-outline-info btn-sm">Đọc</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100"> 
+                
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="/blogs/javascript/javascript-basic/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="JavaScript Cơ Bản – Nền tảng ngôn ngữ web">JavaScript Cơ Bản – Nền …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là <strong>linh hồn</strong> giúp trang web sống động và tương tác.</p>
+<blockquote>
+<p>Lần đầu mình thử viết JS, mình thêm <code>document.getElementById(&quot;demo&quot;).innerText = &quot;Hello JS&quot;;</code> mà chẳng thấy gì thay đổi. Sau một …</p></blockquote></p>
+                    </div>
+                </div>
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">03/10/2025</span>
+                    <a href="/blogs/javascript/javascript-basic/" class="float-end btn btn-outline-info btn-sm">Đọc</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100"> 
+                
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="/blogs/javascript/javascript-control-functions/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Cấu trúc điều khiển và Hàm trong JavaScript">Cấu trúc điều khiển và …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Trong bài 1, bạn đã làm quen với <strong>biến, kiểu dữ liệu và toán tử</strong>. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần <strong>xử lý logic</strong> để chương trình có thể đưa ra quyết định.</p>
+<p>Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và <strong>hàm</strong> xuất hiện.</p>
+<blockquote>
+<p>Mình còn nhớ hồi đầu học JS, mình viết <code>if …</code></p></blockquote></p>
+                    </div>
+                </div>
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">03/10/2025</span>
+                    <a href="/blogs/javascript/javascript-control-functions/" class="float-end btn btn-outline-info btn-sm">Đọc</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100"> 
+                
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="/blogs/javascript/javascript-objects-arrays-oop/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Đối tượng, Mảng và OOP trong JavaScript">Đối tượng, Mảng và OOP …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Trong bài 2, bạn đã biết cách sử dụng <strong>if, vòng lặp và hàm</strong> để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách <strong>tổ chức dữ liệu</strong> hiệu quả hơn.</p>
+<p>👉 Đó là lý do có <strong>Object (đối tượng)</strong> và <strong>Array (mảng)</strong>, hai cấu trúc dữ liệu cốt lõi trong JavaScript. Và để nâng cao, ta có <strong>OOP …</strong></p></p>
+                    </div>
+                </div>
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">03/10/2025</span>
+                    <a href="/blogs/javascript/javascript-objects-arrays-oop/" class="float-end btn btn-outline-info btn-sm">Đọc</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card h-100"> 
+                
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <a href="/blogs/javascript/javascript-dom-web/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="DOM &amp; Tương tác với Web trong JavaScript">DOM &amp; Tương tác với Web …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Bạn đã biết <strong>Object, Array, OOP</strong> trong JavaScript. Nhưng JS sẽ chẳng có ý nghĩa gì nếu nó không <strong>tương tác với HTML/CSS</strong> để làm web sống động.</p>
+<p>👉 Đó chính là <strong>DOM (Document Object Model)</strong> – cây mô hình đại diện cho toàn bộ trang web.</p>
+<blockquote>
+<p>Mình còn nhớ lần đầu viết code …</p></blockquote></p>
+                    </div>
+                </div>
+                <div class="mt-auto post-footer bg-transparent py-3">
+                    <span class="float-start bg-transparent">03/10/2025</span>
+                    <a href="/blogs/javascript/javascript-dom-web/" class="float-end btn btn-outline-info btn-sm">Đọc</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-auto m-3">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+            &copy; 2025  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

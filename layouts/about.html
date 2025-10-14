@@ -1,0 +1,128 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath}}/css/about.css">
+<!-- fontawesome -->
+<script defer src="{{ .Site.Params.staticPath}}/fontawesome-6/all-6.4.2.js"></script>
+{{ end }}
+
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<section id="single">
+  <div class="container">
+    <div class="title mb-3">
+      <h1 class="text-center mb-4">{{ .Title }}</h1>
+    </div>
+
+    <div class="row justify-content-center align-items-start">
+      {{ if .Params.image }}
+      <!-- CỘT TRÁI: aside -->
+      <div class="col-sm-12 col-md-12 col-lg-4 px-3">
+        <div class="sticky-sidebar">
+          <aside class="aboutImg">
+            <div class="text-center avatar-wrap">
+              <img src="{{ .Params.image }}" alt="{{ with .Params.name }}Ảnh của {{ . }}{{ end }}">
+            </div>
+
+            <h2 class="text-center name-heading">
+              {{ with .Params.name }}{{ . }}{{ else }}Tên bạn{{ end }}
+            </h2>
+
+            <div class="aboutImg-content text-center">
+              <ul class="list-inline pt-2 social-links">
+                {{ with .Params.socialLinks.fontAwesomeIcons }}
+                  {{ range . }}
+                    <li class="list-inline-item">
+                      <a href="{{ .url }}" target="_blank" rel="noopener">
+                        <i class="{{ .icon }}"></i>
+                      </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+
+                {{ with .Params.socialLinks.customIcons }}
+                  {{ range . }}
+                    <li class="list-inline-item">
+                      <a href="{{ .url }}" target="_blank" rel="noopener" class="img-icon">
+                        <img src="{{ .icon }}" alt="">
+                      </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+
+            <div class="aside-details pt-3">
+              <h3 class="aside-title"><span class="icon-circle"><i class="fas fa-user"></i></span> Thông Tin Cá Nhân</h3>
+              <ul class="aside-list">
+                <li><strong>Họ và tên:</strong> {{ with .Params.name }}{{ . }}{{ else }}Đào Nguyễn Duy Khoa{{ end }}</li>
+                <li><strong>Ngày sinh:</strong> {{ with .Params.birthday }}{{ . }}{{ else }}08/09/2004{{ end }}</li>
+                <li><strong>Chuyên ngành:</strong> {{ with .Params.major }}{{ . }}{{ else }}Công nghệ phần mềm{{ end }}</li>
+                <li><strong>Trường:</strong> {{ with .Params.university }}{{ . }}{{ else }}Đại học Công nghệ TP.HCM (HUTECH){{ end }}</li>
+              </ul>
+
+              <h3 class="aside-title"><span class="icon-circle"><i class="fas fa-envelope"></i></span> Liên Hệ</h3>
+              <ul class="aside-list">
+                <li><strong>Email:</strong> {{ with .Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ else }}<a href="mailto:dn.duykhoa@gmail.com">dn.duykhoa@gmail.com</a>{{ end }}</li>
+                <li><strong>Điện thoại:</strong> {{ with .Params.phone }}<a href="tel:{{ . }}">{{ . }}</a>{{ else }}0972 350 720{{ end }}</li>
+                <li><strong>GitHub:</strong> {{ with .Params.github }}<a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}<a href="https://github.com/dnduykhoa" target="_blank" rel="noopener">github.com/dnduykhoa</a>{{ end }}</li>
+                <li><strong>Website:</strong> {{ with .Params.website }}<a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }}<a href="https://dnduykhoa.github.io" target="_blank" rel="noopener">dnduykhoa.github.io</a>{{ end }}</li>
+              </ul>
+
+              <h3 class="aside-title"><span class="icon-circle"><i class="fas fa-graduation-cap"></i></span> Học Vấn</h3>
+              <ul class="aside-list">
+                {{ with .Params.education }}
+                  {{ range . }}
+                    <li>
+                        <strong>{{ .period }}</strong><br>
+                                {{ .school }}
+                                {{ with .detail }}<br>{{ . }}{{ end }}
+                    </li>
+                  {{ end }}
+                {{ else }}
+                  <li><strong>2021 — Hiện tại</strong><br>Đại học Công nghệ TP.HCM (Công nghệ phần mềm)</li>
+                  <li><strong>GPA:</strong> {{ with .Params.gpa }}{{ . }}{{ else }}3.2 / 4.0{{ end }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+      {{ end }}
+
+      <!-- CỘT PHẢI: nội dung markdown -->
+      <div class="col-sm-12 col-md-12 col-lg-8 pt-4 p-2">
+        <div class="pr-lg-4">
+          <article class="page-content p-2">
+            {{ .Content | emojify }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function () { scrollFunction(); };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+{{ end }}

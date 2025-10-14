@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Học Lập Trình on Blog Lập Trình</title>
+    <link>http://localhost:1313/tags/h%E1%BB%8Dc-l%E1%BA%ADp-tr%C3%ACnh/</link>
+    <description>Recent content in Học Lập Trình on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <managingEditor>your.email@example.com (Đào Nguyễn Duy Khoa)</managingEditor>
+    <webMaster>your.email@example.com (Đào Nguyễn Duy Khoa)</webMaster>
+    <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/h%E1%BB%8Dc-l%E1%BA%ADp-tr%C3%ACnh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nền Tảng Lập Trình Java – Từ Cơ Bản Đến Ứng Dụng</title>
+      <link>http://localhost:1313/blogs/java/java-basic/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate><author>your.email@example.com (Đào Nguyễn Duy Khoa)</author>
+      <guid>http://localhost:1313/blogs/java/java-basic/</guid>
+      <description>&lt;h1 id=&#34;nền-tảng-lập-trình-java--từ-cơ-bản-đến-ứng-dụng&#34;&gt;Nền Tảng Lập Trình Java – Từ Cơ Bản Đến Ứng Dụng&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-java-là-gì-lịch-sử-và-lý-do-ra-đời&#34;&gt;1. Java là gì? Lịch sử và lý do ra đời&lt;/h2&gt;&#xA;&lt;p&gt;Java là một &lt;strong&gt;ngôn ngữ lập trình hướng đối tượng (OOP)&lt;/strong&gt; được phát triển bởi &lt;strong&gt;Sun Microsystems&lt;/strong&gt; vào năm 1995 (sau này thuộc về Oracle). Ban đầu, Java được tạo ra nhằm phục vụ các thiết bị điện tử như TV thông minh, máy nghe nhạc,&amp;hellip; Tuy nhiên nhờ khả năng &lt;strong&gt;&amp;ldquo;Write Once, Run Anywhere&amp;rdquo; – Viết một lần, chạy mọi nơi&lt;/strong&gt;, Java nhanh chóng trở thành một trong những ngôn ngữ lập trình phổ biến nhất thế giới.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
