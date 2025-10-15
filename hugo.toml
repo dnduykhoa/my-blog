@@ -16,7 +16,6 @@ page = ["HTML", "RSS"]
   title = "Blog Lập Trình Java & JavaScript"
   description = "Chia sẻ kiến thức về lập trình web"
   dateFormat = "02/01/2006"
-  staticPath = ""
   UseBootstrapCDN = true
 
   [params.datesFormat]
