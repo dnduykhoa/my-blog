@@ -3,9 +3,9 @@ languageCode = "vi"
 title = "Blog Lập Trình"
 theme = "hugo-profile"
 
-relativeURLs: false
-canonifyURLs: true
-enableGitInfo: false
+relativeURLs = false
+canonifyURLs = true
+enableGitInfo = false
 
 outputs:
   home:
