@@ -18,6 +18,8 @@ page = ["HTML", "RSS"]
   dateFormat = "02/01/2006"
   UseBootstrapCDN = true
 
+  staticPath = "/my-blog"
+
   [params.datesFormat]
     article = "02/01/2006"
     articleList = "02/01/2006"
