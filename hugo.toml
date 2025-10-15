@@ -1,9 +1,20 @@
 baseURL = "https://dnduykhoa.github.io/my-blog"
 languageCode = "vi"
 title = "Blog Lập Trình"
-
 theme = "hugo-profile"
-publishDir = "docs"
+
+relativeURLs: false
+canonifyURLs: true
+enableGitInfo: false
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
 
 [params]
   title = "Blog Lập Trình Java & JavaScript"
