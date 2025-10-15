@@ -1,20 +1,22 @@
-/config.yaml
-/content
-/static/images
-.vscode
+# Hugo build output
+public/
 
-### Hugo ###
-# Generated files by hugo
-/public/
-/exampleSite/public/
-/resources/_gen/
-/assets/jsconfig.json
-hugo_stats.json
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
+# Editor files
+.vscode/
+.idea/
 
-# Temporary lock file while building
-.hugo_build.lock
+# Hugo cache
+resources/_gen/
+
+# Temporary files
+*.tmp
+*.log

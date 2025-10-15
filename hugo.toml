@@ -1,16 +1,15 @@
-baseURL = "https://dnduykhoa.github.io/my-blog/"
+baseURL = "https://dnduykhoa.github.io/my-blog"
 languageCode = "vi"
 title = "Blog Lập Trình"
-relativeURLs = false
-canonifyURLs = true
 
 theme = "hugo-profile"
+publishDir = "docs"
 
 [params]
   title = "Blog Lập Trình Java & JavaScript"
   description = "Chia sẻ kiến thức về lập trình web"
   dateFormat = "02/01/2006" 
-  staticPath = "/my-blog"
+  staticPath = ""
   UseBootstrapCDN = true
 
   [params.datesFormat]
@@ -26,7 +25,7 @@ theme = "hugo-profile"
     title = "Đào Nguyễn Duy Khoa"
     subtitle = "Sinh viên ngành CNTT - HUTECH"
     content = "Đam mê phát triển web và chia sẻ kiến thức"
-    image = "/my-blog/images/avatar.jpeg"
+    image = "/images/avatar.jpeg"
 
   [params.navbar]
     enable = true
