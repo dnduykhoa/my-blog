@@ -1,30 +1,626 @@
-<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.150.0"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta http-equiv=Accept-CH content="DPR, Viewport-Width, Width"><link rel=icon href=https://dnduykhoa.github.io/my-blog/fav.png type=image/gif><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet></noscript><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/font.css media=all><meta property="og:url" content="https://dnduykhoa.github.io/my-blog/"><meta property="og:site_name" content="Blog Lập Trình"><meta property="og:title" content="Blog Lập Trình"><meta property="og:description" content="Chia sẻ kiến thức về lập trình web"><meta property="og:locale" content="vi"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Blog Lập Trình"><meta name=twitter:description content="Chia sẻ kiến thức về lập trình web"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/header.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/footer.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/theme.css media=all><style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#ffffff;--background-color-dark:#18191a;--secondary-background-color-dark:#212529;--primary-color-dark:#ffffff;--secondary-color-dark:#212529}body{font-size:"1rem";font-weight:"400";line-height:"1.5";text-align:"left"}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style><meta name=description content="Chia sẻ kiến thức về lập trình web"><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/index.css media=all><title>Blog Lập Trình</title></head><body class=light><script>let localStorageValue=localStorage.getItem("pref-theme"),mediaQuery=window.matchMedia("(prefers-color-scheme: dark)").matches;switch(localStorageValue){case"dark":document.body.classList.add("dark");break;case"light":document.body.classList.remove("dark");break;default:mediaQuery&&document.body.classList.add("dark");break}</script><header id=profileHeader><nav class="pt-3 navbar navbar-expand-lg"><div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5"><a class="navbar-brand primary-font text-wrap" href=https://dnduykhoa.github.io/my-blog/>Blog Lập Trình Java & JavaScript
-</a><button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
-<svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg></button><div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent><ul class="navbar-nav ms-auto text-center"><li class="nav-item navbar-text d-block d-md-none"><div class=nav-link><input id=search autocomplete=off class="form-control mr-sm-2" placeholder='Ctrl + k to Search...' aria-label=Search oninput=searchOnChange(event)></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/ title>Trang chủ</a></li><li class="nav-item navbar-text dropdown"><a class="nav-link dropdown-toggle" href=https://dnduykhoa.github.io/my-blog/blogs id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false title>Blog</a><div class="dropdown-menu shadow-lg rounded" aria-labelledby=navbarDropdown><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/java title>Java
-</a><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/javascript title>JavaScript</a></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/about title>Giới Thiệu</a></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/contact title>Liên Hệ</a></li><li class="nav-item navbar-text"><div class=text-center><button id=theme-toggle>
-<svg id="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></li></ul></div></div></nav></header><div id=content><section class=home-hero><div class="container px-3 px-sm-5"><div class="row align-items-center"><div class="col-sm-12 col-md-7"><p class=subtitle>Xin chào, mình là</p><h1 class="hero-title gradient-text">Đào Nguyễn Duy Khoa</h1><h2 class=hero-subtitle>Sinh viên ngành CNTT - HUTECH</h2><p class=hero-desc>Đam mê phát triển web và chia sẻ kiến thức</p><p class=hero-typed>Viết về <span id=typewriter data-words='["Java","JavaScript","Thuật toán","Web Development"]'></span></p><div class=hero-badges><span class="badge pill">10 bài viết</span>
-<span class=dot>•</span>
-<span class="badge pill">23 tags</span></div><a href=#featured class=scroll-down aria-label="Scroll xuống">↓</a></div><div class="col-sm-12 col-md-5"><div class="hero-photo-wrap glow"><img src=https://dnduykhoa.github.io/my-blog/images/avatar.jpeg alt="Đào Nguyễn Duy Khoa"></div></div></div></div></section><section id=featured class=home-featured><div class="container px-3 px-sm-5"><div class=section-head><h3>Bài viết mới</h3><a class=see-all href=https://dnduykhoa.github.io/my-blog/blogs>Xem tất cả</a></div><div class=row><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/java/java-overview/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="Tổng quan: Học Java từ cơ bản đến ứng dụng">Tổng quan: Học Java từ cơ bản đến ứng dụng</h5><p class=summary>1. Mở đầu Xin chào bạn 👋, Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc học lập trình Java.
-Nhưng câu hỏi đặt ra là: “Mình nên …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-overview/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="Tổng quan: Học JavaScript từ cơ bản đến ứng dụng">Tổng quan: Học JavaScript từ cơ bản đến ứng dụng</h5><p class=summary>1. Mở đầu Xin chào bạn 👋, Nếu bạn đang tìm hiểu về lập trình web, chắc chắn bạn sẽ gặp cái tên JavaScript.
-JavaScript chính là ngôn ngữ …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/java/java-basic/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="Java Cơ Bản – Nền tảng cho người mới bắt đầu">Java Cơ Bản – Nền tảng cho người mới bắt đầu</h5><p class=summary>1. Mở đầu Bạn có bao giờ tự hỏi: “Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-basic/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="JavaScript Cơ Bản – Nền tảng ngôn ngữ web">JavaScript Cơ Bản – Nền tảng ngôn ngữ web</h5><p class=summary>1. Mở đầu Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là linh hồn giúp trang web sống động và …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-control-functions/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="Cấu trúc điều khiển và Hàm trong JavaScript">Cấu trúc điều khiển và Hàm trong JavaScript</h5><p class=summary>1. Mở đầu Trong bài 1, bạn đã làm quen với biến, kiểu dữ liệu và toán tử. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần xử lý logic …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div><div class="col-lg-4 col-md-6 my-3 reveal"><a class=card-link href=https://dnduykhoa.github.io/my-blog/blogs/java/java-structures-and-data/><article class="post-card h-100 tilt"><div class=body><h5 class=title title="Cấu trúc và Dữ liệu trong Java">Cấu trúc và Dữ liệu trong Java</h5><p class=summary>1. Mở đầu Trong bài trước, bạn đã chạy thành công chương trình Hello World. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra …</p></div><div class=meta><span class=date>03/10/2025</span>
-<span class=read>Đọc →</span></div></article></a></div></div></div></section><section class=home-tags><div class="container px-3 px-sm-5"><div class=section-head><h3>Tags phổ biến</h3></div><div class="tags reveal"><a class=tag href=https://dnduykhoa.github.io/my-blog/tags/javascript/>#Javascript <span>5</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/java/>#Java <span>5</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/beginner/>#Beginner <span>3</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/c%C6%A1-b%E1%BA%A3n/>#Cơ Bản <span>3</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/object/>#Object <span>2</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/oop/>#Oop <span>2</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/overview/>#Overview <span>2</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/series/>#Series <span>2</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/to%C3%A1n-t%E1%BB%AD/>#Toán Tử <span>1</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/v%C3%B2ng-l%E1%BA%B7p/>#Vòng Lặp <span>1</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/array/>#Array <span>1</span></a>
-<a class=tag href=https://dnduykhoa.github.io/my-blog/tags/bi%E1%BA%BFn/>#Biến <span>1</span></a></div></div></section><script>(function(){const t=document.getElementById("typewriter");if(!t)return;const o=JSON.parse(t.dataset.words||"[]");let n=0,e=0,s=1;function i(){const a=o[n]||"";e+=s,t.textContent=a.slice(0,e),e===a.length+8&&(s=-1),e===0&&(s=1,n=(n+1)%o.length),setTimeout(i,80)}i()})(),function(){const e=new IntersectionObserver(e=>{e.forEach(e=>e.target.classList.toggle("show",e.isIntersecting))},{threshold:.12});document.querySelectorAll(".reveal").forEach(t=>e.observe(t))}(),function(){const e=8;document.querySelectorAll(".tilt").forEach(t=>{t.addEventListener("mousemove",n=>{const s=t.getBoundingClientRect(),o=(n.clientX-s.left)/s.width-.5,i=(n.clientY-s.top)/s.height-.5;t.style.transform=`rotateX(${-i*e}deg) rotateY(${o*e}deg) translateY(-4px)`}),t.addEventListener("mouseleave",()=>t.style.transform="")})}()</script></div><footer><div class="text-center pt-2"></div><div class="container py-4"><div class="row justify-content-center"><div class="col-md-4 text-center">&copy; 2025 All Rights Reserved<div class=text-secondary>Made with
-<span class=text-danger>&#10084;
-</span>and
-<a href=https://github.com/gurusabarish/hugo-profile target=_blank title="Designed and developed by gurusabarish">Hugo Profile</a></div></div></div></div></footer><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js integrity=sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 crossorigin=anonymous></script><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))});var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e)})</script><script src=https://dnduykhoa.github.io/my-blog/js/search.js></script><section id=search-content class=py-2><div class=container id=search-results></div></section></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.150.0"><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1315&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=http://localhost:1315/my-blog/fav.png type="image/gif">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/footer.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1315/my-blog/">
+  <meta property="og:site_name" content="Blog Lập Trình">
+  <meta property="og:title" content="Blog Lập Trình">
+  <meta property="og:description" content="Chia sẻ kiến thức về lập trình web">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog Lập Trình">
+  <meta name="twitter:description" content="Chia sẻ kiến thức về lập trình web">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1315/my-blog/css/header.css" media="all">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/footer.css" media="all">
+
+
+<script defer src="http://localhost:1315/my-blog/fontawesome-6/all-6.4.2.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: "1rem";
+        font-weight: "400";
+        line-height: "1.5";
+        text-align: "left";
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Chia sẻ kiến thức về lập trình web">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/index.css" media="all">
+
+
+  
+  
+
+  <title>
+Blog Lập Trình
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1315/my-blog/">
+                
+                Blog Lập Trình Java &amp; JavaScript
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/blogs" title="">
+                            
+                            Bài viết
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/about" title="">
+                            
+                            Giới Thiệu
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/contact" title="">
+                            
+                            Liên Hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header><div id="content">
+<section class="home-hero">
+  <div class="container px-3 px-sm-5">
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-7">
+        <p class="subtitle">Xin chào, mình là</p>
+        <h1 class="hero-title gradient-text">Đào Nguyễn Duy Khoa</h1>
+        <h2 class="hero-subtitle">Sinh viên ngành CNTT - HUTECH</h2>
+        <p class="hero-desc">Đam mê phát triển web và chia sẻ kiến thức</p>
+        <p class="hero-intro">Chào mừng bạn đến với blog của tôi! Đây là nơi tôi chia sẻ kiến thức, kinh nghiệm và những câu chuyện thú vị về lập trình, công nghệ và nhiều lĩnh vực khác. Hy vọng bạn sẽ tìm thấy điều bổ ích và thú vị tại đây!</p>
+        
+        <p class="hero-typed">Viết về <span id="typewriter" data-words='["Java","JavaScript","Thuật toán","Web Development"]'></span></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary-cta" href="http://localhost:1315/my-blog/blogs">Bắt đầu đọc</a>
+          <a class="btn btn-outline-cta" href="http://localhost:1315/my-blog/about">Giới thiệu</a>
+        </div>
+
+        
+        <div class="hero-badges">
+          
+          <span class="badge pill">10 bài viết</span>
+          <span class="dot">•</span>
+          <span class="badge pill">23 tags</span>
+        </div>
+
+        <a href="#featured" class="scroll-down" aria-label="Scroll xuống">↓</a>
+      </div>
+
+      <div class="col-sm-12 col-md-5">
+        <div class="hero-photo-wrap glow">
+          <img src="http://localhost:1315/my-blog/images/avatar.jpeg" alt="Đào Nguyễn Duy Khoa">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="home-featured">
+  <div class="container px-3 px-sm-5">
+    <div class="section-head">
+      <h3>Bài viết mới</h3>
+      <a class="see-all" href="http://localhost:1315/my-blog/blogs">Xem tất cả</a>
+    </div>
+
+    <div class="row">
+      
+      
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/javascript/javascript-dom-web/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="DOM &amp; Tương tác với Web trong JavaScript">DOM &amp; Tương tác với Web trong JavaScript</h5>
+              <p class="summary"> 1. Mở đầu Bạn đã biết Object, Array, OOP trong JavaScript. Nhưng JS sẽ chẳng có ý nghĩa gì nếu nó không tương tác với HTML/CSS để làm web …</p>
+            </div>
+            <div class="meta">
+              <span class="date">02/10/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/javascript/javascript-objects-arrays-oop/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="Đối tượng, Mảng và OOP trong JavaScript">Đối tượng, Mảng và OOP trong JavaScript</h5>
+              <p class="summary"> 1. Mở đầu Trong bài 2, bạn đã biết cách sử dụng if, vòng lặp và hàm để xử lý logic. Nhưng khi chương trình lớn hơn, bạn sẽ cần cách tổ chức …</p>
+            </div>
+            <div class="meta">
+              <span class="date">27/09/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/javascript/javascript-control-functions/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="Cấu trúc điều khiển và Hàm trong JavaScript">Cấu trúc điều khiển và Hàm trong JavaScript</h5>
+              <p class="summary"> 1. Mở đầu Trong bài 1, bạn đã làm quen với biến, kiểu dữ liệu và toán tử. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần xử lý logic …</p>
+            </div>
+            <div class="meta">
+              <span class="date">24/09/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/javascript/javascript-basic/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="JavaScript Cơ Bản – Nền tảng ngôn ngữ web">JavaScript Cơ Bản – Nền tảng ngôn ngữ web</h5>
+              <p class="summary"> 1. Mở đầu Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là linh hồn giúp trang web sống động và …</p>
+            </div>
+            <div class="meta">
+              <span class="date">22/09/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/javascript/javascript-overview/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="Tổng quan: Học JavaScript từ cơ bản đến ứng dụng">Tổng quan: Học JavaScript từ cơ bản đến ứng dụng</h5>
+              <p class="summary"> 1. Mở đầu Xin chào bạn 👋, Nếu bạn đang tìm hiểu về lập trình web, chắc chắn bạn sẽ gặp cái tên JavaScript.
+JavaScript chính là ngôn ngữ …</p>
+            </div>
+            <div class="meta">
+              <span class="date">20/09/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 my-3 reveal">
+        <a class="card-link" href="http://localhost:1315/my-blog/blogs/java/java-libraries-tools/">
+          <article class="post-card h-100 tilt">
+            
+            <div class="body">
+              <h5 class="title" title="Thư viện &amp; Công cụ mạnh mẽ trong Java">Thư viện &amp; Công cụ mạnh mẽ trong Java</h5>
+              <p class="summary"> 1. Mở đầu Sau khi đã học về ngôn ngữ cơ bản và OOP, bạn có thể viết được nhiều chương trình nhỏ. Nhưng nếu muốn làm các ứng dụng lớn hơn, …</p>
+            </div>
+            <div class="meta">
+              <span class="date">13/09/2025</span>
+              <span class="read">Đọc →</span>
+            </div>
+          </article>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="home-tags">
+  <div class="container px-3 px-sm-5">
+    <div class="section-head"><h3>Tags phổ biến</h3></div>
+    <div class="tags reveal">
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/javascript/">#Javascript <span>5</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/java/">#Java <span>5</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/beginner/">#Beginner <span>3</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/c%C6%A1-b%E1%BA%A3n/">#Cơ Bản <span>3</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/overview/">#Overview <span>2</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/object/">#Object <span>2</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/oop/">#Oop <span>2</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/series/">#Series <span>2</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/dom/">#Dom <span>1</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/v%C3%B2ng-l%E1%BA%B7p/">#Vòng Lặp <span>1</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/event/">#Event <span>1</span></a>
+      
+        <a class="tag" href="http://localhost:1315/my-blog/tags/to%C3%A1n-t%E1%BB%AD/">#Toán Tử <span>1</span></a>
+      
+    </div>
+  </div>
+</section>
+
+
+<script>
+
+(function(){
+  const el = document.getElementById('typewriter');
+  if (!el) return;
+  const words = JSON.parse(el.dataset.words || '[]');
+  let i=0, j=0, dir=1;
+  function tick(){
+    const w = words[i] || "";
+    j += dir;
+    el.textContent = w.slice(0, j);
+    if (j === w.length + 8) dir = -1;
+    if (j === 0){ dir = 1; i = (i+1)%words.length; }
+    setTimeout(tick, 80);
+  }
+  tick();
+})();
+
+
+(function(){
+  const IO = new IntersectionObserver(entries=>{
+    entries.forEach(e=> e.target.classList.toggle('show', e.isIntersecting));
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>IO.observe(el));
+})();
+
+
+(function(){
+  const max = 8;
+  document.querySelectorAll('.tilt').forEach(card=>{
+    card.addEventListener('mousemove', (e)=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - .5;
+      const y = (e.clientY - r.top)/r.height - .5;
+      card.style.transform = `rotateX(${(-y*max)}deg) rotateY(${(x*max)}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', ()=> card.style.transform = '');
+  });
+})();
+</script>
+
+  </div><footer class="site-footer">
+  <div class="container">
+    <div class="row footer-main">
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="footer-heading">Về Blog</h5>
+        <p class="footer-desc">Chia sẻ kiến thức lập trình, từ Java, JavaScript đến Web Development. Học tập mỗi ngày, tiến bộ mỗi giờ! 🚀</p>
+        <div class="footer-social">
+          <a href="https://github.com/dnduykhoa" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:daonguyenduykhoa@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Khám phá</h5>
+        <ul class="footer-links">
+          <li><a href="http://localhost:1315/my-blog/blogs">Tất cả bài viết</a></li>
+          <li><a href="http://localhost:1315/my-blog/tags">Tags</a></li>
+          <li><a href="http://localhost:1315/my-blog/about">Giới thiệu</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Chủ đề hot</h5>
+        <div class="footer-tags">
+          <a href="http://localhost:1315/my-blog/tags/java" class="tag-pill">Java</a>
+          <a href="http://localhost:1315/my-blog/tags/javascript" class="tag-pill">JavaScript</a>
+          <a href="http://localhost:1315/my-blog/tags/web" class="tag-pill">Web Dev</a>
+          <a href="http://localhost:1315/my-blog/tags/oop" class="tag-pill">OOP</a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Nhận bài mới</h5>
+        <p class="footer-newsletter-desc">Đăng ký để không bỏ lỡ bài viết hay!</p>
+        <form class="footer-newsletter" action="#" method="post">
+          <input type="email" placeholder="Email của bạn" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</footer>
+
+<script>
+
+(function(){
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="http://localhost:1315/my-blog/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

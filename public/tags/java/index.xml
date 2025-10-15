@@ -1,28 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/java/</link><description>Recent content in Java on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Tổng quan: Học Java từ cơ bản đến ứng dụng</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-overview/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-overview/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Xin chào bạn 👋,
-Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc &lt;strong&gt;học lập trình Java&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Nhưng câu hỏi đặt ra là: &lt;em&gt;“Mình nên bắt đầu học Java từ đâu? Học như thế nào để có cái nhìn toàn diện?”&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;👉 Đó chính là lý do mình viết series &lt;strong&gt;4 bài blog Java cơ bản&lt;/strong&gt; – để giúp bạn đi từ số 0 đến khi có thể viết những chương trình nhỏ và hiểu nền tảng quan trọng nhất của Java.&lt;/p&gt;</description></item><item><title>Java Cơ Bản – Nền tảng cho người mới bắt đầu</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-basic/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-basic/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Bạn có bao giờ tự hỏi: &lt;em&gt;“Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả trí tuệ nhân tạo?”&lt;/em&gt;
-Câu trả lời nằm ở sự &lt;strong&gt;đơn giản, mạnh mẽ và ổn định&lt;/strong&gt; mà Java mang lại.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ &lt;code&gt;java -version&lt;/code&gt; mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?&lt;/p&gt;</description></item><item><title>Cấu trúc và Dữ liệu trong Java</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-structures-and-data/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-structures-and-data/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Trong bài trước, bạn đã chạy thành công chương trình &lt;strong&gt;Hello World&lt;/strong&gt;. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra màn hình, đúng không?
-Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu chương.&lt;/p&gt;
-&lt;p&gt;Để viết những chương trình hữu ích, bạn cần biết cách &lt;strong&gt;&amp;ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&amp;rdquo;&lt;/strong&gt; và &lt;strong&gt;&amp;ldquo;xử lý logic (if-else, vòng lặp)&amp;rdquo;&lt;/strong&gt;. Đây là &lt;strong&gt;“xương sống”&lt;/strong&gt; của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.&lt;/p&gt;</description></item><item><title>Lập trình Hướng Đối Tượng (OOP) trong Java</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-oop/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-oop/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển&lt;/strong&gt;. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.&lt;/p&gt;
-&lt;p&gt;Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&amp;hellip;), nếu chỉ viết code bằng &lt;code&gt;if-else&lt;/code&gt; và &lt;code&gt;for&lt;/code&gt; thì chương trình sẽ trở nên &lt;strong&gt;rối rắm, khó bảo trì&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Thư viện &amp; Công cụ mạnh mẽ trong Java</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-libraries-tools/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-libraries-tools/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Sau khi đã học về &lt;strong&gt;ngôn ngữ cơ bản&lt;/strong&gt; và &lt;strong&gt;OOP&lt;/strong&gt;, bạn có thể viết được nhiều chương trình nhỏ.
-Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng những &lt;strong&gt;thư viện và công cụ mạnh mẽ&lt;/strong&gt; mà Java cung cấp sẵn.&lt;/p&gt;
-&lt;p&gt;Trong bài này, chúng ta sẽ tìm hiểu ba “vũ khí” quan trọng:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Collections Framework&lt;/strong&gt; – để quản lý dữ liệu phức tạp.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Exception Handling&lt;/strong&gt; – để xử lý lỗi an toàn.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Input/Output (I/O)&lt;/strong&gt; – để đọc và ghi dữ liệu từ file.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Cuối cùng, mình cũng sẽ giới thiệu ngắn gọn những &lt;strong&gt;hướng phát triển nâng cao&lt;/strong&gt; như JDBC, JavaFX, Spring, Android.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Blog Lập Trình</title>
+    <link>http://localhost:1315/my-blog/tags/java/</link>
+    <description>Recent content in Java on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1315/my-blog/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tổng quan: Học Java từ cơ bản đến ứng dụng</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-overview/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-overview/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào bạn 👋,&#xA;Nếu bạn đang đọc bài này, chắc hẳn bạn quan tâm đến việc &lt;strong&gt;học lập trình Java&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng câu hỏi đặt ra là: &lt;em&gt;“Mình nên bắt đầu học Java từ đâu? Học như thế nào để có cái nhìn toàn diện?”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;👉 Đó chính là lý do mình viết series &lt;strong&gt;4 bài blog Java cơ bản&lt;/strong&gt; – để giúp bạn đi từ số 0 đến khi có thể viết những chương trình nhỏ và hiểu nền tảng quan trọng nhất của Java.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Cơ Bản – Nền tảng cho người mới bắt đầu</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-basic/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-basic/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi: &lt;em&gt;“Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả trí tuệ nhân tạo?”&lt;/em&gt;&#xA;Câu trả lời nằm ở sự &lt;strong&gt;đơn giản, mạnh mẽ và ổn định&lt;/strong&gt; mà Java mang lại.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ &lt;code&gt;java -version&lt;/code&gt; mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu trúc và Dữ liệu trong Java</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-structures-and-data/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-structures-and-data/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài trước, bạn đã chạy thành công chương trình &lt;strong&gt;Hello World&lt;/strong&gt;. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra màn hình, đúng không?&#xA;Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu chương.&lt;/p&gt;&#xA;&lt;p&gt;Để viết những chương trình hữu ích, bạn cần biết cách &lt;strong&gt;&amp;ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&amp;rdquo;&lt;/strong&gt; và &lt;strong&gt;&amp;ldquo;xử lý logic (if-else, vòng lặp)&amp;rdquo;&lt;/strong&gt;. Đây là &lt;strong&gt;“xương sống”&lt;/strong&gt; của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lập trình Hướng Đối Tượng (OOP) trong Java</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-oop/</link>
+      <pubDate>Fri, 12 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-oop/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn còn nhớ ở hai bài trước, chúng ta đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu, toán tử và cấu trúc điều khiển&lt;/strong&gt;. Với những kiến thức đó, bạn có thể viết được nhiều chương trình nhỏ.&lt;/p&gt;&#xA;&lt;p&gt;Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng online, game&amp;hellip;), nếu chỉ viết code bằng &lt;code&gt;if-else&lt;/code&gt; và &lt;code&gt;for&lt;/code&gt; thì chương trình sẽ trở nên &lt;strong&gt;rối rắm, khó bảo trì&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thư viện &amp; Công cụ mạnh mẽ trong Java</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-libraries-tools/</link>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-libraries-tools/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Sau khi đã học về &lt;strong&gt;ngôn ngữ cơ bản&lt;/strong&gt; và &lt;strong&gt;OOP&lt;/strong&gt;, bạn có thể viết được nhiều chương trình nhỏ.&#xA;Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng những &lt;strong&gt;thư viện và công cụ mạnh mẽ&lt;/strong&gt; mà Java cung cấp sẵn.&lt;/p&gt;&#xA;&lt;p&gt;Trong bài này, chúng ta sẽ tìm hiểu ba “vũ khí” quan trọng:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Collections Framework&lt;/strong&gt; – để quản lý dữ liệu phức tạp.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Exception Handling&lt;/strong&gt; – để xử lý lỗi an toàn.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Input/Output (I/O)&lt;/strong&gt; – để đọc và ghi dữ liệu từ file.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Cuối cùng, mình cũng sẽ giới thiệu ngắn gọn những &lt;strong&gt;hướng phát triển nâng cao&lt;/strong&gt; như JDBC, JavaFX, Spring, Android.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

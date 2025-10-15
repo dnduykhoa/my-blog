@@ -1,6 +1,6 @@
 ---
 title: "Tổng quan: Học JavaScript từ cơ bản đến ứng dụng"
-date: 2025-10-03
+date: 2025-09-20
 draft: false
 description: "Lộ trình 5 bài học JavaScript cơ bản – từ cú pháp, hàm, đối tượng đến DOM và async – dành cho người mới bắt đầu."
 tags: ["javascript", "overview", "series"]

@@ -11,22 +11,29 @@
 <div class="container pt-5" id="list-page">
     <h2 class="text-center pb-2">{{ .Title }}</h2>
     <div class="row">
-        {{ range .Paginator.Pages }}
+        {{ $pages := where .Site.RegularPages "Section" "blogs" }}
+        {{ $sortedPages := sort $pages "Date" "desc" }}
+        {{ $paginator := .Paginate $sortedPages }}
+        {{ range $paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100"> <!-- Đảm bảo thẻ card có chiều cao cố định -->
-                {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
+            <div class="card h-100">
+                <!-- Ảnh bài viết -->
                 <div class="card-header">
                     <a href="{{ .RelPermalink }}">
+                        {{ if .Params.image }}
                         <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
+                        {{ else }}
+                        <img src="/my-blog/images/blog-image.png" class="card-img-top" alt="{{ .Title }}">
+                        {{ end }}
                     </a>
                 </div>
-                {{ end }}
+                
                 <div class="card-body bg-transparent p-4 shadow-sm">
                     <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
+                        <h1 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title }}</h1>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>{{ .Summary | truncate 300 }}</p>
+                        <p class="summary-text">{{ .Summary | truncate 150 }}</p>
                     </div>
                 </div>
                 <div class="mt-auto post-footer bg-transparent py-3">
@@ -38,7 +45,7 @@
         {{ end }}
         <div class="row justify-content-center">
             <div class="col-auto m-3">
-                {{ template "_internal/pagination.html" . }}
+                {{ template "_internal/pagination.html" $paginator }}
             </div>
         </div>
     </div>

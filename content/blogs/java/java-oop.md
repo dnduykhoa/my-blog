@@ -1,6 +1,6 @@
 ---
 title: "Lập trình Hướng Đối Tượng (OOP) trong Java"
-date: 2025-10-03
+date: 2025-09-12
 draft: false
 description: "Khám phá bốn tính chất quan trọng của OOP trong Java: Đóng gói, Kế thừa, Đa hình và Trừu tượng"
 tags: ["java", "oop", "class", "object"]

@@ -1,6 +1,6 @@
 ---
 title: "Cấu trúc và Dữ liệu trong Java"
-date: 2025-10-03
+date: 2025-09-11
 draft: false
 description: "Khám phá cách Java lưu trữ và xử lý dữ liệu qua biến, kiểu dữ liệu, toán tử và các cấu trúc điều khiển."
 tags: ["java", "cơ bản", "biến", "toán tử", "cấu trúc điều khiển"]

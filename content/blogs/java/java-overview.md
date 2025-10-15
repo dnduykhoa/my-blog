@@ -1,7 +1,7 @@
 ---
 
 title: "Tổng quan: Học Java từ cơ bản đến ứng dụng"
-date: 2025-10-03
+date: 2025-09-09
 draft: false
 description: "Lộ trình 4 bài học Java cơ bản – từ nền tảng, dữ liệu, OOP đến thư viện mạnh mẽ – dành cho người mới bắt đầu."
 tags: ["java", "overview", "series"]

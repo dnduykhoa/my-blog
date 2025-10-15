@@ -1,6 +1,6 @@
 ---
 title: "Cấu trúc điều khiển và Hàm trong JavaScript"
-date: 2025-10-03
+date: 2025-09-24
 draft: false
 description: "Khám phá cách JavaScript xử lý logic với if, else, switch, vòng lặp, và cách định nghĩa hàm (function, arrow function)."
 tags: ["javascript", "beginner", "hàm", "vòng lặp", "điều khiển"]

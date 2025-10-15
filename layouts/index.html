@@ -16,8 +16,13 @@
         <h1 class="hero-title gradient-text">{{ .Site.Params.hero.title }}</h1>
         <h2 class="hero-subtitle">{{ .Site.Params.hero.subtitle }}</h2>
         <p class="hero-desc">{{ .Site.Params.hero.content }}</p>
+        <p class="hero-intro">Chào mừng bạn đến với blog của tôi! Đây là nơi tôi chia sẻ kiến thức, kinh nghiệm và những câu chuyện thú vị về lập trình, công nghệ và nhiều lĩnh vực khác. Hy vọng bạn sẽ tìm thấy điều bổ ích và thú vị tại đây!</p>
         <!-- Typewriter -->
         <p class="hero-typed">Viết về <span id="typewriter" data-words='["Java","JavaScript","Thuật toán","Web Development"]'></span></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary-cta" href="/blogs">Bắt đầu đọc</a>
+          <a class="btn btn-outline-cta" href="/about">Giới thiệu</a>
+        </div>
 
         <!-- Badges -->
         <div class="hero-badges">
@@ -47,7 +52,9 @@
     </div>
 
     <div class="row">
-      {{ range first 6 (where .Site.RegularPages "Section" "blogs") }}
+      {{ $blogPosts := where .Site.RegularPages "Section" "blogs" }}
+      {{ $sortedPosts := sort $blogPosts "Date" "desc" }}
+      {{ range first 6 $sortedPosts }}
       <div class="col-lg-4 col-md-6 my-3 reveal">
         <a class="card-link" href="{{ .RelPermalink }}">
           <article class="post-card h-100 tilt">

@@ -1,10 +1,90 @@
-<footer>
-    <!-- Recent blog posts -->
-    {{- partial "sections/footer/recentBlogPosts.html" . -}}
+<footer class="site-footer">
+  <div class="container">
+    <div class="row footer-main">
+      <!-- Cột 1: About -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="footer-heading">Về Blog</h5>
+        <p class="footer-desc">Chia sẻ kiến thức lập trình, từ Java, JavaScript đến Web Development. Học tập mỗi ngày, tiến bộ mỗi giờ! 🚀</p>
+        <div class="footer-social">
+          <a href="https://github.com/dnduykhoa" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:daonguyenduykhoa@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
 
-    <!-- Social Icons -->
-    {{- partial "sections/footer/socialNetwork.html" . -}}
+      <!-- Cột 2: Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Khám phá</h5>
+        <ul class="footer-links">
+          <li><a href="/blogs">Tất cả bài viết</a></li>
+          <li><a href="/tags">Tags</a></li>
+          <li><a href="/about">Giới thiệu</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Top Tags -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Chủ đề hot</h5>
+        <div class="footer-tags">
+          <a href="/tags/java" class="tag-pill">Java</a>
+          <a href="/tags/javascript" class="tag-pill">JavaScript</a>
+          <a href="/tags/web" class="tag-pill">Web Dev</a>
+          <a href="/tags/oop" class="tag-pill">OOP</a>
+        </div>
+      </div>
+
+      <!-- Cột 4: Newsletter (optional) -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Nhận bài mới</h5>
+        <p class="footer-newsletter-desc">Đăng ký để không bỏ lỡ bài viết hay!</p>
+        <form class="footer-newsletter" action="#" method="post">
+          <input type="email" placeholder="Email của bạn" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
 
     <!-- Copyright -->
-    {{- partial "sections/footer/copyright.html" . -}}
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p>&copy; {{ now.Year }} {{ .Site.Title }}. Tất cả quyền được bảo lưu.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 </footer>
+
+<script>
+// Back to top
+(function(){
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>

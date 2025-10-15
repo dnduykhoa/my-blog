@@ -3,6 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 <link rel="icon" href={{ .Site.Params.favicon | default "/fav.png" }} type="image/gif">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/footer.css">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +37,9 @@
 {{- end -}}
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/header.css" media="all">
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/footer.css" media="all">
+
+<!-- FontAwesome -->
+<script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
 
 <!-- theme -->
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/theme.css" media="all">

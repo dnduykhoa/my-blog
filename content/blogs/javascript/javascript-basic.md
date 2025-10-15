@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Cơ Bản – Nền tảng ngôn ngữ web"
-date: 2025-10-03
+date: 2025-09-22
 draft: false
 description: "Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử."
 tags: ["javascript", "beginner", "cơ bản"]

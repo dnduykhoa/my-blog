@@ -1,7 +1,7 @@
 ---
 
 title: "DOM & Tương tác với Web trong JavaScript"
-date: 2025-10-03
+date: 2025-10-02
 draft: false
 description: "Tìm hiểu cách JavaScript thao tác với HTML qua DOM, thay đổi nội dung, style và xử lý sự kiện để tạo ứng dụng web sống động."
 tags: ["javascript", "dom", "event", "web"]

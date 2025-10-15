@@ -1,45 +1,721 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta http-equiv=Accept-CH content="DPR, Viewport-Width, Width"><link rel=icon href=https://dnduykhoa.github.io/my-blog/fav.png type=image/gif><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media=print onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel=stylesheet></noscript><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/font.css media=all><meta property="og:url" content="https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-basic/"><meta property="og:site_name" content="Blog Lập Trình"><meta property="og:title" content="JavaScript Cơ Bản – Nền tảng ngôn ngữ web"><meta property="og:description" content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử."><meta property="og:locale" content="vi"><meta property="og:type" content="article"><meta property="article:section" content="blogs"><meta property="article:published_time" content="2025-10-03T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-03T00:00:00+00:00"><meta property="article:tag" content="Javascript"><meta property="article:tag" content="Beginner"><meta property="article:tag" content="Cơ Bản"><meta name=twitter:card content="summary"><meta name=twitter:title content="JavaScript Cơ Bản – Nền tảng ngôn ngữ web"><meta name=twitter:description content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử."><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/header.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/footer.css media=all><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/theme.css media=all><style>:root{--text-color:#343a40;--text-secondary-color:#6c757d;--text-link-color:#007bff;--background-color:#eaedf0;--secondary-background-color:#64ffda1a;--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color-dark:#e4e6eb;--text-secondary-color-dark:#b0b3b8;--text-link-color-dark:#ffffff;--background-color-dark:#18191a;--secondary-background-color-dark:#212529;--primary-color-dark:#ffffff;--secondary-color-dark:#212529}body{font-size:"1rem";font-weight:"400";line-height:"1.5";text-align:"left"}html{background-color:var(--background-color)!important}body::-webkit-scrollbar{height:0;width:8px;background-color:var(--background-color)}::-webkit-scrollbar-track{border-radius:1rem}::-webkit-scrollbar-thumb{border-radius:1rem;background:#b0b0b0;outline:1px solid var(--background-color)}#search-content::-webkit-scrollbar{width:.5em;height:.1em;background-color:var(--background-color)}</style><meta name=description content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử."><link rel=stylesheet href=https://dnduykhoa.github.io/my-blog/css/single.css><script defer src=https://dnduykhoa.github.io/my-blog/fontawesome-6/all-6.4.2.js></script><title>JavaScript Cơ Bản – Nền tảng ngôn ngữ web | Blog Lập Trình</title></head><body class=light><script>let localStorageValue=localStorage.getItem("pref-theme"),mediaQuery=window.matchMedia("(prefers-color-scheme: dark)").matches;switch(localStorageValue){case"dark":document.body.classList.add("dark");break;case"light":document.body.classList.remove("dark");break;default:mediaQuery&&document.body.classList.add("dark");break}</script><header id=profileHeader><nav class="pt-3 navbar navbar-expand-lg"><div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5"><a class="navbar-brand primary-font text-wrap" href=https://dnduykhoa.github.io/my-blog/>Blog Lập Trình Java & JavaScript
-</a><button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarContent aria-controls=navbarContent aria-expanded=false aria-label="Toggle navigation">
-<svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg></button><div class="collapse navbar-collapse text-wrap primary-font" id=navbarContent><ul class="navbar-nav ms-auto text-center"><li class="nav-item navbar-text d-block d-md-none"><div class=nav-link><input id=search autocomplete=off class="form-control mr-sm-2" placeholder='Ctrl + k to Search...' aria-label=Search oninput=searchOnChange(event)></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/ title>Trang chủ</a></li><li class="nav-item navbar-text dropdown"><a class="nav-link dropdown-toggle" href=https://dnduykhoa.github.io/my-blog/blogs id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false title>Blog</a><div class="dropdown-menu shadow-lg rounded" aria-labelledby=navbarDropdown><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/java title>Java
-</a><a class="dropdown-item text-center nav-link" href=https://dnduykhoa.github.io/my-blog/blogs/javascript title>JavaScript</a></div></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/about title>Giới Thiệu</a></li><li class="nav-item navbar-text"><a class=nav-link href=https://dnduykhoa.github.io/my-blog/contact title>Liên Hệ</a></li><li class="nav-item navbar-text"><div class=text-center><button id=theme-toggle>
-<svg id="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></li></ul></div></div></nav></header><div id=content><section id=single><div class=container><div class="row justify-content-center"><div class="col-sm-12 col-md-12 col-lg-9"><div class=pr-lg-4><div class="title mb-5"><h1 class="text-center mb-4">JavaScript Cơ Bản – Nền tảng ngôn ngữ web</h1><div class=text-center>Đào Nguyễn Duy Khoa <small>|</small>
-03/10/2025</div></div><article class="page-content p-2"><hr><h2 id=1-mở-đầu>1. Mở đầu</h2><p>Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là <strong>linh hồn</strong> giúp trang web sống động và tương tác.</p><blockquote><p>Lần đầu mình thử viết JS, mình thêm <code>document.getElementById("demo").innerText = "Hello JS";</code> mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai <code>id</code> 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?</p></blockquote><p>{{&lt; image src="/images/js-basic.png" alt=&ldquo;Ví dụ chạy JavaScript cơ bản trong trình duyệt&rdquo; >}}</p><hr><h2 id=2-javascript-chạy-ở-đâu>2. JavaScript chạy ở đâu?</h2><p>Bạn có thể chạy JavaScript theo 3 cách:</p><ol><li><strong>Inline</strong> – trong thẻ HTML:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>onclick</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;alert(&#39;Xin chào!&#39;)&#34;</span>&gt;Bấm tôi&lt;/<span style=color:#f92672>button</span>&gt;
-</span></span></code></pre></div><ol start=2><li><strong>Internal</strong> – trong thẻ <code>&lt;script></code>:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
-</span></span><span style=display:flex><span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hello JavaScript!&#34;</span>);
-</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>script</span>&gt;
-</span></span></code></pre></div><ol start=3><li><strong>External</strong> – file <code>.js</code> riêng:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;main.js&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
-</span></span></code></pre></div><p>👉 Cách 3 là phổ biến nhất vì dễ quản lý code.</p><hr><h2 id=3-biến-trong-javascript>3. Biến trong JavaScript</h2><h3 id=31-khai-báo-biến>3.1 Khai báo biến</h3><ul><li><code>var</code>: cũ, ít dùng.</li><li><code>let</code>: biến có thể thay đổi.</li><li><code>const</code>: hằng số, không thay đổi.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>21</span>;
-</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Khoa&#34;</span>;
-</span></span></code></pre></div><hr><h3 id=32-kiểu-dữ-liệu-cơ-bản>3.2 Kiểu dữ liệu cơ bản</h3><ul><li><strong>Number</strong>: 10, 3.14</li><li><strong>String</strong>: <code>"Hello"</code></li><li><strong>Boolean</strong>: <code>true</code>, <code>false</code></li><li><strong>Null</strong>: rỗng</li><li><strong>Undefined</strong>: chưa được gán</li><li><strong>Object</strong>: <code>{ key: value }</code></li><li><strong>Array</strong>: <code>[1, 2, 3]</code></li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;         <span style=color:#75715e>// number
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>s</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Xin chào&#34;</span>; <span style=color:#75715e>// string
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>arr</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>];
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>obj</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Khoa&#34;</span>, <span style=color:#a6e22e>age</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>21</span> };
-</span></span></code></pre></div><hr><h2 id=4-toán-tử-trong-javascript>4. Toán tử trong JavaScript</h2><table><thead><tr><th>Nhóm</th><th>Ví dụ</th><th>Ý nghĩa</th><th></th><th></th></tr></thead><tbody><tr><td>Số học</td><td><code>+ - * / %</code></td><td>Cộng, trừ, nhân, chia, chia dư</td><td></td><td></td></tr><tr><td>So sánh</td><td><code>== != === !== > &lt;</code></td><td>So sánh giá trị & kiểu</td><td></td><td></td></tr><tr><td>Logic</td><td>`&&</td><td></td><td>!`</td><td>AND, OR, NOT</td></tr><tr><td>Gán</td><td><code>= += -= *=</code></td><td>Gán giá trị</td><td></td><td></td></tr></tbody></table><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>, <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>;
-</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>);  <span style=color:#75715e>// 8
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>b</span>);  <span style=color:#75715e>// true
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;5&#34;</span>);  <span style=color:#75715e>// true (so sánh lỏng)
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>a</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;5&#34;</span>); <span style=color:#75715e>// false (so sánh chặt)
-</span></span></span></code></pre></div><hr><h2 id=5-in-ra-kết-quả>5. In ra kết quả</h2><ul><li><code>alert("Xin chào");</code> → hiển thị hộp thoại.</li><li><code>console.log("Debug");</code> → in ra console.</li><li><code>document.write("Hello");</code> → ghi vào trang web.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Xin chào JavaScript!&#34;</span>);
-</span></span></code></pre></div><hr><h2 id=6-ví-dụ-tính-tuổi-từ-năm-sinh>6. Ví dụ: Tính tuổi từ năm sinh</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
-</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>html</span>&gt;
-</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>body</span>&gt;
-</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>h2</span>&gt;Tính tuổi&lt;/<span style=color:#f92672>h2</span>&gt;
-</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;year&#34;</span> <span style=color:#a6e22e>placeholder</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Nhập năm sinh&#34;</span>&gt;
-</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>onclick</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;calcAge()&#34;</span>&gt;Tính tuổi&lt;/<span style=color:#f92672>button</span>&gt;
-</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;result&#34;</span>&gt;&lt;/<span style=color:#f92672>p</span>&gt;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>script</span>&gt;
-</span></span><span style=display:flex><span>      <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>calcAge</span>() {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>year</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#34;year&#34;</span>).<span style=color:#a6e22e>value</span>;
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>age</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2025</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>year</span>;
-</span></span><span style=display:flex><span>        document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#34;result&#34;</span>).<span style=color:#a6e22e>innerText</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Tuổi của bạn: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>age</span>;
-</span></span><span style=display:flex><span>      }
-</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>script</span>&gt;
-</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>body</span>&gt;
-</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>html</span>&gt;
-</span></span></code></pre></div><p>👉 Khi nhập năm sinh và bấm nút, JS sẽ tính tuổi và hiển thị ra.</p><hr><h2 id=7-lỗi-thường-gặp>7. Lỗi thường gặp</h2><table><thead><tr><th>Lỗi</th><th>Nguyên nhân</th><th>Cách khắc phục</th></tr></thead><tbody><tr><td><code>Uncaught ReferenceError</code></td><td>Gọi biến chưa khai báo</td><td>Dùng <code>let/const</code> khai báo trước</td></tr><tr><td>Sai <code>id</code></td><td>HTML không có id tương ứng</td><td>Kiểm tra lại DOM</td></tr><tr><td>Quên dấu <code>;</code></td><td>JavaScript có thể chạy nhưng dễ gây bug</td><td>Luôn thêm <code>;</code> cuối dòng</td></tr><tr><td>So sánh nhầm</td><td>Dùng <code>==</code> thay vì <code>===</code></td><td>Dùng <code>===</code> để so sánh chặt</td></tr></tbody></table><hr><h2 id=8-bài-tập-nhỏ>8. Bài tập nhỏ</h2><ol><li>Viết chương trình tính tổng 2 số nhập từ input.</li><li>Viết chương trình in ra số chẵn từ 1 đến 20.</li><li>Tạo nút bấm, khi bấm sẽ hiển thị “Hello JavaScript!”.</li></ol><hr><h2 id=9-tổng-kết>9. Tổng kết</h2><p>Trong bài này, bạn đã học:</p><ul><li>Cách nhúng JavaScript vào web.</li><li>Biến (<code>let</code>, <code>const</code>), kiểu dữ liệu cơ bản.</li><li>Các toán tử phổ biến.</li><li>Cách in kết quả ra màn hình.</li><li>Ví dụ ứng dụng nhỏ: tính tuổi.</li></ul><p>👉 Đây là nền tảng để học tiếp <strong>Bài 2: Cấu trúc điều khiển và Hàm trong JavaScript</strong> – nơi bạn sẽ biết cách viết logic điều kiện, vòng lặp và định nghĩa hàm.</p><hr><p><em>Hẹn gặp bạn ở bài 2 nhé!</em> 🚀</p></article></div></div><div class="col-sm-12 col-md-12 col-lg-3"><div id=stickySideBar class=sticky-sidebar><aside class=toc><h5>Mục lục</h5><div class=toc-content><nav id=TableOfContents><ul><li><a href=#1-mở-đầu>1. Mở đầu</a></li><li><a href=#2-javascript-chạy-ở-đâu>2. JavaScript chạy ở đâu?</a></li><li><a href=#3-biến-trong-javascript>3. Biến trong JavaScript</a><ul><li><a href=#31-khai-báo-biến>3.1 Khai báo biến</a></li><li><a href=#32-kiểu-dữ-liệu-cơ-bản>3.2 Kiểu dữ liệu cơ bản</a></li></ul></li><li><a href=#4-toán-tử-trong-javascript>4. Toán tử trong JavaScript</a></li><li><a href=#5-in-ra-kết-quả>5. In ra kết quả</a></li><li><a href=#6-ví-dụ-tính-tuổi-từ-năm-sinh>6. Ví dụ: Tính tuổi từ năm sinh</a></li><li><a href=#7-lỗi-thường-gặp>7. Lỗi thường gặp</a></li><li><a href=#8-bài-tập-nhỏ>8. Bài tập nhỏ</a></li><li><a href=#9-tổng-kết>9. Tổng kết</a></li></ul></nav></div></aside><aside class=tags><h5>Tags</h5><ul class="tags-ul list-unstyled list-inline"><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/javascript target=_blank>javascript</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/beginner target=_blank>beginner</a></li><li class=list-inline-item><a href=https://dnduykhoa.github.io/my-blog/tags/c%C6%A1-b%E1%BA%A3n target=_blank>cơ bản</a></li></ul></aside><aside class=social><h5>Social</h5><div class=social-content><ul class=list-inline><li class="list-inline-item text-center"><a target=_blank href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-linkedin"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://twitter.com/share?text=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web&url=https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-twitter"></i></a></li><li class="list-inline-item text-center"><a target=_blank href="https://api.whatsapp.com/send?text=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web: https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-whatsapp"></i></a></li><li class="list-inline-item text-center"><a target=_blank href='mailto:?subject=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web&amp;body=Check%20out%20this%20site https%3a%2f%2fdnduykhoa.github.io%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f'><i class="fa fa-envelope"></i></a></li></ul></div></aside></div></div></div><div class=row><div class="col-sm-12 col-md-12 col-lg-9 p-4"></div></div></div><button class="p-2 px-3" onclick=topFunction() id=topScroll>
-<i class="fas fa-angle-up"></i></button></section><div class=progress><div id=scroll-progress-bar class=progress-bar role=progressbar aria-valuenow=0 aria-valuemin=0 aria-valuemax=100></div></div><script src=https://dnduykhoa.github.io/my-blog/js/scrollProgressBar.js></script><script>var topScroll=document.getElementById("topScroll");window.onscroll=function(){scrollFunction()};function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?topScroll.style.display="block":topScroll.style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}let stickySideBarElem=document.getElementById("stickySideBar"),stickyNavBar=!1;if(stickyNavBar){let e=document.getElementById("profileHeader"),t=(e?.offsetHeight||35)+15;stickySideBarElem.style.top=t+"px"}else stickySideBarElem.style.top="50px"</script></div><footer><div class="text-center pt-2"></div><div class="container py-4"><div class="row justify-content-center"><div class="col-md-4 text-center">&copy; 2025 All Rights Reserved<div class=text-secondary>Made with
-<span class=text-danger>&#10084;
-</span>and
-<a href=https://github.com/gurusabarish/hugo-profile target=_blank title="Designed and developed by gurusabarish">Hugo Profile</a></div></div></div></div></footer><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js integrity=sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 crossorigin=anonymous></script><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))});var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')),tooltipList=tooltipTriggerList.map(function(e){return new bootstrap.Tooltip(e)})</script><script src=https://dnduykhoa.github.io/my-blog/js/search.js></script><section id=search-content class=py-2><div class=container id=search-results></div></section></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1315&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=http://localhost:1315/my-blog/fav.png type="image/gif">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/footer.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="http://localhost:1315/my-blog/blogs/javascript/javascript-basic/">
+  <meta property="og:site_name" content="Blog Lập Trình">
+  <meta property="og:title" content="JavaScript Cơ Bản – Nền tảng ngôn ngữ web">
+  <meta property="og:description" content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử.">
+  <meta property="og:locale" content="vi">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-09-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-22T00:00:00+00:00">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="Beginner">
+    <meta property="article:tag" content="Cơ Bản">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JavaScript Cơ Bản – Nền tảng ngôn ngữ web">
+  <meta name="twitter:description" content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử.">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1315/my-blog/css/header.css" media="all">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/footer.css" media="all">
+
+
+<script defer src="http://localhost:1315/my-blog/fontawesome-6/all-6.4.2.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: "1rem";
+        font-weight: "400";
+        line-height: "1.5";
+        text-align: "left";
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Giới thiệu JavaScript, cách chạy chương trình đầu tiên, cú pháp cơ bản, biến, kiểu dữ liệu và toán tử.">
+<link rel="stylesheet" href="http://localhost:1315/my-blog/css/single.css">
+<script defer src="http://localhost:1315/my-blog/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+JavaScript Cơ Bản – Nền tảng ngôn ngữ web | Blog Lập Trình
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1315/my-blog/">
+                
+                Blog Lập Trình Java &amp; JavaScript
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/" title="">
+                            
+                            Trang chủ
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/blogs" title="">
+                            
+                            Bài viết
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/about" title="">
+                            
+                            Giới Thiệu
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="http://localhost:1315/my-blog/contact" title="">
+                            
+                            Liên Hệ
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header><div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">JavaScript Cơ Bản – Nền tảng ngôn ngữ web</h1>
+            <div class="text-center">
+              Đào Nguyễn Duy Khoa <small>|</small>
+              22/09/2025
+            </div>
+          </div>
+
+          
+
+          <article class="page-content p-2">
+            <hr>
+<h2 id="1-mở-đầu">1. Mở đầu</h2>
+<p>Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là <strong>linh hồn</strong> giúp trang web sống động và tương tác.</p>
+<blockquote>
+<p>Lần đầu mình thử viết JS, mình thêm <code>document.getElementById(&quot;demo&quot;).innerText = &quot;Hello JS&quot;;</code> mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai <code>id</code> 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?</p></blockquote>
+<p>{{&lt; image src=&quot;/images/js-basic.png&quot; alt=&ldquo;Ví dụ chạy JavaScript cơ bản trong trình duyệt&rdquo; &gt;}}</p>
+<hr>
+<h2 id="2-javascript-chạy-ở-đâu">2. JavaScript chạy ở đâu?</h2>
+<p>Bạn có thể chạy JavaScript theo 3 cách:</p>
+<ol>
+<li><strong>Inline</strong> – trong thẻ HTML:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Xin chào!&#39;)&#34;</span>&gt;Bấm tôi&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><ol start="2">
+<li><strong>Internal</strong> – trong thẻ <code>&lt;script&gt;</code>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello JavaScript!&#34;</span>);
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ol start="3">
+<li><strong>External</strong> – file <code>.js</code> riêng:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>👉 Cách 3 là phổ biến nhất vì dễ quản lý code.</p>
+<hr>
+<h2 id="3-biến-trong-javascript">3. Biến trong JavaScript</h2>
+<h3 id="31-khai-báo-biến">3.1 Khai báo biến</h3>
+<ul>
+<li><code>var</code>: cũ, ít dùng.</li>
+<li><code>let</code>: biến có thể thay đổi.</li>
+<li><code>const</code>: hằng số, không thay đổi.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">21</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>;
+</span></span></code></pre></div><hr>
+<h3 id="32-kiểu-dữ-liệu-cơ-bản">3.2 Kiểu dữ liệu cơ bản</h3>
+<ul>
+<li><strong>Number</strong>: 10, 3.14</li>
+<li><strong>String</strong>: <code>&quot;Hello&quot;</code></li>
+<li><strong>Boolean</strong>: <code>true</code>, <code>false</code></li>
+<li><strong>Null</strong>: rỗng</li>
+<li><strong>Undefined</strong>: chưa được gán</li>
+<li><strong>Object</strong>: <code>{ key: value }</code></li>
+<li><strong>Array</strong>: <code>[1, 2, 3]</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;         <span style="color:#75715e">// number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xin chào&#34;</span>; <span style="color:#75715e">// string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span> };
+</span></span></code></pre></div><hr>
+<h2 id="4-toán-tử-trong-javascript">4. Toán tử trong JavaScript</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Nhóm</th>
+          <th>Ví dụ</th>
+          <th>Ý nghĩa</th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Số học</td>
+          <td><code>+ - * / %</code></td>
+          <td>Cộng, trừ, nhân, chia, chia dư</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>So sánh</td>
+          <td><code>== != === !== &gt; &lt;</code></td>
+          <td>So sánh giá trị &amp; kiểu</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Logic</td>
+          <td>`&amp;&amp;</td>
+          <td></td>
+          <td>!`</td>
+          <td>AND, OR, NOT</td>
+      </tr>
+      <tr>
+          <td>Gán</td>
+          <td><code>= += -= *=</code></td>
+          <td>Gán giá trị</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);  <span style="color:#75715e">// 8
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>);  <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;5&#34;</span>);  <span style="color:#75715e">// true (so sánh lỏng)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;5&#34;</span>); <span style="color:#75715e">// false (so sánh chặt)
+</span></span></span></code></pre></div><hr>
+<h2 id="5-in-ra-kết-quả">5. In ra kết quả</h2>
+<ul>
+<li><code>alert(&quot;Xin chào&quot;);</code> → hiển thị hộp thoại.</li>
+<li><code>console.log(&quot;Debug&quot;);</code> → in ra console.</li>
+<li><code>document.write(&quot;Hello&quot;);</code> → ghi vào trang web.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào JavaScript!&#34;</span>);
+</span></span></code></pre></div><hr>
+<h2 id="6-ví-dụ-tính-tuổi-từ-năm-sinh">6. Ví dụ: Tính tuổi từ năm sinh</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;Tính tuổi&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Nhập năm sinh&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calcAge()&#34;</span>&gt;Tính tuổi&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calcAge</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">year</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;year&#34;</span>).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2025</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">year</span>;
+</span></span><span style="display:flex;"><span>        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;result&#34;</span>).<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tuổi của bạn: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">age</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>👉 Khi nhập năm sinh và bấm nút, JS sẽ tính tuổi và hiển thị ra.</p>
+<hr>
+<h2 id="7-lỗi-thường-gặp">7. Lỗi thường gặp</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Lỗi</th>
+          <th>Nguyên nhân</th>
+          <th>Cách khắc phục</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Uncaught ReferenceError</code></td>
+          <td>Gọi biến chưa khai báo</td>
+          <td>Dùng <code>let/const</code> khai báo trước</td>
+      </tr>
+      <tr>
+          <td>Sai <code>id</code></td>
+          <td>HTML không có id tương ứng</td>
+          <td>Kiểm tra lại DOM</td>
+      </tr>
+      <tr>
+          <td>Quên dấu <code>;</code></td>
+          <td>JavaScript có thể chạy nhưng dễ gây bug</td>
+          <td>Luôn thêm <code>;</code> cuối dòng</td>
+      </tr>
+      <tr>
+          <td>So sánh nhầm</td>
+          <td>Dùng <code>==</code> thay vì <code>===</code></td>
+          <td>Dùng <code>===</code> để so sánh chặt</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="8-bài-tập-nhỏ">8. Bài tập nhỏ</h2>
+<ol>
+<li>Viết chương trình tính tổng 2 số nhập từ input.</li>
+<li>Viết chương trình in ra số chẵn từ 1 đến 20.</li>
+<li>Tạo nút bấm, khi bấm sẽ hiển thị “Hello JavaScript!”.</li>
+</ol>
+<hr>
+<h2 id="9-tổng-kết">9. Tổng kết</h2>
+<p>Trong bài này, bạn đã học:</p>
+<ul>
+<li>Cách nhúng JavaScript vào web.</li>
+<li>Biến (<code>let</code>, <code>const</code>), kiểu dữ liệu cơ bản.</li>
+<li>Các toán tử phổ biến.</li>
+<li>Cách in kết quả ra màn hình.</li>
+<li>Ví dụ ứng dụng nhỏ: tính tuổi.</li>
+</ul>
+<p>👉 Đây là nền tảng để học tiếp <strong>Bài 2: Cấu trúc điều khiển và Hàm trong JavaScript</strong> – nơi bạn sẽ biết cách viết logic điều kiện, vòng lặp và định nghĩa hàm.</p>
+<hr>
+<p><em>Hẹn gặp bạn ở bài 2 nhé!</em> 🚀</p>
+
+          </article>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+            <h5>Mục lục</h5>
+            <div class="toc-content">
+              
+              
+              
+              
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-mở-đầu">1. Mở đầu</a></li>
+    <li><a href="#2-javascript-chạy-ở-đâu">2. JavaScript chạy ở đâu?</a></li>
+    <li><a href="#3-biến-trong-javascript">3. Biến trong JavaScript</a>
+      <ul>
+        <li><a href="#31-khai-báo-biến">3.1 Khai báo biến</a></li>
+        <li><a href="#32-kiểu-dữ-liệu-cơ-bản">3.2 Kiểu dữ liệu cơ bản</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-toán-tử-trong-javascript">4. Toán tử trong JavaScript</a></li>
+    <li><a href="#5-in-ra-kết-quả">5. In ra kết quả</a></li>
+    <li><a href="#6-ví-dụ-tính-tuổi-từ-năm-sinh">6. Ví dụ: Tính tuổi từ năm sinh</a></li>
+    <li><a href="#7-lỗi-thường-gặp">7. Lỗi thường gặp</a></li>
+    <li><a href="#8-bài-tập-nhỏ">8. Bài tập nhỏ</a></li>
+    <li><a href="#9-tổng-kết">9. Tổng kết</a></li>
+  </ul>
+</nav>
+            </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item">
+                <a href="http://localhost:1315/my-blog/tags/javascript" target="_blank">javascript</a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a href="http://localhost:1315/my-blog/tags/beginner" target="_blank">beginner</a>
+              </li>
+              
+              <li class="list-inline-item">
+                <a href="http://localhost:1315/my-blog/tags/c%C6%A1-b%E1%BA%A3n" target="_blank">cơ bản</a>
+              </li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1315%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web&url=http%3a%2f%2flocalhost%3a1315%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web: http%3a%2f%2flocalhost%3a1315%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f"><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=JavaScript%20C%c6%a1%20B%e1%ba%a3n%20%e2%80%93%20N%e1%bb%81n%20t%e1%ba%a3ng%20ng%c3%b4n%20ng%e1%bb%af%20web&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1315%2fmy-blog%2fblogs%2fjavascript%2fjavascript-basic%2f'><i class="fa fa-envelope"></i></a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
+  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar = false; 
+  if(stickyNavBar){
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = (headerElem?.offsetHeight || 35) + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+  </div><footer class="site-footer">
+  <div class="container">
+    <div class="row footer-main">
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="footer-heading">Về Blog</h5>
+        <p class="footer-desc">Chia sẻ kiến thức lập trình, từ Java, JavaScript đến Web Development. Học tập mỗi ngày, tiến bộ mỗi giờ! 🚀</p>
+        <div class="footer-social">
+          <a href="https://github.com/dnduykhoa" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:daonguyenduykhoa@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5 class="footer-heading">Khám phá</h5>
+        <ul class="footer-links">
+          <li><a href="http://localhost:1315/my-blog/blogs">Tất cả bài viết</a></li>
+          <li><a href="http://localhost:1315/my-blog/tags">Tags</a></li>
+          <li><a href="http://localhost:1315/my-blog/about">Giới thiệu</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Chủ đề hot</h5>
+        <div class="footer-tags">
+          <a href="http://localhost:1315/my-blog/tags/java" class="tag-pill">Java</a>
+          <a href="http://localhost:1315/my-blog/tags/javascript" class="tag-pill">JavaScript</a>
+          <a href="http://localhost:1315/my-blog/tags/web" class="tag-pill">Web Dev</a>
+          <a href="http://localhost:1315/my-blog/tags/oop" class="tag-pill">OOP</a>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="footer-heading">Nhận bài mới</h5>
+        <p class="footer-newsletter-desc">Đăng ký để không bỏ lỡ bài viết hay!</p>
+        <form class="footer-newsletter" action="#" method="post">
+          <input type="email" placeholder="Email của bạn" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</footer>
+
+<script>
+
+(function(){
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="http://localhost:1315/my-blog/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

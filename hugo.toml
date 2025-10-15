@@ -75,20 +75,8 @@ page = ["HTML", "RSS"]
   weight = 1
 
 [[menu.main]]
-  name = "Blog"
+  name = "Bài viết"
   url = "/blogs"
-  weight = 2
-
-[[menu.main]]
-  name = "Java"
-  url = "/blogs/java"
-  parent = "Blog"
-  weight = 1
-
-[[menu.main]]
-  name = "JavaScript"
-  url = "/blogs/javascript"
-  parent = "Blog"
   weight = 2
 
 [[menu.main]]
@@ -100,3 +88,4 @@ page = ["HTML", "RSS"]
   name = "Liên Hệ"
   url = "/contact"
   weight = 4
+  

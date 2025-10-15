@@ -79,11 +79,11 @@ Hiện tại, tôi đang tập trung phát triển theo hướng **Backend với
 - Đóng góp mã nguồn mở, chia sẻ kiến thức cho cộng đồng sinh viên và lập trình viên trẻ Việt Nam.  
 
 ## Chứng chỉ
-- **Chứng nhận Tiếng Anh CEF chuẩn B1**: Hoàn thành cấp ngày 04/09/2025[Xem chứng chỉ](/pdf/EnglishB1.pdf)
-- **Kỹ năng Giao tiếp và Làm việc nhóm**: Hoàn thành cấp ngày 24/05/2024 [Xem chứng chỉ]()
+- **Chứng nhận Tiếng Anh CEF chuẩn B1**: Hoàn thành cấp ngày 04/09/2025 [Xem chứng chỉ](/pdf/EnglishB1.pdf)
+- **Kỹ năng Giao tiếp và Làm việc nhóm**: Hoàn thành cấp ngày 24/05/2024 [Xem chứng chỉ](/pdf/Communication_Teamwork.pdf)
 - **Networking Bassics**: Hoàn thành cấp ngày 15/09/2025 [Xem chứng chỉ](/pdf/NetworkingBasics.pdf)
 - **JavaScript Essentails 1**: Hoàn thành cấp ngày 15/09/2025 [Xem chứng chỉ](/pdf/JavaScriptEssentials1.pdf)
-- **JavaScript Essentails 2**: Hoàn thành cấp ngày 15/09/2025 [Xem chứng chỉ](/pdf/JavaScriptEssentails2.pdf)
+- **JavaScript Essentails 2**: Hoàn thành cấp ngày 15/09/2025 [Xem chứng chỉ](/pdf/JavaScriptEssentials2.pdf)
 
 ## Triết Lý Học Tập & Làm Việc
 Tôi luôn tin rằng **lập trình không phải là học thuộc cú pháp**, mà là **rèn luyện cách tư duy và giải quyết vấn đề**.  

@@ -1,15 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beginner on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/beginner/</link><description>Recent content in Beginner on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/beginner/index.xml" rel="self" type="application/rss+xml"/><item><title>Java Cơ Bản – Nền tảng cho người mới bắt đầu</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-basic/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-basic/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Bạn có bao giờ tự hỏi: &lt;em&gt;“Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả trí tuệ nhân tạo?”&lt;/em&gt;
-Câu trả lời nằm ở sự &lt;strong&gt;đơn giản, mạnh mẽ và ổn định&lt;/strong&gt; mà Java mang lại.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ &lt;code&gt;java -version&lt;/code&gt; mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?&lt;/p&gt;</description></item><item><title>JavaScript Cơ Bản – Nền tảng ngôn ngữ web</title><link>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-basic/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-basic/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là &lt;strong&gt;linh hồn&lt;/strong&gt; giúp trang web sống động và tương tác.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lần đầu mình thử viết JS, mình thêm &lt;code&gt;document.getElementById(&amp;quot;demo&amp;quot;).innerText = &amp;quot;Hello JS&amp;quot;;&lt;/code&gt; mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai &lt;code&gt;id&lt;/code&gt; 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?&lt;/p&gt;</description></item><item><title>Cấu trúc điều khiển và Hàm trong JavaScript</title><link>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-control-functions/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/javascript/javascript-control-functions/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Trong bài 1, bạn đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu và toán tử&lt;/strong&gt;. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần &lt;strong&gt;xử lý logic&lt;/strong&gt; để chương trình có thể đưa ra quyết định.&lt;/p&gt;
-&lt;p&gt;Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và &lt;strong&gt;hàm&lt;/strong&gt; xuất hiện.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Mình còn nhớ hồi đầu học JS, mình viết &lt;code&gt;if (x = 5)&lt;/code&gt; thay vì &lt;code&gt;if (x == 5)&lt;/code&gt; 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on Blog Lập Trình</title>
+    <link>http://localhost:1315/my-blog/tags/beginner/</link>
+    <description>Recent content in Beginner on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1315/my-blog/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript Cơ Bản – Nền tảng ngôn ngữ web</title>
+      <link>http://localhost:1315/my-blog/blogs/javascript/javascript-basic/</link>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/javascript/javascript-basic/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Nếu HTML là phần “xác” của một trang web, CSS là phần “trang điểm”, thì JavaScript chính là &lt;strong&gt;linh hồn&lt;/strong&gt; giúp trang web sống động và tương tác.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Lần đầu mình thử viết JS, mình thêm &lt;code&gt;document.getElementById(&amp;quot;demo&amp;quot;).innerText = &amp;quot;Hello JS&amp;quot;;&lt;/code&gt; mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai &lt;code&gt;id&lt;/code&gt; 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java Cơ Bản – Nền tảng cho người mới bắt đầu</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-basic/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-basic/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có bao giờ tự hỏi: &lt;em&gt;“Vì sao Java lại tồn tại hơn 25 năm và vẫn được dùng rộng rãi trong lập trình web, ứng dụng di động, và cả trí tuệ nhân tạo?”&lt;/em&gt;&#xA;Câu trả lời nằm ở sự &lt;strong&gt;đơn giản, mạnh mẽ và ổn định&lt;/strong&gt; mà Java mang lại.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ &lt;code&gt;java -version&lt;/code&gt; mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu trúc điều khiển và Hàm trong JavaScript</title>
+      <link>http://localhost:1315/my-blog/blogs/javascript/javascript-control-functions/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/javascript/javascript-control-functions/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài 1, bạn đã làm quen với &lt;strong&gt;biến, kiểu dữ liệu và toán tử&lt;/strong&gt;. Nhưng chỉ có dữ liệu thôi thì chưa đủ – chúng ta cần &lt;strong&gt;xử lý logic&lt;/strong&gt; để chương trình có thể đưa ra quyết định.&lt;/p&gt;&#xA;&lt;p&gt;Đây là lúc các cấu trúc điều khiển (if, switch, vòng lặp) và &lt;strong&gt;hàm&lt;/strong&gt; xuất hiện.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Mình còn nhớ hồi đầu học JS, mình viết &lt;code&gt;if (x = 5)&lt;/code&gt; thay vì &lt;code&gt;if (x == 5)&lt;/code&gt; 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

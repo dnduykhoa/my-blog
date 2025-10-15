@@ -1,7 +1,7 @@
 ---
 
 title: "Java Cơ Bản – Nền tảng cho người mới bắt đầu"
-date: 2025-10-03
+date: 2025-09-10
 draft: false
 description: "Giới thiệu Java, lịch sử, ưu điểm, cách cài đặt môi trường và viết chương trình đầu tiên."
 tags: ["java", "cơ bản", "beginner"]

@@ -1,6 +1,6 @@
 ---
 title: "Thư viện & Công cụ mạnh mẽ trong Java"
-date: 2025-10-03
+date: 2025-09-13
 draft: false
 description: "Khám phá Collections Framework, xử lý ngoại lệ, nhập/xuất dữ liệu và những hướng phát triển nâng cao trong Java."
 tags: ["java", "collections", "exception", "io", "công cụ"]

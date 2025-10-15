@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cấu Trúc Điều Khiển on Blog Lập Trình</title><link>https://dnduykhoa.github.io/my-blog/tags/c%E1%BA%A5u-tr%C3%BAc-%C4%91i%E1%BB%81u-khi%E1%BB%83n/</link><description>Recent content in Cấu Trúc Điều Khiển on Blog Lập Trình</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dnduykhoa.github.io/my-blog/tags/c%E1%BA%A5u-tr%C3%BAc-%C4%91i%E1%BB%81u-khi%E1%BB%83n/index.xml" rel="self" type="application/rss+xml"/><item><title>Cấu trúc và Dữ liệu trong Java</title><link>https://dnduykhoa.github.io/my-blog/blogs/java/java-structures-and-data/</link><pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate><guid>https://dnduykhoa.github.io/my-blog/blogs/java/java-structures-and-data/</guid><description>&lt;hr&gt;
-&lt;h2 id="1-mở-đầu"&gt;1. Mở đầu&lt;/h2&gt;
-&lt;p&gt;Trong bài trước, bạn đã chạy thành công chương trình &lt;strong&gt;Hello World&lt;/strong&gt;. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra màn hình, đúng không?
-Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu chương.&lt;/p&gt;
-&lt;p&gt;Để viết những chương trình hữu ích, bạn cần biết cách &lt;strong&gt;&amp;ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&amp;rdquo;&lt;/strong&gt; và &lt;strong&gt;&amp;ldquo;xử lý logic (if-else, vòng lặp)&amp;rdquo;&lt;/strong&gt;. Đây là &lt;strong&gt;“xương sống”&lt;/strong&gt; của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cấu Trúc Điều Khiển on Blog Lập Trình</title>
+    <link>http://localhost:1315/my-blog/tags/c%E1%BA%A5u-tr%C3%BAc-%C4%91i%E1%BB%81u-khi%E1%BB%83n/</link>
+    <description>Recent content in Cấu Trúc Điều Khiển on Blog Lập Trình</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1315/my-blog/tags/c%E1%BA%A5u-tr%C3%BAc-%C4%91i%E1%BB%81u-khi%E1%BB%83n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cấu trúc và Dữ liệu trong Java</title>
+      <link>http://localhost:1315/my-blog/blogs/java/java-structures-and-data/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/blogs/java/java-structures-and-data/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-mở-đầu&#34;&gt;1. Mở đầu&lt;/h2&gt;&#xA;&lt;p&gt;Trong bài trước, bạn đã chạy thành công chương trình &lt;strong&gt;Hello World&lt;/strong&gt;. Nhưng chắc chắn bạn sẽ muốn làm nhiều thứ hơn là chỉ in chữ ra màn hình, đúng không?&#xA;Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu chương.&lt;/p&gt;&#xA;&lt;p&gt;Để viết những chương trình hữu ích, bạn cần biết cách &lt;strong&gt;&amp;ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&amp;rdquo;&lt;/strong&gt; và &lt;strong&gt;&amp;ldquo;xử lý logic (if-else, vòng lặp)&amp;rdquo;&lt;/strong&gt;. Đây là &lt;strong&gt;“xương sống”&lt;/strong&gt; của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

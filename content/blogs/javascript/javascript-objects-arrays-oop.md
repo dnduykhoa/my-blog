@@ -1,6 +1,6 @@
 ---
 title: "Đối tượng, Mảng và OOP trong JavaScript"
-date: 2025-10-03
+date: 2025-09-27
 draft: false
 description: "Khám phá cách làm việc với Object, Array, và lập trình hướng đối tượng trong JavaScript với ES6 Class và Prototype."
 tags: ["javascript", "object", "array", "oop"]
