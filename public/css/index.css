@@ -576,3 +576,87 @@ header .navbar.animate {
     box-shadow: 0px 8px 56px rgb(15 80 100 / 5%);
     padding: .5rem 1rem;
 }
+
+/* Container tối đa để bố cục gọn */
+.container { max-width: 1200px; }
+
+/* Hero */
+.home-hero{ padding: 5rem 0 2rem; background: var(--background-color); }
+.hero-title{ font-size: clamp(2.4rem, 6vw, 3.4rem); font-weight:800; color: var(--primary-color); }
+.hero-subtitle{ font-size: clamp(1.25rem, 3vw, 1.6rem); color: var(--text-secondary-color); }
+.hero-desc{ color: var(--text-secondary-color); }
+.hero-photo-wrap{ width:min(380px,100%); margin:1.2rem auto 0; padding:.6rem; border-radius:1rem; background: var(--secondary-color); border:1px solid #0001; box-shadow:0 12px 30px #0000001a; }
+.hero-photo-wrap img{ width:100%; border-radius:.9rem; object-fit:cover; }
+
+/* Featured */
+.home-featured{ padding: 1.5rem 0 1rem; }
+.section-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:.75rem; }
+.section-head .see-all{ color: var(--text-link-color); text-decoration:none; }
+
+.home-featured a{ text-decoration:none; color: inherit; }      /* bỏ link xanh gạch chân */
+.post-card{ display:flex; flex-direction:column; background:var(--secondary-color); border-radius:.9rem; overflow:hidden; border:1px solid #0001; transition:.2s transform ease,.2s box-shadow ease; }
+.post-card:hover{ transform:translateY(-6px); box-shadow:0 18px 54px #0f50601c; }
+.post-card .thumb{ height:180px; background:#eef3f7; }
+.post-card .thumb img{ width:100%; height:100%; object-fit:cover; }
+.post-card .body{ padding:1rem 1.1rem; }
+.post-card .title{ font-weight:700; line-height:1.35; }
+.post-card .summary{ color:var(--text-secondary-color); margin:.25rem 0 0; }
+.post-card .meta{ padding:.75rem 1.1rem; display:flex; justify-content:space-between; align-items:center; color:var(--text-secondary-color); border-top:1px solid #0001; }
+.post-card .meta .read{ color: var(--text-link-color); font-weight:600; }
+
+/* Tags */
+.home-tags{ padding:.5rem 0 3rem; }
+.tags{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.tag{ padding:.45rem .8rem; background:var(--secondary-color); border-radius:999px; color:var(--text-color); text-decoration:none; box-shadow:0 6px 20px #0f50601a; border:1px solid #0001; }
+.tag:hover{ transform:translateY(-2px); box-shadow:0 10px 28px #0f506028; }
+
+
+.gradient-text{
+  background: linear-gradient(90deg, #2563eb, #22d3ee, #7c3aed);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background-size: 200% 100%; animation: hueShift 8s linear infinite;
+}
+@keyframes hueShift{ to { background-position: 200% 0; } }
+
+.hero-typed{ margin-top:.5rem; color: var(--text-secondary-color); font-weight:600 }
+.hero-typed #typewriter{ color: var(--primary-color) }
+
+.hero-badges{ display:flex; gap:.5rem; align-items:center; margin-top:.75rem; }
+.hero-badges .badge.pill{
+  padding:.4rem .7rem; border-radius:999px; background: var(--secondary-color);
+  border:1px solid #0001; box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+.hero-badges .dot{ color: var(--text-secondary-color) }
+
+.scroll-down{
+  display:inline-block; margin-top:1rem; text-decoration:none; font-size:1.4rem;
+  color: var(--text-link-color);
+  animation: bounce 1.6s ease-in-out infinite;
+}
+@keyframes bounce{
+  0%,100%{ transform: translateY(0); opacity:.8 }
+  50%{ transform: translateY(6px); opacity:1 }
+}
+
+/* hero photo glow ring */
+.hero-photo-wrap.glow{ position: relative; padding:.6rem; border-radius:1rem; }
+.hero-photo-wrap.glow::before{
+  content:""; position:absolute; inset:-3px; border-radius:inherit; z-index:0;
+  background: conic-gradient(from 0deg, #2563eb, #22d3ee, #7c3aed, #2563eb);
+  filter: blur(12px); opacity:.45; animation: spin 8s linear infinite;
+}
+.hero-photo-wrap.glow img{ position:relative; z-index:1 }
+@keyframes spin{ to{ transform: rotate(360deg) } }
+
+/* reveal on scroll */
+.reveal{ opacity:0; transform: translateY(16px); transition: .45s ease }
+.reveal.show{ opacity:1; transform:none }
+
+/* tilt base (extra smooth) */
+.post-card.tilt{ will-change: transform; transform-style: preserve-3d; transition: transform 120ms ease, box-shadow .2s ease }
+.post-card.tilt:hover{ box-shadow:0 22px 60px rgba(15,80,100,.22) }
+
+/* polish: headline spacing */
+.section-head h3{ font-weight:700 }
+
+.hero-photo-wrap{ width:min(340px,100%); }  
