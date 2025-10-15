@@ -7,6 +7,7 @@ relativeURLs = false
 canonifyURLs = true
 enableGitInfo = false
 
+# CHỈ KHAI BÁO OUTPUTS MỘT LẦN Ở ĐÂY
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML", "RSS"]
@@ -14,7 +15,7 @@ page = ["HTML", "RSS"]
 [params]
   title = "Blog Lập Trình Java & JavaScript"
   description = "Chia sẻ kiến thức về lập trình web"
-  dateFormat = "02/01/2006" 
+  dateFormat = "02/01/2006"
   staticPath = ""
   UseBootstrapCDN = true
 
@@ -49,55 +50,52 @@ page = ["HTML", "RSS"]
     placeholder = ""
     clearButton = false
 
-  [outputs]
-    home = ["HTML"]
-    
-  [[menu.main]]
-    name = "Trang chủ"
-    url = "/"
-    weight = 1
-
-  [[menu.main]]
-    name = "Blog"
-    url = "/blogs"
-    weight = 2
-
-  [[menu.main]]
-    name = "Java"
-    url = "/blogs/java"
-    parent = "Blog"
-    weight = 1
-
-  [[menu.main]]
-    name = "JavaScript"
-    url = "/blogs/javascript"
-    parent = "Blog"
-    weight = 2
-
-  [[menu.main]]
-    name = "Giới Thiệu"
-    url = "/about"
-    weight = 3
-
-  [[menu.main]]
-    name = "Liên Hệ"
-    url = "/contact"
-    weight = 4
-
   [params.blog]
     enable = true
     showDate = true
     showTags = true
     showAuthor = true
     authorImage = true
-    showRecentPosts = true  
+    showRecentPosts = true
     recentPostsLimit = 5
 
-  [taxonomies]
-    tag = "tags"
-    category = "categories"
-  
-  [markup]
-  [markup.goldmark.parser]
-    attribute = true
-    
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+[markup.goldmark.parser]
+  attribute = true
+
+# Menu: khai báo trực tiếp các array-of-tables ở cấp top-level
+[[menu.main]]
+  name = "Trang chủ"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blogs"
+  weight = 2
+
+[[menu.main]]
+  name = "Java"
+  url = "/blogs/java"
+  parent = "Blog"
+  weight = 1
+
+[[menu.main]]
+  name = "JavaScript"
+  url = "/blogs/javascript"
+  parent = "Blog"
+  weight = 2
+
+[[menu.main]]
+  name = "Giới Thiệu"
+  url = "/about"
+  weight = 3
+
+[[menu.main]]
+  name = "Liên Hệ"
+  url = "/contact"
+  weight = 4
