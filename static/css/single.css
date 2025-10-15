@@ -319,4 +319,10 @@
     transition: width .2s;
 }
 
-/* Singlepage scroll progress end */
+/* Ẩn ảnh/figure trong Mục lục */
+#single aside.toc img,
+#single aside.toc figure,
+#single aside.toc picture,
+#single aside.toc .md-img {
+  display: none !important;
+}
