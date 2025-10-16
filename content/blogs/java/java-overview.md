@@ -23,7 +23,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 ![Java Roadmap cho series 4 bài học](/images/java-roadmap.png)
 
----
 
 ## 2. Tại sao nên học Java?
 
@@ -34,7 +33,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Nắm vững Java, bạn có thể phát triển sự nghiệp ở nhiều lĩnh vực.
 
----
 
 ## 3. Lộ trình 4 bài học
 
@@ -48,7 +46,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Sau bài này: Bạn cài đặt xong môi trường và chạy được code đầu tiên.
 
----
 
 ### **Bài 2: Cấu trúc và Dữ liệu trong Java**
 
@@ -58,7 +55,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Sau bài này: Bạn viết được chương trình xử lý dữ liệu và logic cơ bản.
 
----
 
 ### **Bài 3: Lập trình Hướng Đối Tượng (OOP) trong Java**
 
@@ -68,7 +64,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Sau bài này: Bạn hiểu tư duy OOP – trái tim của Java.
 
----
 
 ### **Bài 4: Thư viện & Công cụ mạnh mẽ trong Java**
 
@@ -79,7 +74,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Sau bài này: Bạn biết cách sử dụng thư viện mạnh mẽ để quản lý dữ liệu và lưu trữ.
 
----
 
 ## 4. Ai nên đọc series này?
 
@@ -87,7 +81,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 * Người muốn bắt đầu học lập trình từ đầu.
 * Lập trình viên từ ngôn ngữ khác muốn làm quen với Java.
 
----
 
 ## 5. Sau khi học xong 4 bài này, bạn có thể…
 
@@ -95,7 +88,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 * Hiểu tư duy hướng đối tượng và cách Java tổ chức code.
 * Có nền tảng để học tiếp Java Web, Spring Boot, hoặc Android.
 
----
 
 ## 6. Tiếp theo nên học gì?
 
@@ -106,7 +98,6 @@ Nhưng câu hỏi đặt ra là: *“Mình nên bắt đầu học Java từ đ�
 
 👉 Đây chính là con đường phát triển từ **Java cơ bản → Java nâng cao → Ứng dụng thực tế**.
 
----
 
 ## 7. Tổng kết
 
@@ -121,6 +112,5 @@ Series này gồm 4 bài:
 
 👉 Hãy bắt đầu ngay với **Bài 1: Java Cơ Bản – Nền tảng cho người mới bắt đầu** 🚀
 
----
 
 *Chúc bạn học tập hiệu quả và sớm trở thành Java Developer!* 💻

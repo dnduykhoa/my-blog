@@ -20,7 +20,6 @@ Nhưng khi dự án lớn dần (ví dụ: quản lý sinh viên, bán hàng onl
 👉 Đó là lúc **Lập trình Hướng Đối Tượng (OOP – Object-Oriented Programming)** xuất hiện để giải quyết vấn đề.
 Java chính là một trong những ngôn ngữ tiêu biểu nhất cho OOP.
 
----
 
 ## 2. OOP là gì?
 
@@ -41,7 +40,6 @@ Ví dụ:
 
 👉 Đây chính là cách mà Java giúp chúng ta **mô phỏng thế giới thực bằng code**.
 
----
 
 ## 3. Các khái niệm cơ bản
 
@@ -72,8 +70,6 @@ public class Main {
 }
 ```
 
----
-
 ## 4. Bốn tính chất quan trọng của OOP
 
 ### 4.1 Đóng gói (Encapsulation)
@@ -99,7 +95,6 @@ class BankAccount {
 
 👉 `balance` bị ẩn đi, không thể thay đổi trực tiếp từ bên ngoài.
 
----
 
 ### 4.2 Kế thừa (Inheritance)
 
@@ -132,7 +127,6 @@ public class Main {
 }
 ```
 
----
 
 ### 4.3 Đa hình (Polymorphism)
 
@@ -165,8 +159,6 @@ class Dog extends Animal {
 }
 ```
 
----
-
 ### 4.4 Trừu tượng (Abstraction)
 
 * Ẩn chi tiết, chỉ cho người dùng thấy **cái gì làm được** chứ không cần biết **làm thế nào**.
@@ -197,8 +189,6 @@ class Car implements Vehicle {
     }
 }
 ```
-
----
 
 ## 5. Ví dụ tổng hợp
 
@@ -231,8 +221,6 @@ public class Main {
 }
 ```
 
----
-
 ## 6. Lỗi thường gặp
 
 | Lỗi                    | Nguyên nhân                              | Cách khắc phục                     |
@@ -241,7 +229,6 @@ public class Main {
 | `NullPointerException` | Đối tượng chưa được khởi tạo bằng `new`  | Dùng `new` để tạo object           |
 | Lạm dụng kế thừa       | Kế thừa không hợp lý, gây rối code       | Chỉ kế thừa khi có quan hệ “is-a”  |
 
----
 
 ## 7. Bài tập nhỏ
 
@@ -249,7 +236,6 @@ public class Main {
 2. Viết chương trình quản lý **sách trong thư viện**: class `Book` (title, author, year), thêm phương thức in thông tin.
 3. Tạo interface `Shape` với phương thức `area()`. Cài đặt `Rectangle` và `Circle`.
 
----
 
 ## 8. Tổng kết
 
@@ -265,6 +251,5 @@ Trong bài này, bạn đã học:
 Ở **bài 4**, chúng ta sẽ tìm hiểu:
 **“Thư viện & Công cụ mạnh mẽ trong Java”** – gồm Collections, Exception Handling và IO.
 
----
 
 *Hẹn gặp bạn ở Bài 4 nhé!* 🚀

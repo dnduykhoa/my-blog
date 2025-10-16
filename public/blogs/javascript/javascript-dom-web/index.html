@@ -294,7 +294,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <blockquote>
 <p>Mình còn nhớ lần đầu viết code <code>document.getElementById(&quot;title&quot;).innerText = &quot;Xin chào JS&quot;;</code> và thấy ngay dòng chữ trên web thay đổi. Mình cảm thấy “wow, mình vừa điều khiển được cả website bằng code của mình!”. Bạn có nhớ lần đầu tiên bạn thấy web “chuyển động” nhờ JS không?</p></blockquote>
 <p>{{&lt; image src=&quot;/images/js-dom.png&quot; alt=&ldquo;DOM trong JavaScript&rdquo; &gt;}}</p>
-<hr>
 <h2 id="2-dom-là-gì">2. DOM là gì?</h2>
 <ul>
 <li>DOM là <strong>cây phân cấp</strong> của tất cả các phần tử trong HTML.</li>
@@ -305,8 +304,7 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;Xin chào&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span></code></pre></div><p>JavaScript:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;title&#34;</span>).<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xin chào JavaScript!&#34;</span>;
-</span></span></code></pre></div><hr>
-<h2 id="3-truy-cập-phần-tử">3. Truy cập phần tử</h2>
+</span></span></code></pre></div><h2 id="3-truy-cập-phần-tử">3. Truy cập phần tử</h2>
 <h3 id="31-theo-id">3.1 Theo ID</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;title&#34;</span>);
 </span></span></code></pre></div><h3 id="32-theo-class">3.2 Theo class</h3>
@@ -316,31 +314,26 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 </span></span></code></pre></div><h3 id="34-query-selector-hiện-đại">3.4 Query selector (hiện đại)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#title&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.item&#34;</span>);
-</span></span></code></pre></div><hr>
-<h2 id="4-thay-đổi-nội-dung-và-style">4. Thay đổi nội dung và style</h2>
+</span></span></code></pre></div><h2 id="4-thay-đổi-nội-dung-và-style">4. Thay đổi nội dung và style</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;title&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Chào bạn!&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;24px&#34;</span>;
-</span></span></code></pre></div><hr>
-<h2 id="5-xử-lý-sự-kiện-events">5. Xử lý sự kiện (Events)</h2>
+</span></span></code></pre></div><h2 id="5-xử-lý-sự-kiện-events">5. Xử lý sự kiện (Events)</h2>
 <h3 id="51-gắn-sự-kiện-trực-tiếp">5.1 Gắn sự kiện trực tiếp</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Bạn vừa click!&#39;)&#34;</span>&gt;Click me&lt;/<span style="color:#f92672">button</span>&gt;
-</span></span></code></pre></div><hr>
-<h3 id="52-dùng-addeventlistener">5.2 Dùng addEventListener</h3>
+</span></span></code></pre></div><h3 id="52-dùng-addeventlistener">5.2 Dùng addEventListener</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myBtn&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Bạn vừa bấm nút!&#34;</span>);
 </span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><hr>
-<h3 id="53-sự-kiện-thường-gặp">5.3 Sự kiện thường gặp</h3>
+</span></span></code></pre></div><h3 id="53-sự-kiện-thường-gặp">5.3 Sự kiện thường gặp</h3>
 <ul>
 <li><code>click</code></li>
 <li><code>mouseover</code></li>
 <li><code>keydown</code></li>
 <li><code>submit</code></li>
 </ul>
-<hr>
 <h2 id="6-ví-dụ-tổng-hợp-to-do-list">6. Ví dụ tổng hợp: To-do List</h2>
 <p>HTML:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;task&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Nhập công việc&#34;</span>&gt;
@@ -359,7 +352,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 </span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><p>👉 Kết quả: bạn có một ứng dụng <strong>To-do List</strong> mini 🚀</p>
 <p>{{&lt; image src=&quot;/images/js-todo.png&quot; alt=&ldquo;Ứng dụng To-do List bằng JavaScript&rdquo; &gt;}}</p>
-<hr>
 <h2 id="7-lỗi-thường-gặp">7. Lỗi thường gặp</h2>
 <table>
   <thead>
@@ -392,7 +384,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
       </tr>
   </tbody>
 </table>
-<hr>
 <h2 id="8-bài-tập-nhỏ">8. Bài tập nhỏ</h2>
 <ol>
 <li>Viết chương trình thay đổi màu nền trang khi bấm nút.</li>
@@ -400,7 +391,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <li>Tạo form đăng nhập, khi bấm submit thì in ra tên người dùng.</li>
 <li>Viết ứng dụng quiz nhỏ: hiện câu hỏi, chọn đáp án, báo đúng/sai.</li>
 </ol>
-<hr>
 <h2 id="9-tổng-kết">9. Tổng kết</h2>
 <p>Trong bài này, bạn đã học:</p>
 <ul>
@@ -411,7 +401,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <li>Ứng dụng To-do List thực tế.</li>
 </ul>
 <p>👉 Đây chính là lúc bạn thấy JavaScript <strong>biến trang web tĩnh thành trang web động</strong>.</p>
-<hr>
 <h2 id="10-kết-thúc-series">10. Kết thúc series</h2>
 <p>🎉 Xin chúc mừng! Bạn đã hoàn thành 4 bài học cơ bản về JavaScript:</p>
 <ol>
@@ -426,7 +415,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <li>Làm ứng dụng mini chạy trong trình duyệt.</li>
 <li>Có nền tảng để học nâng cao: <strong>AJAX, API, React, Node.js</strong>.</li>
 </ul>
-<hr>
 <p><em>Chúc bạn sớm trở thành JavaScript Developer và xây dựng những website tuyệt vời!</em> 🌐🚀</p>
 
           </article>
@@ -501,7 +489,7 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 
           
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Chia sẻ</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -530,10 +518,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -542,11 +526,6 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
 <script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; 
@@ -615,7 +594,7 @@ DOM &amp; Tương tác với Web trong JavaScript | Blog Lập Trình
     <div class="footer-bottom">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>

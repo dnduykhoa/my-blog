@@ -64,7 +64,7 @@
 
           {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
           <aside class="social">
-            <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
+            <h5>{{ .Site.Params.terms.social | default "Chia sẻ" }}</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -93,10 +93,6 @@
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -105,11 +101,6 @@
 <script src="{{.Site.Params.staticPath}}/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   // sticky sidebar offset (đơn giản, tránh lỗi JS)
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; // đặt false để không gây lỗi

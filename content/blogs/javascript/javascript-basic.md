@@ -17,7 +17,7 @@ Nếu HTML là phần “xác” của một trang web, CSS là phần “trang 
 
 {{</* image src="/images/js-basic.png" alt="Ví dụ chạy JavaScript cơ bản trong trình duyệt" */>}}
 
----
+
 
 ## 2. JavaScript chạy ở đâu?
 
@@ -45,7 +45,7 @@ Bạn có thể chạy JavaScript theo 3 cách:
 
 👉 Cách 3 là phổ biến nhất vì dễ quản lý code.
 
----
+
 
 ## 3. Biến trong JavaScript
 
@@ -60,7 +60,7 @@ let age = 21;
 const name = "Khoa";
 ```
 
----
+
 
 ### 3.2 Kiểu dữ liệu cơ bản
 
@@ -79,7 +79,6 @@ let arr = [1, 2, 3];
 let obj = { name: "Khoa", age: 21 };
 ```
 
----
 
 ## 4. Toán tử trong JavaScript
 
@@ -98,7 +97,6 @@ console.log(a == "5");  // true (so sánh lỏng)
 console.log(a === "5"); // false (so sánh chặt)
 ```
 
----
 
 ## 5. In ra kết quả
 
@@ -110,7 +108,6 @@ console.log(a === "5"); // false (so sánh chặt)
 console.log("Xin chào JavaScript!");
 ```
 
----
 
 ## 6. Ví dụ: Tính tuổi từ năm sinh
 
@@ -136,7 +133,7 @@ console.log("Xin chào JavaScript!");
 
 👉 Khi nhập năm sinh và bấm nút, JS sẽ tính tuổi và hiển thị ra.
 
----
+
 
 ## 7. Lỗi thường gặp
 
@@ -147,7 +144,7 @@ console.log("Xin chào JavaScript!");
 | Quên dấu `;`              | JavaScript có thể chạy nhưng dễ gây bug | Luôn thêm `;` cuối dòng         |
 | So sánh nhầm              | Dùng `==` thay vì `===`                 | Dùng `===` để so sánh chặt      |
 
----
+
 
 ## 8. Bài tập nhỏ
 
@@ -155,7 +152,7 @@ console.log("Xin chào JavaScript!");
 2. Viết chương trình in ra số chẵn từ 1 đến 20.
 3. Tạo nút bấm, khi bấm sẽ hiển thị “Hello JavaScript!”.
 
----
+
 
 ## 9. Tổng kết
 
@@ -169,6 +166,6 @@ Trong bài này, bạn đã học:
 
 👉 Đây là nền tảng để học tiếp **Bài 2: Cấu trúc điều khiển và Hàm trong JavaScript** – nơi bạn sẽ biết cách viết logic điều kiện, vòng lặp và định nghĩa hàm.
 
----
+
 
 *Hẹn gặp bạn ở bài 2 nhé!* 🚀

@@ -294,7 +294,6 @@
 <blockquote>
 <p>Hồi mình mới học JS, mình viết danh sách sinh viên bằng… 5 biến riêng lẻ: <code>name1</code>, <code>name2</code>, <code>name3</code>… 😅. Rất lộn xộn! Sau này mình mới biết dùng <strong>array</strong> và <strong>object</strong>, mọi thứ gọn gàng hơn hẳn. Bạn đã từng code “cồng kềnh” như vậy chưa?</p></blockquote>
 <p>{{&lt; image src=&quot;/images/js-object-array.png&quot; alt=&ldquo;Object và Array trong JavaScript&rdquo; &gt;}}</p>
-<hr>
 <h2 id="2-object-trong-javascript">2. Object trong JavaScript</h2>
 <h3 id="21-khai-báo-object">2.1 Khai báo object</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">student</span> <span style="color:#f92672">=</span> {
@@ -310,8 +309,7 @@
 </span></span></code></pre></div><h3 id="22-thêm-và-xóa-thuộc-tính">2.2 Thêm và xóa thuộc tính</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">student</span>.<span style="color:#66d9ef">class</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CNTT&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">student</span>.<span style="color:#a6e22e">age</span>;
-</span></span></code></pre></div><hr>
-<h2 id="3-array-trong-javascript">3. Array trong JavaScript</h2>
+</span></span></code></pre></div><h2 id="3-array-trong-javascript">3. Array trong JavaScript</h2>
 <h3 id="31-khai-báo-array">3.1 Khai báo array</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Táo&#34;</span>, <span style="color:#e6db74">&#34;Cam&#34;</span>, <span style="color:#e6db74">&#34;Chuối&#34;</span>];
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// Táo
@@ -320,13 +318,11 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">pop</span>();          <span style="color:#75715e">// xóa phần tử cuối
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">shift</span>();        <span style="color:#75715e">// xóa phần tử đầu
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#e6db74">&#34;Lê&#34;</span>);  <span style="color:#75715e">// thêm phần tử đầu
-</span></span></span></code></pre></div><hr>
-<h3 id="33-duyệt-mảng">3.3 Duyệt mảng</h3>
+</span></span></span></code></pre></div><h3 id="33-duyệt-mảng">3.3 Duyệt mảng</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruit</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">fruits</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruit</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="34-các-phương-thức-hiện-đại">3.4 Các phương thức hiện đại</h3>
+</span></span></code></pre></div><h3 id="34-các-phương-thức-hiện-đại">3.4 Các phương thức hiện đại</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squares</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n</span>);
@@ -337,8 +333,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// 15
-</span></span></span></code></pre></div><hr>
-<h2 id="4-lập-trình-hướng-đối-tượng-oop">4. Lập trình Hướng Đối Tượng (OOP)</h2>
+</span></span></span></code></pre></div><h2 id="4-lập-trình-hướng-đối-tượng-oop">4. Lập trình Hướng Đối Tượng (OOP)</h2>
 <h3 id="41-constructor-function">4.1 Constructor function</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Student</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
@@ -347,15 +342,13 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#ae81ff">21</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">name</span>);
-</span></span></code></pre></div><hr>
-<h3 id="42-prototype">4.2 Prototype</h3>
+</span></span></code></pre></div><h3 id="42-prototype">4.2 Prototype</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Student</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào, tôi là &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">s1</span>.<span style="color:#a6e22e">sayHello</span>();
-</span></span></code></pre></div><hr>
-<h3 id="43-class-es6">4.3 Class (ES6)</h3>
+</span></span></code></pre></div><h3 id="43-class-es6">4.3 Class (ES6)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
@@ -369,8 +362,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Lan&#34;</span>, <span style="color:#ae81ff">20</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">s2</span>.<span style="color:#a6e22e">study</span>();
-</span></span></code></pre></div><hr>
-<h3 id="44-kế-thừa-với-extends">4.4 Kế thừa với <code>extends</code></h3>
+</span></span></code></pre></div><h3 id="44-kế-thừa-với-extends">4.4 Kế thừa với <code>extends</code></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
@@ -385,9 +377,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">t1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Teacher</span>(<span style="color:#e6db74">&#34;Thầy Minh&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">t1</span>.<span style="color:#a6e22e">teach</span>();
-</span></span></code></pre></div><hr>
-<p>{{&lt; image src=&quot;/images/js-class-diagram.png&quot; alt=&ldquo;Class và kế thừa trong JavaScript&rdquo; &gt;}}</p>
-<hr>
+</span></span></code></pre></div><p>{{&lt; image src=&quot;/images/js-class-diagram.png&quot; alt=&ldquo;Class và kế thừa trong JavaScript&rdquo; &gt;}}</p>
 <h2 id="5-ví-dụ-tổng-hợp-quản-lý-sinh-viên">5. Ví dụ tổng hợp: Quản lý sinh viên</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) {
@@ -406,8 +396,7 @@
 </span></span><span style="display:flex;"><span>];
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s</span> =&gt; <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">display</span>());
-</span></span></code></pre></div><hr>
-<h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
+</span></span></code></pre></div><h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
 <table>
   <thead>
       <tr>
@@ -439,7 +428,6 @@
       </tr>
   </tbody>
 </table>
-<hr>
 <h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
 <ol>
 <li>Tạo object <code>car</code> có thuộc tính <code>brand</code>, <code>speed</code>, và method <code>drive()</code>.</li>
@@ -447,7 +435,6 @@
 <li>Viết class <code>Animal</code> và class con <code>Dog</code>, override method <code>sound()</code>.</li>
 <li>Tạo danh sách sinh viên (array of objects) và in ra tất cả.</li>
 </ol>
-<hr>
 <h2 id="8-tổng-kết">8. Tổng kết</h2>
 <p>Trong bài này, bạn đã học:</p>
 <ul>
@@ -459,7 +446,6 @@
 <p>👉 Đây là bước quan trọng để bạn làm việc với <strong>dữ liệu phức tạp và mô hình hóa đối tượng trong JS</strong>.</p>
 <p>Ở <strong>bài 4</strong>, chúng ta sẽ học:
 <strong>“DOM &amp; Tương tác với Web”</strong> – nơi JS thật sự “thể hiện sức mạnh” khi làm web sống động.</p>
-<hr>
 <p><em>Hẹn gặp bạn ở Bài 4 nhé!</em> 🚀</p>
 
           </article>
@@ -538,7 +524,7 @@
 
           
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Chia sẻ</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -567,10 +553,6 @@
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -579,11 +561,6 @@
 <script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; 
@@ -652,7 +629,7 @@
     <div class="footer-bottom">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>

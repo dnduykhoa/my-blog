@@ -19,7 +19,7 @@ Trong bài 2, bạn đã biết cách sử dụng **if, vòng lặp và hàm** �
 
 {{</* image src="/images/js-object-array.png" alt="Object và Array trong JavaScript" */>}}
 
----
+
 
 ## 2. Object trong JavaScript
 
@@ -45,7 +45,7 @@ student.class = "CNTT";
 delete student.age;
 ```
 
----
+
 
 ## 3. Array trong JavaScript
 
@@ -65,7 +65,7 @@ fruits.shift();        // xóa phần tử đầu
 fruits.unshift("Lê");  // thêm phần tử đầu
 ```
 
----
+
 
 ### 3.3 Duyệt mảng
 
@@ -75,7 +75,7 @@ for (let fruit of fruits) {
 }
 ```
 
----
+
 
 ### 3.4 Các phương thức hiện đại
 
@@ -92,7 +92,7 @@ let sum = numbers.reduce((acc, n) => acc + n, 0);
 console.log(sum); // 15
 ```
 
----
+
 
 ## 4. Lập trình Hướng Đối Tượng (OOP)
 
@@ -108,7 +108,7 @@ let s1 = new Student("Khoa", 21);
 console.log(s1.name);
 ```
 
----
+
 
 ### 4.2 Prototype
 
@@ -120,7 +120,7 @@ Student.prototype.sayHello = function() {
 s1.sayHello();
 ```
 
----
+
 
 ### 4.3 Class (ES6)
 
@@ -140,7 +140,7 @@ let s2 = new Student("Lan", 20);
 s2.study();
 ```
 
----
+
 
 ### 4.4 Kế thừa với `extends`
 
@@ -161,11 +161,11 @@ let t1 = new Teacher("Thầy Minh");
 t1.teach();
 ```
 
----
+
 
 {{</* image src="/images/js-class-diagram.png" alt="Class và kế thừa trong JavaScript" */>}}
 
----
+
 
 ## 5. Ví dụ tổng hợp: Quản lý sinh viên
 
@@ -189,7 +189,7 @@ let list = [
 list.forEach(s => s.display());
 ```
 
----
+
 
 ## 6. Lỗi thường gặp
 
@@ -200,7 +200,7 @@ list.forEach(s => s.display());
 | Thêm phần tử ngoài mảng         | Dùng sai chỉ số            | Chỉ số phải < length    |
 | Quên `new` khi tạo object       | Không tạo instance         | Dùng `new ClassName()`  |
 
----
+
 
 ## 7. Bài tập nhỏ
 
@@ -209,7 +209,7 @@ list.forEach(s => s.display());
 3. Viết class `Animal` và class con `Dog`, override method `sound()`.
 4. Tạo danh sách sinh viên (array of objects) và in ra tất cả.
 
----
+
 
 ## 8. Tổng kết
 
@@ -225,6 +225,6 @@ Trong bài này, bạn đã học:
 Ở **bài 4**, chúng ta sẽ học:
 **“DOM & Tương tác với Web”** – nơi JS thật sự “thể hiện sức mạnh” khi làm web sống động.
 
----
+
 
 *Hẹn gặp bạn ở Bài 4 nhé!* 🚀

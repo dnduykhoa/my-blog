@@ -295,7 +295,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 <blockquote>
 <p>Mình còn nhớ hồi đầu học JS, mình viết <code>if (x = 5)</code> thay vì <code>if (x == 5)</code> 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?</p></blockquote>
 <p>{{&lt; image src=&quot;/images/js-control-flow.png&quot; alt=&ldquo;Sơ đồ cấu trúc điều khiển trong JavaScript&rdquo; &gt;}}</p>
-<hr>
 <h2 id="2-cấu-trúc-rẽ-nhánh">2. Cấu trúc rẽ nhánh</h2>
 <h3 id="21-if--else">2.1 If – else</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
@@ -304,8 +303,7 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 </span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Bạn chưa đủ 18 tuổi.&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="22-if--else-if--else">2.2 If – else if – else</h3>
+</span></span></code></pre></div><h3 id="22-if--else-if--else">2.2 If – else if – else</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">85</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xuất sắc&#34;</span>);
@@ -314,8 +312,7 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 </span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Trung bình&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="23-switch-case">2.3 Switch-case</h3>
+</span></span></code></pre></div><h3 id="23-switch-case">2.3 Switch-case</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">day</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Thứ Hai&#34;</span>); <span style="color:#66d9ef">break</span>;
@@ -323,65 +320,55 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Thứ Tư&#34;</span>); <span style="color:#66d9ef">break</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ngày khác&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="3-vòng-lặp">3. Vòng lặp</h2>
+</span></span></code></pre></div><h2 id="3-vòng-lặp">3. Vòng lặp</h2>
 <h3 id="31-for">3.1 For</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;i = &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="32-while">3.2 While</h3>
+</span></span></code></pre></div><h3 id="32-while">3.2 While</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="33-do-while">3.3 Do-while</h3>
+</span></span></code></pre></div><h3 id="33-do-while">3.3 Do-while</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">j</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>;
 </span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">5</span>);
-</span></span></code></pre></div><hr>
-<h3 id="34-forof">3.4 For…of</h3>
+</span></span></code></pre></div><h3 id="34-forof">3.4 For…of</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Táo&#34;</span>, <span style="color:#e6db74">&#34;Cam&#34;</span>, <span style="color:#e6db74">&#34;Chuối&#34;</span>];
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruit</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arr</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruit</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="35-forin">3.5 For…in</h3>
+</span></span></code></pre></div><h3 id="35-forin">3.5 For…in</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span>};
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">person</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">key</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>[<span style="color:#a6e22e">key</span>]);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="4-hàm-trong-javascript">4. Hàm trong JavaScript</h2>
+</span></span></code></pre></div><h2 id="4-hàm-trong-javascript">4. Hàm trong JavaScript</h2>
 <h3 id="41-hàm-cơ-bản">4.1 Hàm cơ bản</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">name</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Xin chào, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;!&#34;</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greet</span>(<span style="color:#e6db74">&#34;Khoa&#34;</span>));
-</span></span></code></pre></div><hr>
-<h3 id="42-biểu-thức-hàm-function-expression">4.2 Biểu thức hàm (Function Expression)</h3>
+</span></span></code></pre></div><h3 id="42-biểu-thức-hàm-function-expression">4.2 Biểu thức hàm (Function Expression)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">x</span>;
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">5</span>)); <span style="color:#75715e">// 25
-</span></span></span></code></pre></div><hr>
-<h3 id="43-arrow-function-es6">4.3 Arrow function (ES6)</h3>
+</span></span></span></code></pre></div><h3 id="43-arrow-function-es6">4.3 Arrow function (ES6)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// 7
-</span></span></span></code></pre></div><hr>
-<h3 id="44-tham-số-mặc-định">4.4 Tham số mặc định</h3>
+</span></span></span></code></pre></div><h3 id="44-tham-số-mặc-định">4.4 Tham số mặc định</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bạn&#34;</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">greet</span>();        <span style="color:#75715e">// Xin chào, bạn
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">greet</span>(<span style="color:#e6db74">&#34;Khoa&#34;</span>);  <span style="color:#75715e">// Xin chào, Khoa
-</span></span></span></code></pre></div><hr>
-<h2 id="5-ví-dụ-tổng-hợp-tính-tổng-số-nguyên-tố">5. Ví dụ tổng hợp: Tính tổng số nguyên tố</h2>
+</span></span></span></code></pre></div><h2 id="5-ví-dụ-tổng-hợp-tính-tổng-số-nguyên-tố">5. Ví dụ tổng hợp: Tính tổng số nguyên tố</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isPrime</span>(<span style="color:#a6e22e">n</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">n</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
@@ -399,8 +386,7 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sumPrimes</span>(<span style="color:#ae81ff">20</span>)); <span style="color:#75715e">// 77
-</span></span></span></code></pre></div><hr>
-<h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
+</span></span></span></code></pre></div><h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
 <table>
   <thead>
       <tr>
@@ -432,7 +418,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
       </tr>
   </tbody>
 </table>
-<hr>
 <h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
 <ol>
 <li>Viết chương trình nhập số và in ra “Chẵn” hoặc “Lẻ”.</li>
@@ -440,7 +425,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 <li>Viết hàm tính tổng các số lẻ từ 1 đến N.</li>
 <li>Viết hàm kiểm tra chuỗi có phải palindrome hay không.</li>
 </ol>
-<hr>
 <h2 id="8-tổng-kết">8. Tổng kết</h2>
 <p>Trong bài này, bạn đã học:</p>
 <ul>
@@ -452,7 +436,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 <p>👉 Đây là bước giúp bạn viết <strong>logic phức tạp hơn trong JavaScript</strong>.</p>
 <p>Ở <strong>bài 3</strong>, chúng ta sẽ học:
 <strong>“Đối tượng, Mảng và OOP trong JavaScript”</strong> – một phần cực quan trọng để làm việc với dữ liệu thực tế.</p>
-<hr>
 <p><em>Hẹn gặp bạn ở Bài 3 nhé!</em> 🚀</p>
 
           </article>
@@ -537,7 +520,7 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 
           
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Chia sẻ</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -566,10 +549,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -578,11 +557,6 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
 <script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; 
@@ -651,7 +625,7 @@ Cấu trúc điều khiển và Hàm trong JavaScript | Blog Lập Trình
     <div class="footer-bottom">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>

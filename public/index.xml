@@ -85,5 +85,12 @@
       <guid>http://localhost:1315/my-blog/about/</guid>
       <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu&lt;/h2&gt;&#xA;&lt;p&gt;Xin chào! Tôi là &lt;strong&gt;Đào Nguyễn Duy Khoa&lt;/strong&gt;, sinh viên năm 4 ngành &lt;strong&gt;Công nghệ phần mềm&lt;/strong&gt; tại &lt;strong&gt;Đại học Công nghệ TP.HCM (HUTECH)&lt;/strong&gt;.&lt;br&gt;&#xA;Tôi yêu thích việc tìm hiểu cách phần mềm hoạt động và cách một dòng code có thể tạo ra sự thay đổi thực sự. Mỗi lần tôi hoàn thành một project, dù nhỏ, cảm giác &amp;ldquo;mình vừa tạo ra thứ gì đó hoạt động được&amp;rdquo; luôn khiến tôi thấy hào hứng và muốn học thêm nữa.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Liên hệ</title>
+      <link>http://localhost:1315/my-blog/contact/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1315/my-blog/contact/</guid>
+      <description>&lt;p&gt;Tôi rất vui được nghe từ bạn! Dù bạn có câu hỏi, góp ý, hoặc chỉ đơn giản muốn chào hỏi - đừng ngần ngại liên hệ nhé! 😊&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

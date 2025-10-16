@@ -18,8 +18,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 
 > Ngày đầu mình học vòng lặp for, mình viết nhầm điều kiện i <= 10 thành i >= 10 và chương trình chạy vô tận. Máy treo luôn 😅. Từ đó mình rút ra bài học: vòng lặp phải có điểm dừng rõ ràng. Bạn có từng gặp vòng lặp vô hạn chưa?
 
----
-
 ## 2. Biến trong Java
 
 ### 2.1 Khái niệm
@@ -47,7 +45,6 @@ String name = "Khoa";
 * Nên dùng **camelCase**: ví dụ `studentAge`, `maxSpeed`.
 * Không trùng với từ khóa Java (`class`, `int`, `if`…).
 
----
 
 ## 3. Kiểu dữ liệu trong Java
 
@@ -78,8 +75,6 @@ Ví dụ:
 String greeting = "Xin chào!";
 int[] numbers = {1, 2, 3, 4, 5};
 ```
-
----
 
 ## 4. Toán tử trong Java
 
@@ -119,8 +114,6 @@ boolean hasID = false;
 System.out.println(isAdult && hasID); // false
 ```
 
----
-
 ## 5. Cấu trúc điều khiển
 
 ### 5.1 Cấu trúc rẽ nhánh – if/else
@@ -146,7 +139,6 @@ switch(day) {
 }
 ```
 
----
 
 ### 5.3 Vòng lặp for
 
@@ -176,7 +168,6 @@ do {
 } while (j <= 5);
 ```
 
----
 
 ## 6. Ví dụ tổng hợp
 
@@ -203,7 +194,6 @@ public class BMI {
 }
 ```
 
----
 
 ## 7. Lỗi thường gặp
 
@@ -214,7 +204,6 @@ public class BMI {
 | `variable not initialized` | Biến chưa gán giá trị | Khởi tạo trước khi dùng   |
 | Vòng lặp vô hạn            | Quên tăng biến lặp    | Kiểm tra điều kiện lặp    |
 
----
 
 ## 8. Bài tập nhỏ
 
@@ -222,7 +211,6 @@ public class BMI {
 2. Viết chương trình nhập một số và kiểm tra số đó có phải **số nguyên tố**.
 3. Viết chương trình tính **tổng các số chẵn từ 1 đến N**.
 
----
 
 ## 9. Tổng kết
 
@@ -238,6 +226,5 @@ Trong bài này, bạn đã học được:
 Ở **bài tiếp theo**, chúng ta sẽ bước sang phần thú vị hơn:
 **“Lập trình Hướng Đối Tượng (OOP) trong Java”** – nơi bạn làm quen với class, object và các tính chất OOP.
 
----
 
 *Hẹn gặp bạn ở Bài 3 nhé!* 🚀

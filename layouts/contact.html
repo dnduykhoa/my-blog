@@ -1,0 +1,184 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/contact.css">
+<script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
+{{ end }}
+
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<section id="contact-page">
+  <div class="container">
+    <div class="contact-header text-center mb-5">
+      <h1 class="contact-title">{{ .Title }}</h1>
+      <p class="contact-subtitle">{{ .Content | safeHTML }}</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Form liên hệ -->
+      <div class="col-lg-6 col-md-8 mb-5">
+        <div class="contact-form-wrapper">
+          <h3 class="form-heading">
+            <i class="fas fa-envelope-open-text"></i> Gửi tin nhắn
+          </h3>
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name">
+                <i class="fas fa-user"></i> Tên của bạn
+              </label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i> Email
+              </label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">
+                <i class="fas fa-tag"></i> Chủ đề
+              </label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Câu hỏi về bài viết...">
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                <i class="fas fa-comment-dots"></i> Nội dung
+              </label>
+              <textarea class="form-control" id="message" name="message" rows="6" placeholder="Viết tin nhắn của bạn..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit">
+              <i class="fas fa-paper-plane"></i> Gửi tin nhắn
+            </button>
+          </form>
+
+          <div id="formStatus" class="form-status"></div>
+        </div>
+      </div>
+
+      <!-- Thông tin liên hệ -->
+      <div class="col-lg-4 col-md-8">
+        <div class="contact-info-wrapper">
+          <h3 class="info-heading">
+            <i class="fas fa-address-card"></i> Thông tin liên lạc
+          </h3>
+
+          <div class="contact-info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h5>Email</h5>
+              <a href="dn.duykhoa@gmail.com">dn.duykhoa@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="info-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="info-content">
+              <h5>GitHub</h5>
+              <a href="https://github.com/dnduykhoa" target="_blank">@dnduykhoa</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="info-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="info-content">
+              <h5>LinkedIn</h5>
+              <a href="https://linkedin.com/in/yourprofile" target="_blank">Kết nối với tôi</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h5>Địa điểm</h5>
+              <p>TP. Hồ Chí Minh, Việt Nam</p>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="contact-social mt-4">
+            <h5 class="mb-3">Theo dõi tôi</h5>
+            <div class="social-links">
+              <a href="https://github.com/dnduykhoa" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/yourhandle" target="_blank" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="mailto:daonguyenduykhoa@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="contact-cta text-center mt-5">
+      <div class="cta-box">
+        <i class="fas fa-comments cta-icon"></i>
+        <h4>Đang tìm kiếm cơ hội hợp tác?</h4>
+        <p>Tôi luôn sẵn sàng thảo luận về các dự án thú vị và cơ hội làm việc mới!</p>
+        <a href="mailto:daonguyenduykhoa@gmail.com" class="btn btn-cta">
+          <i class="fas fa-handshake"></i> Liên hệ ngay
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formStatus = document.getElementById('formStatus');
+  const form = this;
+  
+  // Show loading
+  formStatus.innerHTML = '<div class="alert alert-info"><i class="fas fa-spinner fa-spin"></i> Đang gửi...</div>';
+  
+  // Submit form via fetch
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      formStatus.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle"></i> Cảm ơn bạn! Tin nhắn đã được gửi thành công.</div>';
+      form.reset();
+    } else {
+      throw new Error('Form submission failed');
+    }
+  })
+  .catch(error => {
+    formStatus.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> Có lỗi xảy ra. Vui lòng thử lại sau.</div>';
+  });
+  
+  // Hide status after 5 seconds
+  setTimeout(() => {
+    formStatus.innerHTML = '';
+  }, 5000);
+});
+</script>
+{{ end }}

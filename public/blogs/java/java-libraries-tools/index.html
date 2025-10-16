@@ -299,7 +299,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 <li><strong>Input/Output (I/O)</strong> – để đọc và ghi dữ liệu từ file.</li>
 </ol>
 <p>Cuối cùng, mình cũng sẽ giới thiệu ngắn gọn những <strong>hướng phát triển nâng cao</strong> như JDBC, JavaFX, Spring, Android.</p>
-<hr>
 <h2 id="2-collections-framework">2. Collections Framework</h2>
 <h3 id="21-giới-thiệu">2.1 Giới thiệu</h3>
 <p>Collections Framework là <strong>bộ công cụ mạnh mẽ</strong> để quản lý dữ liệu dạng tập hợp: danh sách, tập hợp không trùng, ánh xạ khóa-giá trị.</p>
@@ -334,7 +333,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>👉 Nhờ Collections, bạn có thể dễ dàng quản lý hàng ngàn bản ghi dữ liệu.</p>
-<hr>
 <h2 id="3-exception-handling-xử-lý-ngoại-lệ">3. Exception Handling (Xử lý ngoại lệ)</h2>
 <h3 id="31-tại-sao-cần">3.1 Tại sao cần?</h3>
 <p>Trong thực tế, chương trình thường gặp lỗi: chia cho 0, nhập sai dữ liệu, file không tồn tại&hellip; Nếu không xử lý tốt, chương trình sẽ <strong>dừng đột ngột</strong>.</p>
@@ -359,8 +357,7 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">checkAge</span>(<span style="color:#66d9ef">int</span> age) <span style="color:#66d9ef">throws</span> Exception {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&lt;</span> 18) <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Exception(<span style="color:#e6db74">&#34;Chưa đủ tuổi!&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="4-inputoutput-io-trong-java">4. Input/Output (I/O) trong Java</h2>
+</span></span></code></pre></div><h2 id="4-inputoutput-io-trong-java">4. Input/Output (I/O) trong Java</h2>
 <h3 id="41-đọc-file-văn-bản">4.1 Đọc file văn bản</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
 </span></span><span style="display:flex;"><span>
@@ -385,7 +382,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>👉 Đây là bước quan trọng để xây dựng ứng dụng lưu trữ dữ liệu.</p>
-<hr>
 <h2 id="5-ví-dụ-tổng-hợp-quản-lý-sinh-viên-với-collections--io">5. Ví dụ tổng hợp: Quản lý sinh viên với Collections + I/O</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
@@ -416,7 +412,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>👉 Ở ví dụ này, bạn đã kết hợp Collections và I/O để <strong>lưu và đọc dữ liệu sinh viên từ file</strong>.</p>
-<hr>
 <h2 id="6-lỗi-thường-gặp">6. Lỗi thường gặp</h2>
 <table>
   <thead>
@@ -444,14 +439,12 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
       </tr>
   </tbody>
 </table>
-<hr>
 <h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
 <ol>
 <li>Viết chương trình lưu trữ danh sách tên người dùng vào file rồi đọc lại.</li>
 <li>Viết chương trình nhập điểm của sinh viên và tìm người có điểm cao nhất (dùng HashMap).</li>
 <li>Tạo class <code>Book</code> và lưu danh sách sách vào file <code>books.txt</code>.</li>
 </ol>
-<hr>
 <h2 id="8-hướng-phát-triển-nâng-cao">8. Hướng phát triển nâng cao</h2>
 <p>Sau khi nắm vững cơ bản, bạn có thể học thêm:</p>
 <ul>
@@ -461,7 +454,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 <li><strong>Android Development</strong> – phát triển ứng dụng di động.</li>
 </ul>
 <p>👉 Đây là các bước để bạn đi xa hơn trong con đường Java Developer.</p>
-<hr>
 <h2 id="9-tổng-kết">9. Tổng kết</h2>
 <p>Trong bài này, chúng ta đã tìm hiểu:</p>
 <ul>
@@ -473,7 +465,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 </ul>
 <p>🎉 Như vậy, qua 4 bài blog, bạn đã có cái nhìn <strong>toàn diện về Java cơ bản</strong> – từ chạy chương trình đầu tiên, xử lý dữ liệu, OOP đến sử dụng thư viện mạnh mẽ.</p>
 <p>👉 Giờ bạn đã sẵn sàng bước vào những dự án Java thực tế! 🚀</p>
-<hr>
 <p><em>Xin chúc mừng bạn đã hoàn thành series 4 bài học Java cơ bản!</em> 🎉</p>
 
           </article>
@@ -556,7 +547,7 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 
           
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Chia sẻ</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -585,10 +576,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -597,11 +584,6 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 <script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; 
@@ -670,7 +652,7 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
     <div class="footer-bottom">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>

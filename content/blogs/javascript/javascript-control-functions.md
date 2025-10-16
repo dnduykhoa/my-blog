@@ -19,7 +19,7 @@ Trong bài 1, bạn đã làm quen với **biến, kiểu dữ liệu và toán 
 
 {{</* image src="/images/js-control-flow.png" alt="Sơ đồ cấu trúc điều khiển trong JavaScript" */>}}
 
----
+
 
 ## 2. Cấu trúc rẽ nhánh
 
@@ -34,7 +34,7 @@ if (age >= 18) {
 }
 ```
 
----
+
 
 ### 2.2 If – else if – else
 
@@ -49,7 +49,7 @@ if (score >= 90) {
 }
 ```
 
----
+
 
 ### 2.3 Switch-case
 
@@ -63,7 +63,7 @@ switch (day) {
 }
 ```
 
----
+
 
 ## 3. Vòng lặp
 
@@ -75,7 +75,7 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
----
+
 
 ### 3.2 While
 
@@ -87,7 +87,7 @@ while (i <= 5) {
 }
 ```
 
----
+
 
 ### 3.3 Do-while
 
@@ -99,7 +99,7 @@ do {
 } while (j <= 5);
 ```
 
----
+
 
 ### 3.4 For…of
 
@@ -110,7 +110,7 @@ for (let fruit of arr) {
 }
 ```
 
----
+
 
 ### 3.5 For…in
 
@@ -121,7 +121,7 @@ for (let key in person) {
 }
 ```
 
----
+
 
 ## 4. Hàm trong JavaScript
 
@@ -135,7 +135,7 @@ function greet(name) {
 console.log(greet("Khoa"));
 ```
 
----
+
 
 ### 4.2 Biểu thức hàm (Function Expression)
 
@@ -146,7 +146,7 @@ const square = function(x) {
 console.log(square(5)); // 25
 ```
 
----
+
 
 ### 4.3 Arrow function (ES6)
 
@@ -155,7 +155,7 @@ const add = (a, b) => a + b;
 console.log(add(3, 4)); // 7
 ```
 
----
+
 
 ### 4.4 Tham số mặc định
 
@@ -167,7 +167,7 @@ greet();        // Xin chào, bạn
 greet("Khoa");  // Xin chào, Khoa
 ```
 
----
+
 
 ## 5. Ví dụ tổng hợp: Tính tổng số nguyên tố
 
@@ -191,7 +191,7 @@ function sumPrimes(limit) {
 console.log(sumPrimes(20)); // 77
 ```
 
----
+
 
 ## 6. Lỗi thường gặp
 
@@ -202,7 +202,7 @@ console.log(sumPrimes(20)); // 77
 | Hàm trả về `undefined` | Quên `return`         | Thêm `return` trong hàm       |
 | `NaN` khi tính toán    | Dữ liệu không phải số | Kiểm tra kiểu dữ liệu đầu vào |
 
----
+
 
 ## 7. Bài tập nhỏ
 
@@ -211,7 +211,7 @@ console.log(sumPrimes(20)); // 77
 3. Viết hàm tính tổng các số lẻ từ 1 đến N.
 4. Viết hàm kiểm tra chuỗi có phải palindrome hay không.
 
----
+
 
 ## 8. Tổng kết
 
@@ -227,6 +227,6 @@ Trong bài này, bạn đã học:
 Ở **bài 3**, chúng ta sẽ học:
 **“Đối tượng, Mảng và OOP trong JavaScript”** – một phần cực quan trọng để làm việc với dữ liệu thực tế.
 
----
+
 
 *Hẹn gặp bạn ở Bài 3 nhé!* 🚀

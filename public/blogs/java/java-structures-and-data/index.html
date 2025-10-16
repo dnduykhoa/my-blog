@@ -295,7 +295,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <p>Để viết những chương trình hữu ích, bạn cần biết cách <strong>&ldquo;lưu trữ dữ liệu (biến, kiểu dữ liệu)&rdquo;</strong> và <strong>&ldquo;xử lý logic (if-else, vòng lặp)&rdquo;</strong>. Đây là <strong>“xương sống”</strong> của mọi chương trình Java. Hãy cùng tìm hiểu từng phần nhé.</p>
 <blockquote>
 <p>Ngày đầu mình học vòng lặp for, mình viết nhầm điều kiện i &lt;= 10 thành i &gt;= 10 và chương trình chạy vô tận. Máy treo luôn 😅. Từ đó mình rút ra bài học: vòng lặp phải có điểm dừng rõ ràng. Bạn có từng gặp vòng lặp vô hạn chưa?</p></blockquote>
-<hr>
 <h2 id="2-biến-trong-java">2. Biến trong Java</h2>
 <h3 id="21-khái-niệm">2.1 Khái niệm</h3>
 <ul>
@@ -314,7 +313,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <li>Nên dùng <strong>camelCase</strong>: ví dụ <code>studentAge</code>, <code>maxSpeed</code>.</li>
 <li>Không trùng với từ khóa Java (<code>class</code>, <code>int</code>, <code>if</code>…).</li>
 </ul>
-<hr>
 <h2 id="3-kiểu-dữ-liệu-trong-java">3. Kiểu dữ liệu trong Java</h2>
 <p>Java có hai nhóm chính:</p>
 <h3 id="31-kiểu-dữ-liệu-nguyên-thủy-primitive-types">3.1 Kiểu dữ liệu nguyên thủy (Primitive Types)</h3>
@@ -387,8 +385,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <p>Ví dụ:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String greeting <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Xin chào!&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> numbers <span style="color:#f92672">=</span> {1, 2, 3, 4, 5};
-</span></span></code></pre></div><hr>
-<h2 id="4-toán-tử-trong-java">4. Toán tử trong Java</h2>
+</span></span></code></pre></div><h2 id="4-toán-tử-trong-java">4. Toán tử trong Java</h2>
 <h3 id="41-toán-tử-số-học">4.1 Toán tử số học</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 10, b <span style="color:#f92672">=</span> 3;
 </span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">+</span> b); <span style="color:#75715e">// 13</span>
@@ -413,8 +410,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> isAdult <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> hasID <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
 </span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(isAdult <span style="color:#f92672">&amp;&amp;</span> hasID); <span style="color:#75715e">// false</span>
-</span></span></code></pre></div><hr>
-<h2 id="5-cấu-trúc-điều-khiển">5. Cấu trúc điều khiển</h2>
+</span></span></code></pre></div><h2 id="5-cấu-trúc-điều-khiển">5. Cấu trúc điều khiển</h2>
 <h3 id="51-cấu-trúc-rẽ-nhánh--ifelse">5.1 Cấu trúc rẽ nhánh – if/else</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> 18;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&gt;=</span> 18) {
@@ -430,8 +426,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> 3: System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Thứ Tư&#34;</span>); <span style="color:#66d9ef">break</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>: System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không hợp lệ&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h3 id="53-vòng-lặp-for">5.3 Vòng lặp for</h3>
+</span></span></code></pre></div><h3 id="53-vòng-lặp-for">5.3 Vòng lặp for</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;=</span> 5; i<span style="color:#f92672">++</span>) {
 </span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;i = &#34;</span> <span style="color:#f92672">+</span> i);
 </span></span><span style="display:flex;"><span>}
@@ -447,8 +442,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 </span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;j = &#34;</span> <span style="color:#f92672">+</span> j);
 </span></span><span style="display:flex;"><span>    j<span style="color:#f92672">++</span>;
 </span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> (j <span style="color:#f92672">&lt;=</span> 5);
-</span></span></code></pre></div><hr>
-<h2 id="6-ví-dụ-tổng-hợp">6. Ví dụ tổng hợp</h2>
+</span></span></code></pre></div><h2 id="6-ví-dụ-tổng-hợp">6. Ví dụ tổng hợp</h2>
 <h3 id="61-bài-toán-tính-chỉ-số-bmi">6.1 Bài toán: Tính chỉ số BMI</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
 </span></span><span style="display:flex;"><span>
@@ -468,8 +462,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Thừa cân&#34;</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="7-lỗi-thường-gặp">7. Lỗi thường gặp</h2>
+</span></span></code></pre></div><h2 id="7-lỗi-thường-gặp">7. Lỗi thường gặp</h2>
 <table>
   <thead>
       <tr>
@@ -501,14 +494,12 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
       </tr>
   </tbody>
 </table>
-<hr>
 <h2 id="8-bài-tập-nhỏ">8. Bài tập nhỏ</h2>
 <ol>
 <li>Viết chương trình in ra <strong>bảng cửu chương</strong> từ 1–9.</li>
 <li>Viết chương trình nhập một số và kiểm tra số đó có phải <strong>số nguyên tố</strong>.</li>
 <li>Viết chương trình tính <strong>tổng các số chẵn từ 1 đến N</strong>.</li>
 </ol>
-<hr>
 <h2 id="9-tổng-kết">9. Tổng kết</h2>
 <p>Trong bài này, bạn đã học được:</p>
 <ul>
@@ -520,7 +511,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <p>👉 Với nền tảng này, bạn có thể viết các chương trình tính toán, xử lý dữ liệu và giải các bài toán logic.</p>
 <p>Ở <strong>bài tiếp theo</strong>, chúng ta sẽ bước sang phần thú vị hơn:
 <strong>“Lập trình Hướng Đối Tượng (OOP) trong Java”</strong> – nơi bạn làm quen với class, object và các tính chất OOP.</p>
-<hr>
 <p><em>Hẹn gặp bạn ở Bài 3 nhé!</em> 🚀</p>
 
           </article>
@@ -614,7 +604,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 
           
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Chia sẻ</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
@@ -643,10 +633,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
       </div>
     </div>
   </div>
-
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </section>
 
 <div class="progress">
@@ -655,11 +641,6 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
 <script src="http://localhost:1315/my-blog/js/scrollProgressBar.js"></script>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
-  window.onscroll = function() {scrollFunction()};
-  function scrollFunction(){ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) topScroll.style.display="block"; else topScroll.style.display="none"; }
-  function topFunction(){ document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
-
   
   let stickySideBarElem = document.getElementById("stickySideBar");
   let stickyNavBar = false; 
@@ -728,7 +709,7 @@ Ví dụ: tính tuổi, kiểm tra số chẵn lẻ, hoặc in ra bảng cửu c
     <div class="footer-bottom">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p>&copy; 2025 Blog Lập Trình. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025. Tất cả quyền được bảo lưu.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p>Made with <span class="heart">❤️</span> & <a href="https://gohugo.io" target="_blank">Hugo</a></p>

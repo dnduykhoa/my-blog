@@ -124,5 +124,8 @@
   </url><url>
     <loc>http://localhost:1315/my-blog/blogs/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1315/my-blog/contact/</loc>
+    <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url>
 </urlset>

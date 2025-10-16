@@ -1,5 +1,4 @@
 ---
-
 title: "Java Cơ Bản – Nền tảng cho người mới bắt đầu"
 date: 2025-09-10
 draft: false
@@ -18,7 +17,6 @@ Câu trả lời nằm ở sự **đơn giản, mạnh mẽ và ổn định** m
 > Mình còn nhớ lần đầu cài JDK bị lỗi PATH, gõ `java -version` mà máy báo “command not found”. Loay hoay cả buổi tối mới sửa được. Nếu bạn cũng gặp tình huống này thì đừng nản, vì đây là “nghi thức nhập môn” của dân Java 😂. Bạn đã từng gặp chưa?
 
 ![Hành trình học Java cho người mới bắt đầu](/images/java-learning-roadmap.png)
----
 
 ## 2. Java là gì?
 
@@ -28,7 +26,6 @@ Câu trả lời nằm ở sự **đơn giản, mạnh mẽ và ổn định** m
 > **"Write Once, Run Anywhere"** – *Viết một lần, chạy mọi nơi.*
 
 ![Write Once, Run Anywhere trong Java](/images/java-write-once-run-anywhere.png)
----
 
 ## 3. Lịch sử ra đời và sự phát triển
 
@@ -37,7 +34,6 @@ Câu trả lời nằm ở sự **đơn giản, mạnh mẽ và ổn định** m
 * **2006**: Java trở thành **mã nguồn mở** thông qua OpenJDK.
 * **2010 – nay**: Oracle tiếp quản, Java liên tục được nâng cấp, hiện tại là **Java 21** (LTS).
 
----
 
 ## 4. Ưu điểm của Java
 
@@ -49,8 +45,6 @@ Câu trả lời nằm ở sự **đơn giản, mạnh mẽ và ổn định** m
 | Thư viện phong phú | Có sẵn hàng ngàn thư viện hỗ trợ                 |
 | Cộng đồng lớn      | Hàng triệu lập trình viên Java trên toàn cầu     |
 
----
-
 ## 5. Ứng dụng thực tế của Java
 
 Bạn có thể tìm thấy Java trong rất nhiều công nghệ xung quanh mình:
@@ -61,7 +55,6 @@ Bạn có thể tìm thấy Java trong rất nhiều công nghệ xung quanh mì
 * **IoT & Thiết bị nhúng**: Nhiều TV thông minh, thẻ SIM chạy Java.
 
 ![Ứng dụng thực tế của Java](/images/java-applications.png)
----
 
 ## 6. Chuẩn bị môi trường lập trình Java
 
@@ -75,7 +68,6 @@ java -version
 Nếu hiển thị phiên bản → ✅ cài thành công.
 
 ![Quy trình biên dịch và chạy chương trình Java](/images/java-compile-run-process.png)
----
 
 ## 7. Viết chương trình Java đầu tiên
 Tạo file `HelloWorld.java`:
@@ -101,7 +93,6 @@ Kết quả:
 Xin chào, Java!
 ```
 
----
 
 ## 8. Phân tích cú pháp cơ bản
 
@@ -109,7 +100,6 @@ Xin chào, Java!
 * **public static void main**: điểm bắt đầu chương trình.
 * **System.out.println**: in ra màn hình.
 
----
 
 ## 9. Lỗi thường gặp
 
@@ -119,7 +109,6 @@ Xin chào, Java!
 | `class not found`          | Gõ sai lệnh            | Dùng `java HelloWorld` (không có `.java`) |
 | Thiếu dấu `;`              | Quên kết thúc câu lệnh | Thêm `;`                                  |
 
----
 
 ## 10. Ví dụ mở rộng: Máy tính cộng đơn giản
 
@@ -139,15 +128,12 @@ public class Calculator {
 }
 ```
 
----
-
 ## 11. Bài tập nhỏ cho bạn
 
 1. In ra tên, tuổi và trường học của bạn.
 2. Nhập 2 số và tính hiệu, tích, thương.
 3. In ra câu chào: *“Xin chào [Tên của bạn]!”*.
 
----
 
 ## 12. Tổng kết
 
@@ -163,6 +149,5 @@ Trong bài này, chúng ta đã tìm hiểu:
 Ở bài 2, chúng ta sẽ học:
 **“Cấu trúc và Dữ liệu trong Java”** – biến, kiểu dữ liệu, toán tử, vòng lặp.
 
----
 
 *Hẹn gặp bạn ở bài 2 nhé!* 🚀

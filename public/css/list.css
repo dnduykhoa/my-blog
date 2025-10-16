@@ -1,3 +1,16 @@
+/* Tiêu đề trang "Bài viết" - giống Liên hệ */
+#list-page {
+    padding-top: 80px !important;
+}
+
+#list-page > h2.text-center {
+    font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+    font-weight: 800 !important;
+    color: var(--primary-color) !important;
+    margin-bottom: 60px !important;
+    padding-bottom: 0 !important;
+}
+
 #list-page .card {
     display: flex;
     flex-direction: column;

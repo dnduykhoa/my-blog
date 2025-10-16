@@ -22,7 +22,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 
 ![Roadmap series 5 bài học JavaScript cơ bản](/images/javascript-learning-roadmap.png)
 
----
+
 
 ## 2. JavaScript là gì?
 
@@ -30,7 +30,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * **Đa năng**: ban đầu chỉ dành cho web, nay có thể chạy server (Node.js), mobile app (React Native), desktop app (Electron).
 * **Phổ biến số 1**: Theo Stack Overflow Survey, JavaScript là ngôn ngữ được dùng nhiều nhất trong nhiều năm liền.
 
----
+
 
 ## 3. Tại sao nên học JavaScript?
 
@@ -39,7 +39,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Có thể mở rộng sang Node.js, React, Vue, Angular.
 * Cộng đồng khổng lồ, tài nguyên học tập phong phú.
 
----
+
 
 ## 4. Lộ trình 5 bài học
 
@@ -52,7 +52,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Toán tử và cú pháp cơ bản.
   👉 Sau bài này: bạn có thể viết code JS đơn giản.
 
----
+
 
 ### **Bài 2: Cấu trúc điều khiển và Hàm trong JavaScript**
 
@@ -61,7 +61,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Hàm: declaration, arrow function.
   👉 Sau bài này: bạn xử lý logic và viết hàm trong JS.
 
----
+
 
 ### **Bài 3: Đối tượng, Mảng và OOP trong JavaScript**
 
@@ -70,7 +70,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Kế thừa trong JS.
   👉 Sau bài này: bạn làm việc với dữ liệu phức tạp.
 
----
+
 
 ### **Bài 4: DOM & Tương tác với Web**
 
@@ -79,7 +79,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Thêm event listener.
   👉 Sau bài này: bạn làm web tương tác (vd: To-do List).
 
----
+
 
 ### **Bài 5: JavaScript Nâng Cao Cơ Bản – Async & API**
 
@@ -87,7 +87,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Fetch API gọi dữ liệu thật.
   👉 Sau bài này: bạn hiểu cơ chế bất đồng bộ – kỹ năng quan trọng nhất khi làm web.
 
----
+
 
 ## 5. Ai nên đọc series này?
 
@@ -95,7 +95,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Sinh viên CNTT cần học JavaScript cơ bản.
 * Lập trình viên muốn bổ sung kỹ năng web.
 
----
+
 
 ## 6. Sau khi học xong 5 bài này, bạn sẽ…
 
@@ -105,7 +105,7 @@ JavaScript chính là ngôn ngữ giúp các trang web trở nên **sống độ
 * Gọi API thật bằng async/await.
 * Có nền tảng để học tiếp React, Vue, Node.js.
 
----
+
 
 ## 7. Tổng kết
 
@@ -121,6 +121,6 @@ Series này gồm 5 bài:
 
 👉 Hãy bắt đầu ngay với **Bài 1: JavaScript Cơ Bản – Nền tảng ngôn ngữ web** 🚀
 
----
+
 
 *Chúc bạn học vui vẻ với JavaScript!* 💻

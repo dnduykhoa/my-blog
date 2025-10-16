@@ -22,7 +22,6 @@ Trong bài này, chúng ta sẽ tìm hiểu ba “vũ khí” quan trọng:
 
 Cuối cùng, mình cũng sẽ giới thiệu ngắn gọn những **hướng phát triển nâng cao** như JDBC, JavaFX, Spring, Android.
 
----
 
 ## 2. Collections Framework
 
@@ -67,7 +66,6 @@ public class CollectionDemo {
 
 👉 Nhờ Collections, bạn có thể dễ dàng quản lý hàng ngàn bản ghi dữ liệu.
 
----
 
 ## 3. Exception Handling (Xử lý ngoại lệ)
 
@@ -110,8 +108,6 @@ public void checkAge(int age) throws Exception {
 }
 ```
 
----
-
 ## 4. Input/Output (I/O) trong Java
 
 ### 4.1 Đọc file văn bản
@@ -147,7 +143,6 @@ public class WriteFile {
 
 👉 Đây là bước quan trọng để xây dựng ứng dụng lưu trữ dữ liệu.
 
----
 
 ## 5. Ví dụ tổng hợp: Quản lý sinh viên với Collections + I/O
 
@@ -184,7 +179,6 @@ public class StudentManager {
 
 👉 Ở ví dụ này, bạn đã kết hợp Collections và I/O để **lưu và đọc dữ liệu sinh viên từ file**.
 
----
 
 ## 6. Lỗi thường gặp
 
@@ -194,7 +188,6 @@ public class StudentManager {
 | `NullPointerException`            | Biến tham chiếu `null`       | Luôn khởi tạo object trước khi dùng |
 | `ConcurrentModificationException` | Sửa danh sách khi đang duyệt | Dùng Iterator để tránh xung đột     |
 
----
 
 ## 7. Bài tập nhỏ
 
@@ -202,7 +195,6 @@ public class StudentManager {
 2. Viết chương trình nhập điểm của sinh viên và tìm người có điểm cao nhất (dùng HashMap).
 3. Tạo class `Book` và lưu danh sách sách vào file `books.txt`.
 
----
 
 ## 8. Hướng phát triển nâng cao
 
@@ -215,7 +207,6 @@ Sau khi nắm vững cơ bản, bạn có thể học thêm:
 
 👉 Đây là các bước để bạn đi xa hơn trong con đường Java Developer.
 
----
 
 ## 9. Tổng kết
 
@@ -231,6 +222,5 @@ Trong bài này, chúng ta đã tìm hiểu:
 
 👉 Giờ bạn đã sẵn sàng bước vào những dự án Java thực tế! 🚀
 
----
 
 *Xin chúc mừng bạn đã hoàn thành series 4 bài học Java cơ bản!* 🎉

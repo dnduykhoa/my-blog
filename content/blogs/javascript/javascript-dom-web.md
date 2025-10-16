@@ -20,7 +20,7 @@ Bạn đã biết **Object, Array, OOP** trong JavaScript. Nhưng JS sẽ chẳn
 
 {{</* image src="/images/js-dom.png" alt="DOM trong JavaScript" */>}}
 
----
+
 
 ## 2. DOM là gì?
 
@@ -40,7 +40,7 @@ JavaScript:
 document.getElementById("title").innerText = "Xin chào JavaScript!";
 ```
 
----
+
 
 ## 3. Truy cập phần tử
 
@@ -69,7 +69,7 @@ let el = document.querySelector("#title");
 let list = document.querySelectorAll(".item");
 ```
 
----
+
 
 ## 4. Thay đổi nội dung và style
 
@@ -80,7 +80,6 @@ el.style.color = "red";
 el.style.fontSize = "24px";
 ```
 
----
 
 ## 5. Xử lý sự kiện (Events)
 
@@ -90,7 +89,7 @@ el.style.fontSize = "24px";
 <button onclick="alert('Bạn vừa click!')">Click me</button>
 ```
 
----
+
 
 ### 5.2 Dùng addEventListener
 
@@ -101,7 +100,7 @@ btn.addEventListener("click", function() {
 });
 ```
 
----
+
 
 ### 5.3 Sự kiện thường gặp
 
@@ -110,7 +109,7 @@ btn.addEventListener("click", function() {
 * `keydown`
 * `submit`
 
----
+
 
 ## 6. Ví dụ tổng hợp: To-do List
 
@@ -141,7 +140,6 @@ addBtn.addEventListener("click", function() {
 
 {{</* image src="/images/js-todo.png" alt="Ứng dụng To-do List bằng JavaScript" */>}}
 
----
 
 ## 7. Lỗi thường gặp
 
@@ -152,7 +150,7 @@ addBtn.addEventListener("click", function() {
 | CSS không áp dụng           | Sai cú pháp `style`          | Đúng dạng camelCase: `backgroundColor`            |
 | Thêm element không hiển thị | Quên append vào DOM          | Dùng `appendChild()` hoặc `innerHTML`             |
 
----
+
 
 ## 8. Bài tập nhỏ
 
@@ -161,7 +159,7 @@ addBtn.addEventListener("click", function() {
 3. Tạo form đăng nhập, khi bấm submit thì in ra tên người dùng.
 4. Viết ứng dụng quiz nhỏ: hiện câu hỏi, chọn đáp án, báo đúng/sai.
 
----
+
 
 ## 9. Tổng kết
 
@@ -175,7 +173,7 @@ Trong bài này, bạn đã học:
 
 👉 Đây chính là lúc bạn thấy JavaScript **biến trang web tĩnh thành trang web động**.
 
----
+
 
 ## 10. Kết thúc series
 
@@ -192,6 +190,6 @@ Trong bài này, bạn đã học:
 * Làm ứng dụng mini chạy trong trình duyệt.
 * Có nền tảng để học nâng cao: **AJAX, API, React, Node.js**.
 
----
+
 
 *Chúc bạn sớm trở thành JavaScript Developer và xây dựng những website tuyệt vời!* 🌐🚀
