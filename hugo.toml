@@ -44,6 +44,7 @@ page = ["HTML", "RSS"]
     searchDisplay = false
     brandDisplay = true
     brandalignment = "left"
+    disableSearch = true
 
   [params.search]
     enable = false
