@@ -158,15 +158,16 @@ Công Cụ | Blog Lập Trình
             
 
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation" onclick="document.getElementById('navbarContent').classList.add('show-offcanvas');document.body.classList.add('menu-open');document.getElementById('offcanvasOverlay').classList.add('active')">
                 <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
                     <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
                 </svg>
             </button>
 
             
-            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+            <div class="offcanvas-overlay" id="offcanvasOverlay" onclick="document.getElementById('navbarContent').classList.remove('show-offcanvas');document.body.classList.remove('menu-open');this.classList.remove('active')"></div>
+            <div class="collapse navbar-collapse text-wrap primary-font offcanvas-menu" id="navbarContent">
+                <button class="offcanvas-close d-lg-none" aria-label="Đóng menu" onclick="document.getElementById('navbarContent').classList.remove('show-offcanvas');document.body.classList.remove('menu-open');document.getElementById('offcanvasOverlay').classList.remove('active')">&times;</button>
                 <ul class="navbar-nav ms-auto text-center">
                     
 

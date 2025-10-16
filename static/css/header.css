@@ -1,3 +1,63 @@
+@media (max-width: 991.98px) {
+    body.menu-open {
+        overflow: hidden;
+    }
+    .offcanvas-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.32);
+        z-index: 1199;
+        transition: opacity 0.25s;
+        opacity: 0;
+    }
+    .offcanvas-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    .offcanvas-menu {
+        position: fixed !important;
+        top: 0; right: 0;
+        height: 100vh;
+        width: 80vw;
+        max-width: 320px;
+        background: var(--background-color);
+        box-shadow: -2px 0 24px #0002;
+        z-index: 1200;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(.77,0,.18,1);
+        overflow-y: auto;
+        border-radius: 1.2rem 0 0 1.2rem;
+        padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+        display: block !important;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .offcanvas-menu.show-offcanvas {
+        transform: translateX(0);
+        box-shadow: -2px 0 32px #0004;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .offcanvas-close {
+        position: absolute;
+        top: 1.1rem;
+        right: 1.1rem;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        color: var(--text-color);
+        z-index: 1300;
+        cursor: pointer;
+        line-height: 1;
+    }
+    .navbar-collapse:not(.show-offcanvas) {
+        transform: translateX(100%);
+        transition: none;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
 header {
     z-index: 10;
     position: relative;
