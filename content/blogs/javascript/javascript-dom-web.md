@@ -155,9 +155,88 @@ addBtn.addEventListener("click", function() {
 ## 8. Bài tập nhỏ
 
 1. Viết chương trình thay đổi màu nền trang khi bấm nút.
+
+HTML:
+```html
+<button id="colorBtn">Đổi màu nền</button>
+```
+
+JavaScript:
+```js
+document.getElementById("colorBtn").addEventListener("click", function() {
+  document.body.style.backgroundColor =
+    "#" + Math.floor(Math.random() * 16777215).toString(16);
+});
+```
+
 2. Làm ứng dụng “Đếm số ký tự” khi nhập vào ô input.
+
+HTML:
+```html
+<input id="textInput" type="text" placeholder="Nhập nội dung...">
+<p>Số ký tự: <span id="count">0</span></p>
+```
+
+JavaScript:
+```js
+let input = document.getElementById("textInput");
+let count = document.getElementById("count");
+
+input.addEventListener("input", function() {
+  count.innerText = input.value.length;
+});
+```
+
 3. Tạo form đăng nhập, khi bấm submit thì in ra tên người dùng.
+
+HTML:
+```html
+<form id="loginForm">
+  <input id="username" type="text" placeholder="Tên người dùng">
+  <input type="password" placeholder="Mật khẩu">
+  <button type="submit">Đăng nhập</button>
+</form>
+<p id="result"></p>
+```
+
+JavaScript:
+```js
+let form = document.getElementById("loginForm");
+let result = document.getElementById("result");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // Ngăn load lại trang
+  let name = document.getElementById("username").value;
+  result.innerText = "Xin chào, " + name + "!";
+});
+```
 4. Viết ứng dụng quiz nhỏ: hiện câu hỏi, chọn đáp án, báo đúng/sai.
+
+HTML:
+```html
+<p id="question">JavaScript là ngôn ngữ phía ...?</p>
+<button class="answer">Client</button>
+<button class="answer">Server</button>
+<button class="answer">Cả hai</button>
+<p id="feedback"></p>
+```
+
+
+JavaScript:
+```js
+let answers = document.querySelectorAll(".answer");
+let feedback = document.getElementById("feedback");
+
+answers.forEach(btn => {
+  btn.addEventListener("click", function() {
+    if (btn.innerText === "Cả hai") {
+      feedback.innerText = "✅ Chính xác!";
+    } else {
+      feedback.innerText = "❌ Sai rồi, thử lại nhé!";
+    }
+  });
+});
+```
 
 
 

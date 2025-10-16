@@ -416,10 +416,61 @@ Câu trả lời nằm ở sự <strong>đơn giản, mạnh mẽ và ổn đị
 </span></span></code></pre></div><h2 id="11-bài-tập-nhỏ-cho-bạn">11. Bài tập nhỏ cho bạn</h2>
 <ol>
 <li>In ra tên, tuổi và trường học của bạn.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonalInfo</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nguyễn Văn A&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> 20;
+</span></span><span style="display:flex;"><span>        String school <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Đại học Công nghệ Thông tin&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span> <span style="color:#f92672">+</span> name);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tuổi: &#34;</span> <span style="color:#f92672">+</span> age);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Trường: &#34;</span> <span style="color:#f92672">+</span> school);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
 <li>Nhập 2 số và tính hiệu, tích, thương.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BasicOperations</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập số thứ nhất: &#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập số thứ hai: &#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> hieu <span style="color:#f92672">=</span> a <span style="color:#f92672">-</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tich <span style="color:#f92672">=</span> a <span style="color:#f92672">*</span> b;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> thuong <span style="color:#f92672">=</span> (b <span style="color:#f92672">!=</span> 0) <span style="color:#f92672">?</span> (<span style="color:#66d9ef">double</span>) a <span style="color:#f92672">/</span> b : Double.<span style="color:#a6e22e">NaN</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hiệu = &#34;</span> <span style="color:#f92672">+</span> hieu);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tích = &#34;</span> <span style="color:#f92672">+</span> tich);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (b <span style="color:#f92672">!=</span> 0)
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Thương = &#34;</span> <span style="color:#f92672">+</span> thuong);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không thể chia cho 0!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
 <li>In ra câu chào: <em>“Xin chào [Tên của bạn]!”</em>.</li>
 </ol>
-<h2 id="12-tổng-kết">12. Tổng kết</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Greeting</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập tên của bạn: &#34;</span>);
+</span></span><span style="display:flex;"><span>        String name <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="12-tổng-kết">12. Tổng kết</h2>
 <p>Trong bài này, chúng ta đã tìm hiểu:</p>
 <ul>
 <li>Java là gì, lịch sử và ưu điểm.</li>
@@ -537,6 +588,7 @@ Câu trả lời nằm ở sự <strong>đơn giản, mạnh mẽ và ổn đị
     stickySideBarElem.style.top = "50px";
   }
 </script>
+
 
   </div><footer class="site-footer">
   <div class="container">

@@ -149,8 +149,64 @@ console.log("Xin chào JavaScript!");
 ## 8. Bài tập nhỏ
 
 1. Viết chương trình tính tổng 2 số nhập từ input.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Tính tổng hai số</h3>
+    <input id="a" type="number" placeholder="Số thứ nhất">
+    <input id="b" type="number" placeholder="Số thứ hai">
+    <button onclick="sum()">Tính tổng</button>
+    <p id="result"></p>
+
+    <script>
+      function sum() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        document.getElementById("result").innerText = "Tổng = " + (a + b);
+      }
+    </script>
+  </body>
+</html>
+```
 2. Viết chương trình in ra số chẵn từ 1 đến 20.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Số chẵn từ 1 đến 20</h3>
+    <button onclick="showEven()">Hiển thị</button>
+    <p id="even"></p>
+
+    <script>
+      function showEven() {
+        let result = "";
+        for (let i = 1; i <= 20; i++) {
+          if (i % 2 === 0) result += i + " ";
+        }
+        document.getElementById("even").innerText = result;
+      }
+    </script>
+  </body>
+</html>
+```
 3. Tạo nút bấm, khi bấm sẽ hiển thị “Hello JavaScript!”.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Chào JavaScript</h3>
+    <button onclick="sayHello()">Bấm tôi</button>
+    <p id="msg"></p>
+
+    <script>
+      function sayHello() {
+        document.getElementById("msg").innerText = "Hello JavaScript!";
+      }
+    </script>
+  </body>
+</html>
+```
 
 
 

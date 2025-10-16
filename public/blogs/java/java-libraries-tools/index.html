@@ -442,10 +442,124 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
 <h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
 <ol>
 <li>Viết chương trình lưu trữ danh sách tên người dùng vào file rồi đọc lại.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserList</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> users <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhập danh sách người dùng (gõ &#39;end&#39; để kết thúc):&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            String name <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (name.<span style="color:#a6e22e">equalsIgnoreCase</span>(<span style="color:#e6db74">&#34;end&#34;</span>)) <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>            users.<span style="color:#a6e22e">add</span>(name);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Ghi vào file</span>
+</span></span><span style="display:flex;"><span>        BufferedWriter bw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter(<span style="color:#66d9ef">new</span> FileWriter(<span style="color:#e6db74">&#34;users.txt&#34;</span>));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (String user : users) {
+</span></span><span style="display:flex;"><span>            bw.<span style="color:#a6e22e">write</span>(user);
+</span></span><span style="display:flex;"><span>            bw.<span style="color:#a6e22e">newLine</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        bw.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Đọc lại từ file</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\nDanh sách người dùng trong file:&#34;</span>);
+</span></span><span style="display:flex;"><span>        BufferedReader br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;users.txt&#34;</span>));
+</span></span><span style="display:flex;"><span>        String line;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> br.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;- &#34;</span> <span style="color:#f92672">+</span> line);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        br.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
 <li>Viết chương trình nhập điểm của sinh viên và tìm người có điểm cao nhất (dùng HashMap).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StudentScores</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>        Map<span style="color:#f92672">&lt;</span>String, Double<span style="color:#f92672">&gt;</span> scores <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhập tên và điểm sinh viên (gõ &#39;end&#39; để kết thúc):&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span>);
+</span></span><span style="display:flex;"><span>            String name <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (name.<span style="color:#a6e22e">equalsIgnoreCase</span>(<span style="color:#e6db74">&#34;end&#34;</span>)) <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Điểm: &#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">double</span> score <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextDouble</span>();
+</span></span><span style="display:flex;"><span>            scores.<span style="color:#a6e22e">put</span>(name, score);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Tìm sinh viên điểm cao nhất</span>
+</span></span><span style="display:flex;"><span>        String topStudent <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> maxScore <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (String key : scores.<span style="color:#a6e22e">keySet</span>()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (scores.<span style="color:#a6e22e">get</span>(key) <span style="color:#f92672">&gt;</span> maxScore) {
+</span></span><span style="display:flex;"><span>                maxScore <span style="color:#f92672">=</span> scores.<span style="color:#a6e22e">get</span>(key);
+</span></span><span style="display:flex;"><span>                topStudent <span style="color:#f92672">=</span> key;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\n🎓 Sinh viên có điểm cao nhất: &#34;</span> <span style="color:#f92672">+</span> topStudent <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; (&#34;</span> <span style="color:#f92672">+</span> maxScore <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
 <li>Tạo class <code>Book</code> và lưu danh sách sách vào file <code>books.txt</code>.</li>
 </ol>
-<h2 id="8-hướng-phát-triển-nâng-cao">8. Hướng phát triển nâng cao</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String title;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String author;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Book</span>(String title, String author) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> title;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">author</span> <span style="color:#f92672">=</span> author;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> title <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; - &#34;</span> <span style="color:#f92672">+</span> author;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookList</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Book<span style="color:#f92672">&gt;</span> books <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Nhập danh sách sách (gõ &#39;end&#39; để dừng):&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Tên sách: &#34;</span>);
+</span></span><span style="display:flex;"><span>            String title <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (title.<span style="color:#a6e22e">equalsIgnoreCase</span>(<span style="color:#e6db74">&#34;end&#34;</span>)) <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Tác giả: &#34;</span>);
+</span></span><span style="display:flex;"><span>            String author <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            books.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> Book(title, author));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Ghi file</span>
+</span></span><span style="display:flex;"><span>        BufferedWriter bw <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter(<span style="color:#66d9ef">new</span> FileWriter(<span style="color:#e6db74">&#34;books.txt&#34;</span>));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (Book b : books) {
+</span></span><span style="display:flex;"><span>            bw.<span style="color:#a6e22e">write</span>(b.<span style="color:#a6e22e">toString</span>());
+</span></span><span style="display:flex;"><span>            bw.<span style="color:#a6e22e">newLine</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        bw.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;\n📖 Danh sách sách đã được lưu vào books.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="8-hướng-phát-triển-nâng-cao">8. Hướng phát triển nâng cao</h2>
 <p>Sau khi nắm vững cơ bản, bạn có thể học thêm:</p>
 <ul>
 <li><strong>JDBC</strong> – kết nối và làm việc với cơ sở dữ liệu (MySQL, PostgreSQL).</li>
@@ -595,6 +709,7 @@ Nhưng nếu muốn làm các ứng dụng lớn hơn, bạn cần tận dụng 
     stickySideBarElem.style.top = "50px";
   }
 </script>
+
 
   </div><footer class="site-footer">
   <div class="container">

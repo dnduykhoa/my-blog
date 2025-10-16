@@ -233,8 +233,103 @@ public class Main {
 ## 7. Bài tập nhỏ
 
 1. Tạo class `Animal` với phương thức `sound()`. Kế thừa tạo `Dog` và `Cat` rồi override `sound()`.
+```java
+class Animal {
+    void sound() {
+        System.out.println("Động vật phát ra âm thanh");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Chó: Gâu gâu!");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Mèo: Meo meo!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+
+        a1.sound();
+        a2.sound();
+    }
+}
+```
 2. Viết chương trình quản lý **sách trong thư viện**: class `Book` (title, author, year), thêm phương thức in thông tin.
+```java
+class Book {
+    String title;
+    String author;
+    int year;
+
+    void displayInfo() {
+        System.out.println("Tên sách: " + title);
+        System.out.println("Tác giả: " + author);
+        System.out.println("Năm xuất bản: " + year);
+    }
+}
+
+public class Library {
+    public static void main(String[] args) {
+        Book b1 = new Book();
+        b1.title = "Lập trình Java cơ bản";
+        b1.author = "Đào Nguyễn Duy Khoa";
+        b1.year = 2025;
+
+        b1.displayInfo();
+    }
+}
+```
 3. Tạo interface `Shape` với phương thức `area()`. Cài đặt `Rectangle` và `Circle`.
+```java
+interface Shape {
+    double area();
+}
+
+class Rectangle implements Shape {
+    double width, height;
+
+    Rectangle(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    public double area() {
+        return width * height;
+    }
+}
+
+class Circle implements Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape rect = new Rectangle(4, 5);
+        Shape circle = new Circle(3);
+
+        System.out.println("Diện tích hình chữ nhật: " + rect.area());
+        System.out.println("Diện tích hình tròn: " + circle.area());
+    }
+}
+```
 
 
 ## 8. Tổng kết

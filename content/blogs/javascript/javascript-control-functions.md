@@ -207,9 +207,112 @@ console.log(sumPrimes(20)); // 77
 ## 7. Bài tập nhỏ
 
 1. Viết chương trình nhập số và in ra “Chẵn” hoặc “Lẻ”.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Kiểm tra số chẵn/lẻ</h3>
+    <input id="num" type="number" placeholder="Nhập số">
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+
+    <script>
+      function check() {
+        let n = Number(document.getElementById("num").value);
+        if (n % 2 === 0)
+          document.getElementById("result").innerText = n + " là số chẵn.";
+        else
+          document.getElementById("result").innerText = n + " là số lẻ.";
+      }
+    </script>
+  </body>
+</html>
+```
 2. Viết hàm tính giai thừa của một số.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Tính giai thừa</h3>
+    <input id="n" type="number" placeholder="Nhập số">
+    <button onclick="calcFactorial()">Tính</button>
+    <p id="result"></p>
+
+    <script>
+      function factorial(n) {
+        if (n === 0 || n === 1) return 1;
+        let result = 1;
+        for (let i = 2; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      }
+
+      function calcFactorial() {
+        let n = Number(document.getElementById("n").value);
+        document.getElementById("result").innerText =
+          n + "! = " + factorial(n);
+      }
+    </script>
+  </body>
+</html>
+```
 3. Viết hàm tính tổng các số lẻ từ 1 đến N.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Tính tổng số lẻ từ 1 đến N</h3>
+    <input id="limit" type="number" placeholder="Nhập N">
+    <button onclick="calcSumOdd()">Tính tổng</button>
+    <p id="result"></p>
+
+    <script>
+      function sumOdd(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+          if (i % 2 !== 0) sum += i;
+        }
+        return sum;
+      }
+
+      function calcSumOdd() {
+        let n = Number(document.getElementById("limit").value);
+        document.getElementById("result").innerText =
+          "Tổng các số lẻ từ 1 đến " + n + " là " + sumOdd(n);
+      }
+    </script>
+  </body>
+</html>
+```
 4. Viết hàm kiểm tra chuỗi có phải palindrome hay không.
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Kiểm tra chuỗi Palindrome</h3>
+    <input id="str" placeholder="Nhập chuỗi">
+    <button onclick="checkPalindrome()">Kiểm tra</button>
+    <p id="result"></p>
+
+    <script>
+      function isPalindrome(s) {
+        s = s.toLowerCase().replace(/\s/g, "");
+        let reversed = s.split("").reverse().join("");
+        return s === reversed;
+      }
+
+      function checkPalindrome() {
+        let s = document.getElementById("str").value;
+        if (isPalindrome(s))
+          document.getElementById("result").innerText = `"${s}" là Palindrome.`;
+        else
+          document.getElementById("result").innerText = `"${s}" không phải Palindrome.`;
+      }
+    </script>
+  </body>
+</html>
+```
 
 
 

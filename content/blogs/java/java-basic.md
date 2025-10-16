@@ -131,8 +131,61 @@ public class Calculator {
 ## 11. Bài tập nhỏ cho bạn
 
 1. In ra tên, tuổi và trường học của bạn.
+```java
+public class PersonalInfo {
+    public static void main(String[] args) {
+        String name = "Nguyễn Văn A";
+        int age = 20;
+        String school = "Đại học Công nghệ Thông tin";
+
+        System.out.println("Tên: " + name);
+        System.out.println("Tuổi: " + age);
+        System.out.println("Trường: " + school);
+    }
+}
+```
 2. Nhập 2 số và tính hiệu, tích, thương.
+```java
+import java.util.Scanner;
+
+public class BasicOperations {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhập số thứ nhất: ");
+        int a = sc.nextInt();
+
+        System.out.print("Nhập số thứ hai: ");
+        int b = sc.nextInt();
+
+        int hieu = a - b;
+        int tich = a * b;
+        double thuong = (b != 0) ? (double) a / b : Double.NaN;
+
+        System.out.println("Hiệu = " + hieu);
+        System.out.println("Tích = " + tich);
+        if (b != 0)
+            System.out.println("Thương = " + thuong);
+        else
+            System.out.println("Không thể chia cho 0!");
+    }
+}
+```
 3. In ra câu chào: *“Xin chào [Tên của bạn]!”*.
+```java
+import java.util.Scanner;
+
+public class Greeting {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhập tên của bạn: ");
+        String name = sc.nextLine();
+
+        System.out.println("Xin chào " + name + "!");
+    }
+}
+```
 
 
 ## 12. Tổng kết

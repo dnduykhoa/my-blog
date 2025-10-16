@@ -205,10 +205,58 @@ list.forEach(s => s.display());
 ## 7. Bài tập nhỏ
 
 1. Tạo object `car` có thuộc tính `brand`, `speed`, và method `drive()`.
-2. Tạo mảng chứa 5 số và tính tổng.
-3. Viết class `Animal` và class con `Dog`, override method `sound()`.
-4. Tạo danh sách sinh viên (array of objects) và in ra tất cả.
+```js
+let car = {
+  brand: "Toyota",
+  speed: 120,
+  drive: function() {
+    console.log(this.brand + " đang chạy với tốc độ " + this.speed + " km/h.");
+  }
+};
 
+car.drive();
+```
+
+2. Tạo mảng chứa 5 số và tính tổng.
+```js
+let numbers = [5, 10, 15, 20, 25];
+let sum = numbers.reduce((acc, n) => acc + n, 0);
+console.log("Tổng = " + sum);
+```
+
+3. Viết class `Animal` và class con `Dog`, override method `sound()`.
+```js
+class Animal {
+  sound() {
+    console.log("Động vật phát ra âm thanh.");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+    console.log("Gâu gâu!");
+  }
+}
+
+let a = new Animal();
+let d = new Dog();
+
+a.sound();
+d.sound();
+```
+
+4. Tạo danh sách sinh viên (array of objects) và in ra tất cả.
+```js
+let students = [
+  { name: "Khoa", age: 21 },
+  { name: "Lan", age: 20 },
+  { name: "Nam", age: 22 }
+];
+
+students.forEach(s => {
+  console.log("Tên: " + s.name + ", Tuổi: " + s.age);
+});
+```
 
 
 ## 8. Tổng kết

@@ -208,9 +208,67 @@ public class BMI {
 ## 8. Bài tập nhỏ
 
 1. Viết chương trình in ra **bảng cửu chương** từ 1–9.
+```java
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 9; i++) {
+            System.out.println("Bảng cửu chương " + i + ":");
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+            System.out.println(); // dòng trống ngăn cách
+        }
+    }
+}
+```
 2. Viết chương trình nhập một số và kiểm tra số đó có phải **số nguyên tố**.
-3. Viết chương trình tính **tổng các số chẵn từ 1 đến N**.
+```java
+import java.util.Scanner;
 
+public class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập một số: ");
+        int n = sc.nextInt();
+
+        boolean isPrime = true;
+
+        if (n < 2) isPrime = false;
+        else {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            System.out.println(n + " là số nguyên tố");
+        else
+            System.out.println(n + " không phải là số nguyên tố");
+    }
+}
+```
+3. Viết chương trình tính **tổng các số chẵn từ 1 đến N**.
+```java
+import java.util.Scanner;
+
+public class EvenSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập N: ");
+        int N = sc.nextInt();
+
+        int sum = 0;
+        for (int i = 2; i <= N; i += 2) {
+            sum += i;
+        }
+
+        System.out.println("Tổng các số chẵn từ 1 đến " + N + " là: " + sum);
+    }
+}
+```
 
 ## 9. Tổng kết
 

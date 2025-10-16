@@ -192,8 +192,124 @@ public class StudentManager {
 ## 7. Bài tập nhỏ
 
 1. Viết chương trình lưu trữ danh sách tên người dùng vào file rồi đọc lại.
+```java
+import java.io.*;
+import java.util.*;
+
+public class UserList {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        List<String> users = new ArrayList<>();
+
+        System.out.println("Nhập danh sách người dùng (gõ 'end' để kết thúc):");
+        while (true) {
+            String name = sc.nextLine();
+            if (name.equalsIgnoreCase("end")) break;
+            users.add(name);
+        }
+
+        // Ghi vào file
+        BufferedWriter bw = new BufferedWriter(new FileWriter("users.txt"));
+        for (String user : users) {
+            bw.write(user);
+            bw.newLine();
+        }
+        bw.close();
+
+        // Đọc lại từ file
+        System.out.println("\nDanh sách người dùng trong file:");
+        BufferedReader br = new BufferedReader(new FileReader("users.txt"));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println("- " + line);
+        }
+        br.close();
+    }
+}
+```
 2. Viết chương trình nhập điểm của sinh viên và tìm người có điểm cao nhất (dùng HashMap).
+```java
+import java.util.*;
+
+public class StudentScores {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Map<String, Double> scores = new HashMap<>();
+
+        System.out.println("Nhập tên và điểm sinh viên (gõ 'end' để kết thúc):");
+        while (true) {
+            System.out.print("Tên: ");
+            String name = sc.next();
+            if (name.equalsIgnoreCase("end")) break;
+
+            System.out.print("Điểm: ");
+            double score = sc.nextDouble();
+            scores.put(name, score);
+        }
+
+        // Tìm sinh viên điểm cao nhất
+        String topStudent = "";
+        double maxScore = -1;
+
+        for (String key : scores.keySet()) {
+            if (scores.get(key) > maxScore) {
+                maxScore = scores.get(key);
+                topStudent = key;
+            }
+        }
+
+        System.out.println("\n🎓 Sinh viên có điểm cao nhất: " + topStudent + " (" + maxScore + ")");
+    }
+}
+```
 3. Tạo class `Book` và lưu danh sách sách vào file `books.txt`.
+```java
+import java.io.*;
+import java.util.*;
+
+class Book {
+    private String title;
+    private String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String toString() {
+        return title + " - " + author;
+    }
+}
+
+public class BookList {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        List<Book> books = new ArrayList<>();
+
+        System.out.println("Nhập danh sách sách (gõ 'end' để dừng):");
+        while (true) {
+            System.out.print("Tên sách: ");
+            String title = sc.nextLine();
+            if (title.equalsIgnoreCase("end")) break;
+
+            System.out.print("Tác giả: ");
+            String author = sc.nextLine();
+
+            books.add(new Book(title, author));
+        }
+
+        // Ghi file
+        BufferedWriter bw = new BufferedWriter(new FileWriter("books.txt"));
+        for (Book b : books) {
+            bw.write(b.toString());
+            bw.newLine();
+        }
+        bw.close();
+
+        System.out.println("\n📖 Danh sách sách đã được lưu vào books.txt");
+    }
+}
+```
 
 
 ## 8. Hướng phát triển nâng cao

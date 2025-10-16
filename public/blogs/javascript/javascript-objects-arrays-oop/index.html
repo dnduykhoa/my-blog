@@ -431,11 +431,55 @@
 <h2 id="7-bài-tập-nhỏ">7. Bài tập nhỏ</h2>
 <ol>
 <li>Tạo object <code>car</code> có thuộc tính <code>brand</code>, <code>speed</code>, và method <code>drive()</code>.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">brand</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Toyota&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">120</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">drive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">brand</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang chạy với tốc độ &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; km/h.&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">drive</span>();
+</span></span></code></pre></div><ol start="2">
 <li>Tạo mảng chứa 5 số và tính tổng.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">25</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tổng = &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>);
+</span></span></code></pre></div><ol start="3">
 <li>Viết class <code>Animal</code> và class con <code>Dog</code>, override method <code>sound()</code>.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Động vật phát ra âm thanh.&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Gâu gâu!&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Animal</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dog</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">sound</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">sound</span>();
+</span></span></code></pre></div><ol start="4">
 <li>Tạo danh sách sinh viên (array of objects) và in ra tất cả.</li>
 </ol>
-<h2 id="8-tổng-kết">8. Tổng kết</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">students</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Khoa&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Lan&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Nam&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">22</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">students</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">s</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Tuổi: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">age</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="8-tổng-kết">8. Tổng kết</h2>
 <p>Trong bài này, bạn đã học:</p>
 <ul>
 <li>Object và cách thêm/xóa thuộc tính.</li>
@@ -572,6 +616,7 @@
     stickySideBarElem.style.top = "50px";
   }
 </script>
+
 
   </div><footer class="site-footer">
   <div class="container">
