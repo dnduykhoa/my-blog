@@ -18,8 +18,7 @@ Bạn đã biết **Object, Array, OOP** trong JavaScript. Nhưng JS sẽ chẳn
 
 > Mình còn nhớ lần đầu viết code `document.getElementById("title").innerText = "Xin chào JS";` và thấy ngay dòng chữ trên web thay đổi. Mình cảm thấy “wow, mình vừa điều khiển được cả website bằng code của mình!”. Bạn có nhớ lần đầu tiên bạn thấy web “chuyển động” nhờ JS không?
 
-{{</* image src="/images/js-dom.png" alt="DOM trong JavaScript" */>}}
-
+![DOM trong JavaScript](/images/js-dom.png)
 
 
 ## 2. DOM là gì?

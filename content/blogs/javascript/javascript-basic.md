@@ -15,8 +15,7 @@ Nếu HTML là phần “xác” của một trang web, CSS là phần “trang 
 
 > Lần đầu mình thử viết JS, mình thêm `document.getElementById("demo").innerText = "Hello JS";` mà chẳng thấy gì thay đổi. Sau một hồi loay hoay, mình mới phát hiện ra mình… gõ sai `id` 😅. Đây là “cú ngã đầu đời” giúp mình nhớ rằng kiểm tra lại code cẩn thận là rất quan trọng. Bạn có từng bị như vậy chưa?
 
-{{</* image src="/images/js-basic.png" alt="Ví dụ chạy JavaScript cơ bản trong trình duyệt" */>}}
-
+![Ví dụ chạy JavaScript cơ bản trong trình duyệt](/images/js-basic.png)
 
 
 ## 2. JavaScript chạy ở đâu?

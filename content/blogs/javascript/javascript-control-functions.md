@@ -17,8 +17,7 @@ Trong bài 1, bạn đã làm quen với **biến, kiểu dữ liệu và toán 
 
 > Mình còn nhớ hồi đầu học JS, mình viết `if (x = 5)` thay vì `if (x == 5)` 😅. Kết quả là chương trình chạy sai hoàn toàn mà mình không hiểu tại sao. Sau đó mới nhận ra mình đã gán giá trị thay vì so sánh. Bạn có bao giờ nhầm như thế chưa?
 
-{{</* image src="/images/js-control-flow.png" alt="Sơ đồ cấu trúc điều khiển trong JavaScript" */>}}
-
+![Sơ đồ cấu trúc điều khiển trong JavaScript](/images/js-control-flow.png)
 
 
 ## 2. Cấu trúc rẽ nhánh

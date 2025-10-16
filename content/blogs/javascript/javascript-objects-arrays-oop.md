@@ -17,7 +17,7 @@ Trong bài 2, bạn đã biết cách sử dụng **if, vòng lặp và hàm** �
 
 > Hồi mình mới học JS, mình viết danh sách sinh viên bằng… 5 biến riêng lẻ: `name1`, `name2`, `name3`… 😅. Rất lộn xộn! Sau này mình mới biết dùng **array** và **object**, mọi thứ gọn gàng hơn hẳn. Bạn đã từng code “cồng kềnh” như vậy chưa?
 
-{{</* image src="/images/js-object-array.png" alt="Object và Array trong JavaScript" */>}}
+![Object và Array trong JavaScript](/images/js-object-array.png)
 
 
 
