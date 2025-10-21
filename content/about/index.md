@@ -47,39 +47,39 @@ Tôi yêu thích việc tìm hiểu cách phần mềm hoạt động và cách 
 
 ## Kỹ Năng Hiện Có
 
-### 💻 Ngôn ngữ lập trình
+### Ngôn ngữ lập trình
 - **Java:** OOP, Collections, Spring Boot
 - **JavaScript:** DOM, ES6+, ReactJS
 - **Python:** Script tự động hóa, xử lý dữ liệu
 
-### ⚙️ Công cụ & Framework
+### Công cụ & Framework
 - Spring Boot, React, Git/GitHub, VS Code, Postman
 
-### 🌱 Kỹ năng mềm
+### Kỹ năng mềm
 - Làm việc nhóm, tự học qua tài liệu tiếng Anh, tư duy phản biện
 
 ---
 
 ## Định Hướng Nghề Nghiệp
 
-### 🎯 Ngắn hạn
+### Ngắn hạn
 - Hoàn thiện blog cá nhân và 2–3 project thực tế
 
-### 🚀 Trung hạn
+### Trung hạn
 - Trở thành Backend Developer chuyên về Java Spring Boot
 
-### 🌏 Dài hạn
+### Dài hạn
 - Phát triển thành Full-stack Developer, đóng góp mã nguồn mở
 
 ---
 
-## 🎓 Chứng chỉ
+## Chứng chỉ
 
-- 🏅 **Tiếng Anh CEF chuẩn B1** (04/09/2025) [[Xem chứng chỉ](/images/EnglishB1.png)]
-- 🤝 **Giao tiếp & Làm việc nhóm** (24/05/2024) [[Xem chứng chỉ](/pdf/Communication_Teamwork.pdf)]
-- 🌐 **Networking Basics** (18/09/2025) [[Xem chứng chỉ](/pdf/NetworkingBasics.pdf)]
-- 💻 **JavaScript Essentials 1** (20/09/2025) [[Xem chứng chỉ](/pdf/JavaScriptEssentials1.pdf)]
-- 💻 **JavaScript Essentials 2** (20/09/2025) [[Xem chứng chỉ](/pdf/JavaScriptEssentials2.pdf)]
+- **Tiếng Anh CEF chuẩn B1** (04/09/2025) [[Xem chứng chỉ](/images/EnglishB1.png)]
+- **Giao tiếp & Làm việc nhóm** (24/05/2024) [[Xem chứng chỉ](/pdf/Communication_Teamwork.pdf)]
+- **Networking Basics** (18/09/2025) [[Xem chứng chỉ](/pdf/NetworkingBasics.pdf)]
+- **JavaScript Essentials 1** (20/09/2025) [[Xem chứng chỉ](/pdf/JavaScriptEssentials1.pdf)]
+- **JavaScript Essentials 2** (20/09/2025) [[Xem chứng chỉ](/pdf/JavaScriptEssentials2.pdf)]
 
 ---
 
@@ -100,4 +100,4 @@ Tôi luôn tin rằng **lập trình không phải là học thuộc cú pháp**
 ---
 
 Cảm ơn bạn đã ghé thăm blog cá nhân của tôi!  
-Tôi hy vọng những chia sẻ nhỏ này sẽ giúp các bạn sinh viên khác thấy rằng **học lập trình không khó, chỉ cần kiên trì và dám thử.** 🚀
+Tôi hy vọng những chia sẻ nhỏ này sẽ giúp các bạn sinh viên khác thấy rằng **học lập trình không khó, chỉ cần kiên trì và dám thử.** 
