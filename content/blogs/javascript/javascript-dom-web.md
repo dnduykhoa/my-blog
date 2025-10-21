@@ -137,8 +137,7 @@ addBtn.addEventListener("click", function() {
 
 👉 Kết quả: bạn có một ứng dụng **To-do List** mini 🚀
 
-{{</* image src="/images/js-todo.png" alt="Ứng dụng To-do List bằng JavaScript" */>}}
-
+![Ứng dụng To-do List bằng JavaScript](/images/js-todo.png)
 
 ## 7. Lỗi thường gặp
 
