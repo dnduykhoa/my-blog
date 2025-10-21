@@ -66,15 +66,15 @@ Hiện tại, tôi đang tập trung phát triển theo hướng **Backend với
 
 ## Định Hướng Nghề Nghiệp
 
-### 🎯 Ngắn hạn (6–12 tháng)
+### 🎯 Ngắn hạn  
 - Hoàn thiện blog cá nhân và 2–3 **project thực tế** (Java Spring Boot + ReactJS).  
 - Rèn luyện kỹ năng viết tài liệu, báo cáo, và cách trình bày dự án rõ ràng.
 
-### 🚀 Trung hạn (1–2 năm)
+### 🚀 Trung hạn 
 - Trở thành **Backend Developer** chuyên về **Java Spring Boot**, làm việc tại môi trường chuyên nghiệp để học hỏi quy trình phát triển phần mềm thực tế.  
 - Học thêm về **cấu trúc hệ thống**, **quản lý database**, **RESTful API nâng cao** và **testing**.
 
-### 🌏 Dài hạn (3–5 năm)
+### 🌏 Dài hạn 
 - Phát triển thành **Full-stack Developer** có khả năng xây dựng trọn vẹn một ứng dụng web hoàn chỉnh.  
 - Đóng góp mã nguồn mở, chia sẻ kiến thức cho cộng đồng sinh viên và lập trình viên trẻ Việt Nam.  
 

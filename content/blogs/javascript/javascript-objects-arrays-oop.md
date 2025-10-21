@@ -161,10 +161,7 @@ let t1 = new Teacher("Thầy Minh");
 t1.teach();
 ```
 
-
-
-{{</* image src="/images/js-class-diagram.png" alt="Class và kế thừa trong JavaScript" */>}}
-
+![Class và kế thừa trong JavaScript](/images/js-class-diagram.png)
 
 
 ## 5. Ví dụ tổng hợp: Quản lý sinh viên
