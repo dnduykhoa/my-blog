@@ -135,7 +135,7 @@ addBtn.addEventListener("click", function() {
 });
 ```
 
-👉 Kết quả: bạn có một ứng dụng **To-do List** mini 🚀
+Kết quả: bạn có một ứng dụng **To-do List** 
 
 ![Ứng dụng To-do List bằng JavaScript](/images/js-todo.png)
 
