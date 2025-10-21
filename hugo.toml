@@ -33,7 +33,7 @@ page = ["HTML", "RSS"]
     title = "Đào Nguyễn Duy Khoa"
     subtitle = "Sinh viên ngành CNTT - HUTECH"
     content = "Đam mê phát triển web và chia sẻ kiến thức"
-    image = "/images/avatar.jpeg"
+    image = "/images/profile.jpeg"
 
   [params.navbar]
     enable = true
