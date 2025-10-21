@@ -98,8 +98,8 @@ Tôi học tốt nhất khi **tự mình thử, sai và làm lại**. Việc chi
 
 - **Blog cá nhân:** Xây dựng bằng Hugo + GitHub Pages, nơi tôi viết về Java và kinh nghiệm học tập.  
 - **Bloomie — Hệ thống quản lý cửa hàng bán hoa tươi (ASP.NET / .NET)** 
-**Bloomie** — cửa hàng hoa trực tuyến xây bằng **ASP.NET Core (.NET 6/7)**, EF Core và SQL Server. Hỗ trợ giỏ hàng, thanh toán đơn giản, trang admin quản lý sản phẩm & khuyến mãi, và xác thực người dùng bằng OTP (Firebase Phone Auth).  
-**Tech:** ASP.NET Core, Entity Framework Core, SQL Server, Bootstrap, JavaScript, Firebase Phone Auth.  
+**Bloomie** — cửa hàng hoa trực tuyến xây bằng **ASP.NET Core (.NET 8.0)**, EF Core và SQL Server. Hỗ trợ giỏ hàng, thanh toán đơn giản, trang admin quản lý sản phẩm & khuyến mãi, và xác thực người dùng bằng OTP.  
+**Tech:** ASP.NET Core, Entity Framework Core, SQL Server, Bootstrap, JavaScript.  
 **Repo / Demo:** https://github.com/dnduykhoa/Bloomie.git 
 
 
