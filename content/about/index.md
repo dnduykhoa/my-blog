@@ -4,7 +4,7 @@ draft: false
 layout: "about"
 url: "/about"
 description: "Giới thiệu về bản thân tôi – sinh viên năm 4 ngành Công nghệ phần mềm."
-image: "/images/avatar.jpeg"
+image: "/images/profile.jpeg"
 name: "Đào Nguyễn Duy Khoa"
 birthday: "08/09/2004"
 major: "Công nghệ phần mềm"
